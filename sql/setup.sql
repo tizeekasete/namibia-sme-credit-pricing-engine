@@ -67,3 +67,36 @@ SELECT
         ELSE 'REJECT'
     END AS decision
 FROM sme_loans;
+-- =========================
+-- LOAN DECISION VIEW
+-- =========================
+CREATE VIEW loan_decisions AS
+SELECT
+    business_name,
+    credit_score,
+    missed_payments,
+    ROUND(existing_debt * 1.0 / annual_revenue, 3) AS debt_ratio,
+
+    ROUND(
+        (credit_score / 850.0) * 60
+        - (missed_payments * 10)
+        - ((existing_debt * 1.0 / annual_revenue) * 30),
+    2) AS risk_score,
+
+    CASE
+        WHEN (
+            (credit_score / 850.0) * 60
+            - (missed_payments * 10)
+            - ((existing_debt * 1.0 / annual_revenue) * 30)
+        ) >= 40 THEN 'Approve'
+
+        WHEN (
+            (credit_score / 850.0) * 60
+            - (missed_payments * 10)
+            - ((existing_debt * 1.0 / annual_revenue) * 30)
+        ) >= 25 THEN 'Review'
+
+        ELSE 'Reject'
+    END AS decision
+
+FROM sme_loans;
