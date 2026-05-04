@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS sme_loans;
+DROP VIEW IF EXISTS loan_decisions;
 
 CREATE TABLE sme_loans (
     business_id INTEGER,
