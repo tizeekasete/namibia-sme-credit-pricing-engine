@@ -1,0 +1,11 @@
+business_name,decision,risk_score,interest_rate
+"Okuryangava Retail",Review,36.24,0.18
+"Walvis Bay Logistics",Approve,48.42,0.12
+"Katutura Food Services",Reject,10.39,
+"Swakopmund Tours",Review,36.21,0.18
+"Oshakati Construction",Approve,50.13,0.08
+"Windhoek IT Solutions",Approve,47.76,0.12
+"Rundu Agriculture",Reject,21.88,
+"Luderitz Fishing Co",Review,35.95,0.18
+"Gobabis Butchery",Reject,-0.6,
+"Otjiwarongo Supplies",Review,35.5,0.18
