@@ -101,3 +101,18 @@ SELECT
     END AS decision
 
 FROM sme_loans;
+
+DROP VIEW IF EXISTS loan_pricing;
+
+CREATE VIEW loan_pricing AS
+SELECT 
+    business_name,
+    decision,
+    risk_score,
+    CASE
+        WHEN decision = 'Approve' AND risk_score >= 50 THEN 0.08
+        WHEN decision = 'Approve' THEN 0.12
+        WHEN decision = 'Review' THEN 0.18
+        ELSE NULL
+    END AS interest_rate
+FROM loan_decisions;
