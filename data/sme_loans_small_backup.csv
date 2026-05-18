@@ -1,0 +1,11 @@
+business_id,business_name,sector,annual_revenue,years_in_business,loan_amount,existing_debt,credit_score,missed_payments,collateral_value,loan_term_months
+1,Okuryangava Retail,retail,850000,4,200000,50000,680,1,150000,24
+2,Walvis Bay Logistics,transport,2500000,7,800000,200000,720,0,600000,36
+3,Katutura Food Services,food,450000,2,150000,40000,610,3,80000,18
+4,Swakopmund Tours,tourism,1200000,5,300000,100000,690,1,200000,24
+5,Oshakati Construction,construction,3200000,10,1000000,300000,750,0,900000,48
+6,Windhoek IT Solutions,technology,900000,3,250000,60000,705,0,180000,24
+7,Rundu Agriculture,farming,600000,6,200000,80000,650,2,120000,36
+8,Luderitz Fishing Co,fishing,1800000,8,700000,250000,710,1,500000,36
+9,Gobabis Butchery,food,400000,2,120000,30000,590,4,70000,18
+10,Otjiwarongo Supplies,retail,700000,5,180000,50000,675,1,130000,24

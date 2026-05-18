@@ -1,11 +1,1400 @@
-business_id,business_name,sector,annual_revenue,years_in_business,loan_amount,existing_debt,credit_score,missed_payments,collateral_value,loan_term_months
-1,Okuryangava Retail,retail,850000,4,200000,50000,680,1,150000,24
-2,Walvis Bay Logistics,transport,2500000,7,800000,200000,720,0,600000,36
-3,Katutura Food Services,food,450000,2,150000,40000,610,3,80000,18
-4,Swakopmund Tours,tourism,1200000,5,300000,100000,690,1,200000,24
-5,Oshakati Construction,construction,3200000,10,1000000,300000,750,0,900000,48
-6,Windhoek IT Solutions,technology,900000,3,250000,60000,705,0,180000,24
-7,Rundu Agriculture,farming,600000,6,200000,80000,650,2,120000,36
-8,Luderitz Fishing Co,fishing,1800000,8,700000,250000,710,1,500000,36
-9,Gobabis Butchery,food,400000,2,120000,30000,590,4,70000,18
-10,Otjiwarongo Supplies,retail,700000,5,180000,50000,675,1,130000,24
+business_id,business_name,industry,region,years_in_business,employees,loan_amount,loan_purpose,loan_term,annual_revenue,monthly_expenses,cash_balance,existing_debt,monthly_debt_payments,credit_score,missed_payments,prior_defaults,collateral_type,collateral_value
+1,Kunene Logistics,Food Services,Kavango East,17,171,2137960,Construction,12,3193198,413604,1869913,2171572,87882,483,4,1,Livestock,3167417
+2,Luderitz Food Services,Mining Services,Oshikoto,8,7,1809715,Technology Upgrade,24,10326277,137746,2006777,1880491,70048,830,4,0,Property,3531365
+3,Gobabis Manufacturing,Retail,Oshikoto,3,215,1098590,Payroll Support,12,13804300,170807,584232,166265,66764,659,0,0,Vehicle,3063552
+4,Walvis Construction,Agriculture,Erongo,16,231,1027280,Vehicle Purchase,24,1218569,693244,1122588,131549,35254,485,7,0,Inventory,2799887
+5,Namib Farming,Technology,Kavango East,22,7,637103,Inventory,24,10520399,673615,2148959,3493825,2412,771,1,0,Livestock,3134475
+6,Erongo Trading,Tourism,Khomas,22,240,1939300,Inventory,60,10942000,545738,1176777,176510,3944,766,5,1,Livestock,1165309
+7,Kunene Technologies,Agriculture,Otjozondjupa,11,18,183548,Inventory,12,7857804,135074,2519175,3917790,96275,595,1,1,Inventory,3431349
+8,Namib Supplies,Mining Services,Oshikoto,6,213,702664,Construction,60,8539231,510348,2841775,2496263,83833,599,6,0,Livestock,1237434
+9,Luderitz Logistics,Logistics,Oshana,9,20,1537640,Equipment Purchase,12,3901375,265930,1552471,2435689,108562,659,4,0,Vehicle,4166626
+10,Namib Retail,Retail,Kavango West,18,89,1126310,Technology Upgrade,60,12170784,128964,2964201,471302,28175,838,1,0,Vehicle,3637790
+11,Caprivi Retail,Agriculture,Oshana,4,76,1724986,Payroll Support,12,10821126,611336,506315,2187658,73725,848,7,0,Equipment,2781744
+12,Etosha Manufacturing,Logistics,Otjozondjupa,22,57,1389765,Construction,12,10961048,72790,1631994,1812092,9267,632,6,1,Livestock,1576350
+13,Caprivi Trading,Transport,Hardap,22,180,1556799,Working Capital,24,4953146,64088,848723,2220993,451,764,5,1,Livestock,4736589
+14,Etosha Transport,Mining Services,Karas,15,99,154798,Payroll Support,12,7507936,41052,2038114,167435,24133,703,5,0,Equipment,4742201
+15,Caprivi Farming,Retail,Erongo,19,38,1539562,Working Capital,60,7746394,539320,1447874,455341,89375,796,0,0,Savings,458863
+16,Erongo Supplies,Construction,Hardap,13,227,315535,Technology Upgrade,48,1863277,567919,1437153,3303411,88569,563,3,0,Property,1596105
+17,Etosha Manufacturing,Logistics,Hardap,3,11,2030889,Equipment Purchase,12,13732646,554374,1958334,584859,50494,756,1,0,Livestock,1211162
+18,Etosha Retail,Construction,Otjozondjupa,12,201,1115052,Technology Upgrade,36,12579229,105917,170618,665098,58763,646,2,1,Livestock,1703235
+19,Okavango Transport,Mining Services,Khomas,5,173,570178,Expansion,36,1664804,670150,2072826,142853,77191,524,6,0,Livestock,4008823
+20,Namib Logistics,Food Services,Otjozondjupa,3,240,1640138,Construction,36,1181947,166367,1160440,1544145,12896,617,0,0,Vehicle,1448939
+21,Okavango Fishing,Agriculture,Oshana,8,3,340795,Vehicle Purchase,12,7107614,474657,140577,3596710,114466,578,1,0,Property,2198443
+22,Kalahari Manufacturing,Retail,Khomas,25,193,2469892,Working Capital,24,7643850,85827,2091684,3645731,53324,835,8,0,Equipment,1541188
+23,Swakop Food Services,Mining Services,Oshikoto,8,68,2117946,Technology Upgrade,60,2135825,794257,778368,2965074,38711,760,6,0,Equipment,104840
+24,Caprivi Retail,Manufacturing,Karas,3,245,524919,Construction,36,13233777,405954,1699431,3449423,43010,768,2,0,Savings,1264277
+25,Swakop Fishing,Manufacturing,Hardap,22,240,2094583,Equipment Purchase,24,7328317,605905,1373773,1719969,7998,504,4,1,Property,1919763
+26,Caprivi Food Services,Transport,Khomas,12,226,2063040,Expansion,24,4182548,427230,1506131,3970564,24362,605,4,1,Property,4969133
+27,Okavango Retail,Food Services,Khomas,8,16,247975,Expansion,12,9581964,101423,1231331,2360235,8803,701,8,0,Livestock,2317794
+28,Luderitz Farming,Logistics,Karas,5,19,1221449,Expansion,60,2455738,377966,2222090,483501,13035,454,4,0,Livestock,1818046
+29,Oshana Logistics,Agriculture,Oshana,3,111,414605,Equipment Purchase,12,13960884,337262,86022,1650100,5741,523,2,0,Livestock,4646046
+30,Caprivi Trading,Mining Services,Oshikoto,22,158,2014280,Vehicle Purchase,36,8764202,635840,2684019,3652847,71626,725,1,0,Inventory,1289368
+31,Kunene Construction,Transport,Oshikoto,20,43,427046,Payroll Support,24,5517331,266907,1556114,606417,13016,846,7,0,Savings,2957363
+32,Oshana Logistics,Tourism,Kavango East,19,48,1047006,Expansion,24,1670147,748965,2188950,3466020,91569,655,4,0,Property,1293914
+33,Caprivi Technologies,Transport,Khomas,4,201,1361480,Equipment Purchase,48,13932678,501464,273118,819839,16770,520,8,0,Livestock,2364452
+34,Luderitz Logistics,Technology,Oshana,20,71,134804,Inventory,12,2854205,632066,819656,137301,11286,561,7,0,Vehicle,1141058
+35,Gobabis Fishing,Mining Services,Khomas,15,97,2233666,Inventory,48,2394791,370754,2324349,2331904,2740,596,3,0,Livestock,1299116
+36,Otji Retail,Retail,Kavango East,22,91,1013513,Expansion,48,13831910,24863,584838,579368,98746,546,5,0,Inventory,3059627
+37,Windhoek Food Services,Construction,Khomas,17,136,1365082,Inventory,48,12322553,684718,1810378,3583152,24308,548,3,0,Savings,165954
+38,Windhoek Manufacturing,Manufacturing,Khomas,21,191,1781837,Payroll Support,24,6631586,784336,2051169,2825519,106475,847,3,0,Property,147828
+39,Etosha Farming,Retail,Oshana,20,114,1519651,Expansion,60,14350142,663310,1824850,2027125,106123,469,1,0,Inventory,3776119
+40,Kalahari Manufacturing,Mining Services,Otjozondjupa,23,80,2451271,Technology Upgrade,24,8960040,755904,1705543,3013839,52700,768,3,0,Property,2255279
+41,Namib Food Services,Construction,Oshikoto,10,162,1590673,Vehicle Purchase,12,4039600,784621,101792,2846011,88354,601,1,0,Livestock,4742362
+42,Swakop Farming,Tourism,Kavango West,20,58,2136275,Expansion,36,9718559,159616,246500,1297766,70877,739,3,0,Savings,4275984
+43,Okavango Trading,Logistics,Khomas,23,50,2104155,Construction,60,7413463,756337,537303,3422625,40867,501,1,0,Property,3740884
+44,Gobabis Trading,Technology,Kavango East,20,31,2415675,Expansion,48,8535344,601097,1191665,1311228,25872,504,5,1,Savings,3820316
+45,Luderitz Construction,Technology,Hardap,1,128,176759,Technology Upgrade,24,7953054,35408,2437583,1360479,97053,740,3,0,Property,571898
+46,Otji Supplies,Technology,Kavango West,18,248,736901,Inventory,36,5967883,138310,2635314,933929,13125,826,4,1,Equipment,2544991
+47,Kunene Farming,Transport,Oshikoto,5,137,2350517,Vehicle Purchase,36,9228141,78899,1936007,3975386,35290,467,0,0,Inventory,2080479
+48,Windhoek Trading,Food Services,Kavango West,23,71,1811654,Equipment Purchase,60,6743011,26423,1406893,3686165,100755,512,3,0,Equipment,2307728
+49,Gobabis Fishing,Food Services,Otjozondjupa,11,187,1204179,Working Capital,60,11752098,416213,1705980,3797725,46349,566,2,1,Property,2877896
+50,Kunene Manufacturing,Manufacturing,Oshana,8,225,1496853,Expansion,24,5496356,677223,1039861,364382,26502,540,6,0,Property,3936240
+51,Kalahari Transport,Food Services,Oshikoto,21,77,1986728,Expansion,24,8953484,735137,1058562,3625940,65538,700,6,0,Equipment,2265111
+52,Luderitz Technologies,Transport,Otjozondjupa,4,153,172773,Working Capital,48,8720837,267025,1303374,3728712,56976,620,4,0,Inventory,2126191
+53,Kunene Transport,Food Services,Khomas,12,173,2257636,Payroll Support,36,12289019,67307,2444485,2064753,810,716,7,1,Inventory,4262741
+54,Okavango Construction,Food Services,Otjozondjupa,13,142,2324563,Vehicle Purchase,36,7353171,452779,744125,1951765,58603,648,8,1,Inventory,4091529
+55,Etosha Trading,Retail,Kavango East,18,9,1963116,Working Capital,36,8448285,412006,524570,3686981,82960,499,1,0,Property,4469484
+56,Kalahari Supplies,Manufacturing,Hardap,22,249,1575910,Vehicle Purchase,36,13716134,167532,2486852,607634,73057,679,7,0,Property,4319079
+57,Windhoek Retail,Technology,Oshana,23,72,507662,Expansion,24,11076349,562496,2603972,3386115,30136,468,7,0,Vehicle,3680190
+58,Erongo Transport,Construction,Khomas,22,144,2300885,Construction,36,4670043,271278,2561547,1916625,92674,724,1,1,Property,3903004
+59,Kunene Supplies,Construction,Erongo,7,222,599254,Inventory,60,11488410,618703,2946429,1554768,25995,718,1,0,Inventory,1543129
+60,Walvis Construction,Logistics,Oshikoto,20,108,790937,Expansion,24,2583518,477978,2266989,2824140,88140,828,1,0,Savings,2231932
+61,Luderitz Supplies,Retail,Erongo,22,218,1585104,Working Capital,60,13055839,540791,323905,3117907,36307,484,1,0,Vehicle,4311466
+62,Walvis Manufacturing,Manufacturing,Oshikoto,12,237,1650695,Technology Upgrade,60,1899631,755530,817713,3226196,89121,573,5,0,Livestock,722773
+63,Caprivi Technologies,Logistics,Khomas,24,150,173377,Working Capital,36,11432460,558874,2012811,2100036,70619,833,2,0,Equipment,1686967
+64,Gobabis Supplies,Agriculture,Oshana,11,187,2487854,Technology Upgrade,48,12408476,409505,1859452,3265695,29053,676,8,0,Equipment,2665808
+65,Caprivi Technologies,Manufacturing,Khomas,18,219,1927149,Vehicle Purchase,36,11096566,601806,1412350,3560376,24518,604,4,1,Property,3893848
+66,Walvis Farming,Logistics,Karas,20,17,424421,Vehicle Purchase,60,6499874,381599,1253518,1566050,63710,824,6,0,Equipment,1902326
+67,Gobabis Farming,Technology,Karas,13,132,2090525,Working Capital,24,1682686,20761,1148245,911239,36800,625,8,0,Equipment,1196721
+68,Gobabis Retail,Manufacturing,Karas,14,133,1882269,Construction,48,4597264,552604,108248,3870729,107502,683,1,1,Property,3654627
+69,Namib Technologies,Mining Services,Oshana,11,151,2003150,Expansion,24,11736248,435683,902727,1789199,94949,592,4,0,Savings,817048
+70,Namib Supplies,Technology,Hardap,15,229,947274,Construction,12,9732830,661692,522453,1939593,65121,488,7,0,Property,783961
+71,Erongo Food Services,Mining Services,Otjozondjupa,19,168,558027,Vehicle Purchase,12,9193354,682684,1188127,2662972,49316,711,1,1,Property,2841222
+72,Katima Supplies,Manufacturing,Oshana,24,140,2137582,Inventory,24,1273573,689848,660839,1706542,19793,837,3,1,Inventory,3379535
+73,Katima Technologies,Manufacturing,Oshikoto,9,163,887303,Expansion,24,14263183,42425,2612187,699400,61391,469,4,1,Livestock,3490577
+74,Okavango Construction,Mining Services,Otjozondjupa,5,80,1899775,Inventory,12,8654813,524867,2979533,2677131,89486,599,6,0,Inventory,1495207
+75,Okavango Technologies,Retail,Erongo,15,86,1447292,Payroll Support,12,8981416,337923,2584812,1705646,36424,551,5,0,Inventory,2320570
+76,Gobabis Logistics,Construction,Otjozondjupa,14,30,551828,Vehicle Purchase,48,4271877,57194,1889537,633917,109833,539,7,0,Livestock,3608107
+77,Gobabis Logistics,Manufacturing,Khomas,12,236,2242363,Vehicle Purchase,60,14591068,387173,2586935,636712,99526,845,1,0,Savings,4608773
+78,Kalahari Trading,Agriculture,Karas,9,245,830711,Technology Upgrade,36,5716745,770037,1531021,3995106,113795,841,2,0,Livestock,3789046
+79,Caprivi Tours,Tourism,Otjozondjupa,19,44,2132712,Expansion,60,4110449,69513,2415385,2575122,117758,770,6,1,Vehicle,3724835
+80,Namib Farming,Agriculture,Hardap,17,48,2088122,Construction,60,8011433,643579,2257261,370762,96800,514,5,0,Property,3613601
+81,Otji Supplies,Food Services,Oshikoto,18,130,116597,Construction,48,1104485,565327,215482,162685,115538,523,5,0,Livestock,2691176
+82,Erongo Technologies,Transport,Erongo,15,112,1070276,Working Capital,48,10525634,401121,2096850,2325639,64768,519,4,0,Livestock,527161
+83,Luderitz Technologies,Tourism,Kavango East,6,235,722369,Technology Upgrade,24,6999351,643225,1814947,1423116,64755,458,4,0,Vehicle,2130944
+84,Caprivi Trading,Construction,Kavango West,9,225,2071300,Vehicle Purchase,36,8316409,600717,435893,1633300,14285,671,2,0,Property,2527431
+85,Gobabis Fishing,Food Services,Hardap,20,144,2402759,Expansion,48,11753227,52609,719812,2221501,65855,820,6,0,Inventory,1034586
+86,Oshana Tours,Agriculture,Oshikoto,16,131,1155012,Vehicle Purchase,48,470560,174243,1474618,2473984,118229,667,7,0,Vehicle,83869
+87,Kunene Construction,Mining Services,Oshikoto,3,145,1004859,Construction,24,4538071,170320,1859108,332875,52135,677,1,0,Property,4144522
+88,Oshana Logistics,Logistics,Hardap,23,240,771278,Construction,24,3561240,305038,529356,2962094,28901,701,8,0,Property,2522323
+89,Katima Logistics,Transport,Oshikoto,20,183,906101,Expansion,12,6150476,165832,1386303,908573,8713,728,6,1,Equipment,2523337
+90,Caprivi Food Services,Food Services,Oshikoto,18,178,907011,Payroll Support,24,7810183,780389,1163312,2158863,105699,692,8,1,Livestock,2899953
+91,Walvis Manufacturing,Mining Services,Kavango West,22,100,2478121,Working Capital,48,508945,590423,78435,2118662,43072,722,0,0,Vehicle,461624
+92,Kalahari Supplies,Manufacturing,Hardap,25,174,2492367,Technology Upgrade,48,2670142,107390,345341,3139204,32054,710,2,0,Inventory,2922156
+93,Luderitz Supplies,Logistics,Oshikoto,24,180,1418414,Technology Upgrade,12,2610063,782245,1054378,2462250,98850,696,6,1,Inventory,4080306
+94,Windhoek Trading,Logistics,Oshana,17,243,1545870,Payroll Support,12,12312824,136555,2777838,3997612,85079,530,1,0,Vehicle,4490015
+95,Kunene Fishing,Manufacturing,Kavango East,1,61,616382,Payroll Support,48,12694636,164431,821039,1799526,100802,687,4,0,Savings,4559647
+96,Kalahari Technologies,Agriculture,Kavango West,22,156,2211670,Equipment Purchase,36,9788366,521133,2852679,2278190,108062,676,3,0,Savings,3571397
+97,Kalahari Tours,Food Services,Oshana,15,84,222674,Vehicle Purchase,12,9697066,179302,2487918,679141,89734,780,4,0,Equipment,2233003
+98,Katima Technologies,Construction,Oshana,13,9,491499,Equipment Purchase,24,14431897,643249,202104,267032,94204,657,7,0,Equipment,3717803
+99,Kalahari Technologies,Agriculture,Oshikoto,8,8,207768,Inventory,12,7507873,613362,419167,1937090,4379,497,5,0,Vehicle,800074
+100,Caprivi Fishing,Construction,Oshana,20,32,1520115,Expansion,48,10573724,62456,1059787,324721,10865,636,4,0,Livestock,2911252
+101,Oshana Retail,Mining Services,Erongo,17,46,634410,Expansion,60,13808654,83401,1126410,3649424,38080,538,5,0,Savings,182771
+102,Kalahari Retail,Mining Services,Oshikoto,4,90,360205,Vehicle Purchase,36,8720374,782330,1081493,2296591,50733,705,8,0,Savings,4469049
+103,Namib Trading,Manufacturing,Oshana,8,87,1075035,Expansion,12,10293240,96753,1993098,279398,53793,657,1,0,Inventory,420530
+104,Okavango Construction,Transport,Karas,5,121,1186599,Expansion,48,5128949,673244,1422085,2210529,84031,656,1,1,Property,3152324
+105,Gobabis Supplies,Construction,Erongo,6,59,1551201,Inventory,48,6057330,530963,468322,900187,116610,559,7,1,Inventory,2821574
+106,Caprivi Supplies,Retail,Kavango West,12,13,965575,Working Capital,48,777995,180672,1233161,1368255,71212,562,8,0,Livestock,1946263
+107,Gobabis Supplies,Tourism,Hardap,12,246,740247,Expansion,12,6611124,61430,2291276,2320484,32790,766,8,1,Inventory,4450082
+108,Gobabis Technologies,Construction,Khomas,13,74,936939,Construction,60,6408791,211129,2093742,1505073,67862,544,8,0,Vehicle,2649495
+109,Kalahari Manufacturing,Tourism,Kavango West,1,158,2260569,Working Capital,60,9596353,31637,1565090,2129655,61563,722,2,0,Inventory,4748120
+110,Gobabis Transport,Tourism,Hardap,1,189,2466543,Vehicle Purchase,12,323942,87444,2920407,3413791,64494,692,2,0,Vehicle,1574670
+111,Swakop Technologies,Logistics,Karas,1,81,1810507,Technology Upgrade,36,4622832,277425,2296563,1348914,101453,542,6,1,Savings,1921425
+112,Etosha Food Services,Technology,Kavango West,2,88,1645638,Equipment Purchase,36,7509857,557488,2718633,1917862,1989,774,4,0,Vehicle,3358962
+113,Kalahari Transport,Agriculture,Erongo,5,152,1868880,Working Capital,36,3964607,43358,2604885,1689265,43362,555,5,1,Property,1853228
+114,Etosha Farming,Food Services,Oshikoto,11,139,2177826,Expansion,48,9829449,398506,1883019,2844355,31172,729,4,0,Savings,3638903
+115,Swakop Farming,Agriculture,Khomas,1,167,532364,Construction,60,5085772,499069,1990138,2809606,30900,578,0,0,Inventory,4309488
+116,Windhoek Transport,Transport,Kavango West,4,179,1386161,Equipment Purchase,60,9460256,642247,1205078,106083,97722,535,1,0,Vehicle,486549
+117,Katima Trading,Retail,Erongo,17,107,647752,Construction,60,5439922,176784,978224,471802,105115,655,3,0,Savings,2971743
+118,Walvis Farming,Agriculture,Erongo,10,143,1516800,Expansion,12,2342654,364777,1153609,2666268,74321,717,3,0,Equipment,3082001
+119,Katima Trading,Technology,Oshikoto,13,174,77949,Vehicle Purchase,60,10926489,111879,368055,1649348,30969,563,1,0,Vehicle,4570771
+120,Luderitz Retail,Technology,Hardap,7,241,320838,Equipment Purchase,12,7474840,254532,2593824,205631,37579,575,1,0,Livestock,1516503
+121,Caprivi Manufacturing,Technology,Erongo,17,240,808208,Vehicle Purchase,48,13435772,197192,1305771,3314963,106723,812,7,1,Vehicle,1162381
+122,Etosha Manufacturing,Logistics,Hardap,4,60,2074292,Payroll Support,36,5904294,616497,2523112,2749824,58048,572,0,1,Savings,132744
+123,Windhoek Logistics,Transport,Otjozondjupa,8,27,1614367,Expansion,12,3605984,691812,1703010,831406,91668,597,8,1,Livestock,3258754
+124,Kalahari Food Services,Food Services,Erongo,15,6,2473641,Technology Upgrade,24,1537752,482351,2937216,321137,105548,704,4,0,Property,3464163
+125,Gobabis Food Services,Construction,Otjozondjupa,23,25,1114715,Working Capital,12,9335962,256460,1871583,3551204,92968,493,0,0,Equipment,324819
+126,Luderitz Construction,Transport,Karas,10,8,2067328,Construction,12,13161187,348171,2980684,1764521,21880,777,2,1,Livestock,2177682
+127,Oshana Fishing,Construction,Oshikoto,17,85,1820096,Expansion,48,4411802,663519,150308,2029945,90151,709,6,0,Vehicle,3121321
+128,Gobabis Technologies,Retail,Otjozondjupa,4,44,1548287,Working Capital,24,10288807,647567,2325465,540037,88638,534,2,0,Vehicle,3855239
+129,Otji Logistics,Technology,Oshana,10,111,867797,Payroll Support,60,4419646,84486,1344232,83393,31294,558,1,1,Vehicle,2910616
+130,Caprivi Fishing,Construction,Otjozondjupa,6,85,163362,Equipment Purchase,24,12190492,281830,199073,2640637,55456,676,3,0,Equipment,2985455
+131,Walvis Farming,Retail,Kavango East,20,55,1293222,Equipment Purchase,48,1982800,723304,1064769,2293486,84485,678,0,0,Livestock,2741809
+132,Swakop Technologies,Technology,Kavango East,13,173,380331,Equipment Purchase,24,1584927,49240,2682356,585738,49270,660,0,0,Equipment,4950256
+133,Windhoek Food Services,Mining Services,Hardap,18,64,1527600,Expansion,48,1310072,698125,1509589,1653791,87553,586,4,0,Property,4875689
+134,Namib Food Services,Food Services,Oshana,18,164,1002204,Working Capital,48,13796095,389489,2460354,2205944,80912,496,7,0,Vehicle,3400524
+135,Etosha Fishing,Transport,Hardap,2,185,2317335,Technology Upgrade,60,7351379,144177,50479,2134520,38081,450,3,1,Property,4727406
+136,Okavango Farming,Mining Services,Oshikoto,7,103,1487497,Working Capital,48,13906807,278183,1242477,2826902,28955,796,2,0,Equipment,1505547
+137,Kunene Trading,Technology,Kavango West,3,198,1046506,Technology Upgrade,24,11953595,390524,1425769,2217186,5708,563,1,0,Savings,3958287
+138,Oshana Construction,Mining Services,Hardap,5,235,1623532,Construction,12,5245120,632802,2805709,3066032,115717,841,5,0,Vehicle,931529
+139,Gobabis Construction,Food Services,Hardap,3,219,1621545,Inventory,48,11395406,398671,2342215,1429676,24867,743,3,0,Inventory,4019770
+140,Kalahari Manufacturing,Retail,Oshikoto,15,174,1544913,Inventory,60,12903892,487427,957129,321849,16071,648,4,0,Equipment,2508441
+141,Namib Manufacturing,Logistics,Oshikoto,21,29,2137723,Payroll Support,36,2320221,611930,2251992,3629824,45565,824,0,1,Vehicle,1638828
+142,Luderitz Construction,Tourism,Oshikoto,21,3,2190951,Technology Upgrade,24,2505064,40767,220110,2943560,37007,512,1,0,Inventory,4157256
+143,Windhoek Transport,Technology,Erongo,16,195,1759050,Inventory,60,1396084,159384,2595457,3822977,12430,484,2,0,Inventory,2926868
+144,Okavango Farming,Technology,Otjozondjupa,25,120,552620,Vehicle Purchase,24,4893423,625657,2609524,972826,33927,566,5,0,Vehicle,2109708
+145,Swakop Transport,Manufacturing,Oshana,19,104,1872737,Vehicle Purchase,60,14781332,60881,2171157,3118050,109039,674,1,0,Property,2358367
+146,Gobabis Manufacturing,Tourism,Hardap,2,114,2108434,Working Capital,60,14469523,357007,2721233,1890922,98108,829,5,0,Inventory,4101882
+147,Windhoek Construction,Technology,Kavango West,19,154,1064873,Expansion,12,10657501,298864,2827091,292065,33198,700,4,1,Savings,2689278
+148,Okavango Tours,Logistics,Kavango East,1,4,358557,Equipment Purchase,24,6822302,374789,882849,2480768,4825,668,5,1,Inventory,724077
+149,Namib Trading,Agriculture,Kavango East,11,119,144899,Construction,12,6404540,758423,647206,1766912,13018,738,1,0,Equipment,4818320
+150,Oshana Food Services,Transport,Oshikoto,4,204,1220392,Expansion,60,13178331,339353,2800410,2345974,58670,774,1,0,Property,3382124
+151,Erongo Logistics,Construction,Otjozondjupa,12,114,1637792,Equipment Purchase,48,3946749,43764,613542,90072,7174,787,4,0,Property,4083893
+152,Swakop Trading,Retail,Oshana,11,208,930500,Inventory,12,10024017,355516,2263992,2633916,60750,665,1,0,Savings,354106
+153,Kalahari Trading,Technology,Karas,22,164,2021373,Construction,24,1604117,577082,2439858,2782846,97445,478,4,0,Savings,1877701
+154,Kunene Retail,Retail,Oshikoto,20,210,609427,Vehicle Purchase,60,12720990,497351,807936,3423488,7661,607,0,0,Vehicle,2843911
+155,Kunene Fishing,Construction,Karas,21,214,2223695,Equipment Purchase,60,8011634,456126,2339475,1521230,16268,644,2,0,Inventory,1913934
+156,Otji Technologies,Transport,Otjozondjupa,22,16,1938333,Payroll Support,48,14739542,732021,937461,1755556,29294,844,3,0,Inventory,3306143
+157,Luderitz Tours,Retail,Oshikoto,21,244,850065,Construction,60,8562181,148291,1509380,2743773,97045,653,8,0,Inventory,3811026
+158,Okavango Manufacturing,Logistics,Kavango West,6,171,422589,Construction,12,11231019,742730,419840,2504802,17,821,3,0,Savings,3213367
+159,Walvis Supplies,Food Services,Khomas,11,219,315076,Working Capital,60,1696468,373691,1238068,701833,85211,599,6,0,Inventory,3837839
+160,Swakop Tours,Agriculture,Karas,4,169,382385,Working Capital,36,10161003,73394,338949,2323903,10880,561,5,0,Vehicle,3285285
+161,Caprivi Transport,Manufacturing,Otjozondjupa,6,17,1626121,Equipment Purchase,48,13668451,292331,417461,1794401,119688,809,0,1,Equipment,65170
+162,Caprivi Construction,Transport,Khomas,17,73,500030,Vehicle Purchase,48,3348250,420519,2228524,281123,67986,454,4,0,Inventory,3149721
+163,Walvis Construction,Mining Services,Kavango West,21,91,628664,Expansion,36,14205461,44555,1172074,3077128,116994,572,3,0,Property,2790547
+164,Gobabis Tours,Food Services,Oshana,13,50,106203,Vehicle Purchase,12,9563642,66770,331837,603744,55232,629,5,1,Vehicle,380379
+165,Etosha Technologies,Agriculture,Kavango East,4,154,1271891,Inventory,48,1301071,470530,1728163,677017,78601,653,6,0,Inventory,3531391
+166,Erongo Food Services,Tourism,Oshikoto,11,214,2387706,Working Capital,24,7997334,267983,1996331,1120034,3142,780,3,1,Property,3325847
+167,Katima Tours,Agriculture,Oshikoto,7,144,895514,Equipment Purchase,36,2199350,568229,1740298,1807341,65550,520,8,0,Property,1468706
+168,Namib Logistics,Retail,Karas,19,248,244726,Inventory,36,5419118,789043,2368064,2082139,95710,450,5,0,Savings,1245587
+169,Namib Supplies,Food Services,Oshikoto,4,219,306653,Construction,60,11095224,441585,1737047,2363492,1101,627,1,0,Equipment,2842114
+170,Gobabis Food Services,Transport,Oshikoto,7,89,75140,Expansion,12,6314021,323980,969971,1876317,16585,705,2,0,Inventory,4323041
+171,Otji Transport,Agriculture,Khomas,23,145,1420928,Working Capital,36,1340261,165166,133972,3270430,1184,506,2,0,Livestock,1256775
+172,Oshana Tours,Food Services,Kavango East,24,71,2063921,Payroll Support,36,5229285,732706,2366078,1253893,65451,645,8,1,Property,3377863
+173,Etosha Trading,Food Services,Kavango West,14,180,1399628,Expansion,36,14804101,145596,724470,2379236,117467,454,5,0,Property,3218771
+174,Windhoek Technologies,Transport,Oshana,24,219,1548235,Working Capital,36,13230983,24330,2632886,2539604,21542,740,7,1,Savings,3241750
+175,Etosha Logistics,Mining Services,Otjozondjupa,24,33,567134,Vehicle Purchase,36,10905381,570903,2913805,3179707,77880,803,7,1,Property,4044819
+176,Kalahari Tours,Technology,Karas,9,215,1989627,Working Capital,36,14098796,187101,2251624,1724276,57077,452,0,1,Vehicle,1774933
+177,Kunene Food Services,Logistics,Erongo,15,32,518185,Inventory,12,12760325,379898,1841394,1405739,105220,580,0,0,Property,3797835
+178,Okavango Trading,Construction,Erongo,4,231,2488898,Technology Upgrade,24,14978758,389088,316922,3918175,47197,615,4,0,Livestock,3269294
+179,Swakop Construction,Agriculture,Kavango East,12,215,100809,Equipment Purchase,24,8979350,145228,21077,1575057,12528,528,5,1,Livestock,3839557
+180,Luderitz Retail,Retail,Kavango East,14,213,630511,Vehicle Purchase,12,480108,134714,1547777,1202053,108048,804,8,1,Savings,1225706
+181,Katima Logistics,Food Services,Kavango West,10,249,2292919,Vehicle Purchase,12,5329919,446308,2516720,2085728,77451,460,3,0,Property,258015
+182,Swakop Logistics,Agriculture,Khomas,6,201,200709,Inventory,36,7331045,487346,2325511,3021544,41957,802,3,0,Equipment,169352
+183,Walvis Retail,Transport,Khomas,21,181,1041318,Inventory,36,12884324,368660,2344910,292151,6255,751,3,0,Inventory,1359590
+184,Gobabis Farming,Mining Services,Kavango East,2,131,1393813,Working Capital,24,11428774,576569,2169947,645202,119592,510,8,0,Property,746237
+185,Otji Transport,Manufacturing,Khomas,24,220,692757,Vehicle Purchase,48,7871799,72754,2060744,506059,2456,798,7,0,Equipment,2606018
+186,Erongo Transport,Tourism,Oshana,22,113,2198515,Equipment Purchase,48,12224397,594510,2949026,2720212,106355,668,4,0,Property,269126
+187,Otji Construction,Construction,Oshikoto,10,36,1761481,Equipment Purchase,36,3116922,701579,1567162,2995841,23517,824,1,0,Livestock,1659800
+188,Luderitz Fishing,Construction,Kavango East,24,59,390264,Payroll Support,24,8524624,394453,2114283,1314605,50605,624,2,1,Savings,4200666
+189,Kalahari Supplies,Retail,Oshana,6,240,1686901,Vehicle Purchase,12,4894456,797408,2000155,2911798,27600,640,7,0,Equipment,4026702
+190,Namib Retail,Logistics,Khomas,24,181,1802560,Technology Upgrade,24,3880117,269524,2078591,3271175,23742,694,0,0,Vehicle,4438335
+191,Oshana Farming,Agriculture,Kavango East,9,157,1953799,Vehicle Purchase,12,986081,219140,2387862,799662,44568,755,6,1,Inventory,3747871
+192,Katima Manufacturing,Retail,Hardap,2,6,1333303,Payroll Support,36,4080293,573994,1362664,789259,82865,470,2,0,Equipment,4910628
+193,Erongo Trading,Tourism,Kavango East,23,219,2389205,Vehicle Purchase,36,5245828,458264,2034223,1585022,77020,502,6,0,Equipment,4334255
+194,Gobabis Farming,Agriculture,Karas,21,59,1048370,Construction,12,3920119,292123,2166433,957268,63195,802,4,0,Inventory,448590
+195,Oshana Trading,Transport,Oshana,12,232,1664833,Construction,60,14570269,552068,2664555,1255075,118014,843,3,1,Savings,1422124
+196,Namib Supplies,Agriculture,Kavango West,14,24,1221442,Vehicle Purchase,48,14058755,404866,1508713,2180789,84612,572,0,0,Equipment,2767125
+197,Luderitz Manufacturing,Manufacturing,Kavango West,1,91,1966549,Vehicle Purchase,12,9046537,103681,2179076,2289390,35554,808,2,0,Savings,4155143
+198,Namib Manufacturing,Mining Services,Oshana,15,142,488705,Construction,60,8472746,82413,180542,903145,67700,476,3,1,Savings,3341295
+199,Windhoek Construction,Construction,Karas,12,225,2027669,Payroll Support,60,12796087,475197,2455435,859618,12478,716,3,0,Livestock,2441635
+200,Kunene Technologies,Manufacturing,Oshana,22,192,1290384,Payroll Support,24,11083503,792308,747068,2349543,21979,489,3,0,Livestock,3529390
+201,Oshana Tours,Retail,Erongo,21,100,360354,Equipment Purchase,48,9773795,59258,586475,951538,33126,575,0,0,Savings,4964122
+202,Gobabis Trading,Retail,Otjozondjupa,1,170,922277,Technology Upgrade,48,3697800,160635,2838141,1314273,16696,668,6,0,Equipment,890789
+203,Windhoek Retail,Manufacturing,Otjozondjupa,2,8,1221493,Vehicle Purchase,36,3847856,286676,2432133,1765641,62845,454,2,0,Property,3705232
+204,Gobabis Manufacturing,Construction,Kavango West,6,6,2111060,Equipment Purchase,60,14594217,28095,2211359,3927570,44142,602,0,1,Savings,403752
+205,Walvis Fishing,Retail,Karas,21,31,312142,Construction,36,9839488,353089,996882,1008827,39868,787,1,0,Savings,1492563
+206,Walvis Fishing,Agriculture,Khomas,16,75,2474205,Vehicle Purchase,60,14604368,342401,273807,3384681,59629,823,6,0,Vehicle,2279918
+207,Swakop Trading,Construction,Karas,4,151,132068,Payroll Support,24,11919612,671710,488069,2999879,7332,660,0,0,Equipment,2750002
+208,Swakop Manufacturing,Mining Services,Oshana,15,100,1940717,Vehicle Purchase,12,5115803,415301,792416,175461,108284,570,1,0,Vehicle,4019148
+209,Erongo Fishing,Retail,Erongo,7,158,982268,Expansion,12,4699985,525672,2878831,1776561,45514,706,6,0,Vehicle,125304
+210,Etosha Technologies,Tourism,Oshikoto,20,185,794316,Equipment Purchase,48,1085252,263774,1916100,3240528,70019,834,4,0,Property,1617367
+211,Windhoek Fishing,Food Services,Khomas,10,89,817262,Expansion,48,14999634,746073,210383,2377379,99248,536,2,1,Savings,2910757
+212,Gobabis Manufacturing,Mining Services,Erongo,9,190,733257,Working Capital,36,370090,576610,82935,2339337,4367,727,4,0,Vehicle,1126468
+213,Oshana Food Services,Food Services,Kavango West,2,25,2201405,Inventory,48,9272084,329744,1744079,1081858,56696,575,8,0,Vehicle,337604
+214,Swakop Tours,Manufacturing,Otjozondjupa,14,72,468018,Inventory,60,9547812,248164,926128,903202,95494,694,6,1,Vehicle,3326466
+215,Otji Logistics,Tourism,Otjozondjupa,25,45,1836442,Working Capital,24,1076589,662466,1657831,475685,51013,489,7,0,Inventory,3856311
+216,Namib Fishing,Retail,Oshana,21,58,998178,Equipment Purchase,12,5892628,774319,1459846,1141885,71257,734,0,0,Savings,2729290
+217,Oshana Supplies,Food Services,Khomas,23,14,1407687,Inventory,60,14173518,212703,1273753,3827060,109010,640,1,0,Property,1741068
+218,Walvis Manufacturing,Transport,Oshikoto,4,75,1061566,Working Capital,60,6100532,783773,2358144,111568,38126,828,7,0,Property,1031746
+219,Caprivi Logistics,Manufacturing,Hardap,13,98,1145462,Vehicle Purchase,36,5900282,79826,1789921,1392321,11243,649,6,0,Savings,404250
+220,Kalahari Tours,Construction,Khomas,4,6,2265790,Technology Upgrade,12,10898978,785691,1587072,1102142,91829,760,1,0,Vehicle,626694
+221,Katima Retail,Construction,Oshana,3,114,879817,Inventory,48,2604992,622207,1312156,3389622,87563,591,2,1,Savings,3217465
+222,Kalahari Technologies,Transport,Khomas,25,104,1473065,Technology Upgrade,48,14981189,734556,2383477,3752370,70012,540,0,0,Livestock,3898180
+223,Kunene Trading,Transport,Hardap,5,59,1930430,Working Capital,36,1406450,600757,2112930,3912568,17415,812,3,0,Vehicle,3301207
+224,Katima Trading,Transport,Khomas,1,27,912914,Payroll Support,24,8468446,502444,414747,1189815,58673,490,0,0,Savings,137431
+225,Katima Fishing,Tourism,Karas,17,136,905708,Expansion,36,12096000,95748,1797479,2539349,85752,814,6,0,Savings,2028591
+226,Kunene Farming,Tourism,Khomas,15,140,1358158,Technology Upgrade,60,13008942,611690,523947,2909996,913,635,0,0,Property,1662563
+227,Erongo Fishing,Food Services,Hardap,21,7,1485623,Construction,12,13993784,726841,951972,1763793,66055,793,0,0,Inventory,3433062
+228,Namib Manufacturing,Food Services,Otjozondjupa,24,119,1657171,Inventory,36,13522672,29731,1288928,3826242,33102,746,1,0,Livestock,2943949
+229,Walvis Logistics,Manufacturing,Erongo,1,14,2427955,Construction,60,1200789,182219,1751845,2301795,49703,728,8,0,Livestock,3250560
+230,Namib Fishing,Tourism,Oshana,17,148,2172754,Construction,24,11427401,86514,1379496,3277525,31048,618,2,0,Inventory,843022
+231,Windhoek Food Services,Tourism,Erongo,5,94,619250,Expansion,36,1238451,90629,1950637,1644458,46577,649,2,0,Property,1971333
+232,Gobabis Farming,Manufacturing,Kavango East,17,221,1403966,Inventory,48,13917601,536948,1246438,2734154,23516,761,4,0,Vehicle,1831962
+233,Caprivi Farming,Retail,Kavango East,19,95,1377175,Payroll Support,24,7892727,385959,209350,3589950,118105,487,0,1,Property,4184946
+234,Caprivi Food Services,Agriculture,Hardap,4,169,1280492,Equipment Purchase,36,12293656,585629,1651470,1765032,21200,735,7,1,Vehicle,1339299
+235,Otji Logistics,Retail,Oshikoto,18,220,2478523,Vehicle Purchase,12,2162925,203250,1369573,1020068,104282,642,6,1,Equipment,4440583
+236,Luderitz Fishing,Agriculture,Erongo,24,63,2420858,Payroll Support,36,3860344,518273,2965698,572495,95702,805,2,1,Vehicle,3305294
+237,Katima Tours,Transport,Khomas,11,88,1312909,Expansion,12,14345419,185393,1819193,1731182,63042,519,5,1,Vehicle,844990
+238,Namib Manufacturing,Construction,Kavango East,9,155,2123119,Working Capital,24,13050765,218219,2032824,1650551,108956,472,8,0,Property,1949296
+239,Swakop Retail,Logistics,Karas,20,216,855182,Vehicle Purchase,48,9175662,138733,2807204,356930,53133,612,4,0,Property,334525
+240,Oshana Fishing,Mining Services,Erongo,22,186,1498780,Payroll Support,60,12869629,735438,1496600,3842077,87857,584,0,0,Inventory,3671312
+241,Luderitz Technologies,Logistics,Khomas,7,186,1118173,Construction,48,6055092,151435,992488,984500,10398,457,2,0,Livestock,3599966
+242,Etosha Logistics,Mining Services,Hardap,6,45,314749,Payroll Support,48,2457082,502578,1082505,191203,30846,774,8,0,Livestock,554409
+243,Erongo Food Services,Manufacturing,Kavango West,12,212,1076447,Working Capital,36,2471616,647252,1656227,3454516,104532,638,0,1,Vehicle,2598128
+244,Caprivi Fishing,Logistics,Erongo,2,151,1612514,Equipment Purchase,12,4415143,582772,2663357,3255386,17280,595,8,1,Inventory,1772353
+245,Kalahari Trading,Technology,Erongo,17,155,1547648,Technology Upgrade,60,8471008,688743,2045560,2463754,64752,738,4,0,Vehicle,959630
+246,Otji Retail,Transport,Kavango West,6,192,1816067,Equipment Purchase,60,1847999,118280,1992759,420520,17696,687,4,0,Vehicle,3241051
+247,Gobabis Trading,Logistics,Erongo,6,117,2273680,Construction,60,6709844,532608,157578,2810074,38835,738,8,0,Vehicle,1748899
+248,Okavango Transport,Logistics,Kavango East,25,156,1860950,Technology Upgrade,48,12759521,563545,777834,3951859,28262,687,0,0,Savings,1959751
+249,Okavango Transport,Logistics,Karas,13,46,1638355,Vehicle Purchase,48,8514383,308517,183645,3683915,45769,848,4,0,Vehicle,2864644
+250,Katima Manufacturing,Agriculture,Khomas,7,165,244567,Construction,36,3879938,50462,1208903,1430610,51759,523,7,0,Livestock,1161789
+251,Windhoek Logistics,Retail,Oshikoto,22,227,2365321,Payroll Support,12,14226642,131631,2085035,2695076,22133,846,7,0,Savings,3703897
+252,Etosha Manufacturing,Manufacturing,Kavango East,9,181,1083069,Equipment Purchase,36,14357884,783301,285210,677402,69722,496,1,0,Vehicle,1677380
+253,Luderitz Trading,Technology,Erongo,21,43,1647148,Vehicle Purchase,12,12795349,541153,2916045,2243236,117492,520,5,0,Vehicle,3909964
+254,Etosha Fishing,Food Services,Khomas,4,153,1726306,Equipment Purchase,60,1854451,697605,1753890,3630250,34199,567,6,0,Vehicle,1032414
+255,Erongo Farming,Mining Services,Oshikoto,13,118,186941,Inventory,12,11773598,169789,1569903,2231846,32815,654,7,0,Property,1963198
+256,Swakop Farming,Tourism,Kavango West,11,6,779754,Expansion,24,3101152,730134,114244,3070889,69455,610,2,0,Inventory,385834
+257,Okavango Construction,Tourism,Otjozondjupa,6,68,969800,Equipment Purchase,60,14098701,156035,1143163,2431739,46346,687,3,0,Property,2974229
+258,Etosha Transport,Food Services,Kavango West,5,243,825056,Inventory,60,13640740,483008,2620870,733115,113971,821,5,0,Vehicle,3429821
+259,Gobabis Food Services,Mining Services,Oshana,5,12,1277269,Equipment Purchase,60,5604055,504438,673252,257687,58048,500,8,0,Savings,928327
+260,Oshana Trading,Agriculture,Erongo,10,82,871028,Vehicle Purchase,36,2023449,320435,1854084,3961146,106303,534,0,0,Savings,3537168
+261,Luderitz Farming,Tourism,Kavango West,4,141,561345,Working Capital,24,6649081,404798,894466,2172936,108692,596,5,0,Property,1788557
+262,Gobabis Transport,Food Services,Erongo,11,171,566924,Working Capital,36,13135920,54373,1805263,1538732,30898,627,1,0,Inventory,4501320
+263,Walvis Construction,Retail,Kavango East,5,78,2494502,Payroll Support,12,14367219,499077,1882155,116553,27644,636,1,1,Inventory,3529431
+264,Windhoek Construction,Technology,Oshana,6,207,1966099,Construction,36,415632,35532,1534925,1215364,15101,756,8,0,Equipment,4736908
+265,Windhoek Logistics,Agriculture,Oshikoto,17,242,99640,Technology Upgrade,12,3396318,798683,1270440,1032335,79113,696,5,1,Livestock,1284713
+266,Etosha Retail,Food Services,Otjozondjupa,22,77,1534434,Equipment Purchase,24,14401561,596892,1901060,2388894,76513,709,2,0,Savings,4546857
+267,Etosha Tours,Transport,Oshana,16,135,1112119,Payroll Support,24,13850005,441175,1855723,920200,72212,450,2,1,Inventory,283179
+268,Swakop Supplies,Technology,Kavango East,10,56,1192273,Technology Upgrade,48,11776731,29271,1039341,1887452,87343,658,1,0,Equipment,708148
+269,Caprivi Fishing,Manufacturing,Kavango West,4,98,229843,Equipment Purchase,24,2997504,167706,2626581,1513167,112884,710,6,0,Property,1580048
+270,Windhoek Trading,Retail,Oshikoto,6,60,673648,Inventory,24,13679813,120577,276353,307500,669,485,5,0,Savings,3118531
+271,Kunene Construction,Logistics,Karas,4,148,1374225,Payroll Support,60,14559136,473565,1496090,1432358,26557,765,4,0,Vehicle,1898222
+272,Otji Food Services,Manufacturing,Kavango West,25,185,1657293,Construction,36,1387409,509919,2286129,3470078,7956,510,4,0,Livestock,4946833
+273,Caprivi Trading,Mining Services,Karas,11,180,750031,Technology Upgrade,12,4206860,21371,1960093,2227715,19969,686,4,0,Vehicle,729132
+274,Kalahari Food Services,Technology,Hardap,15,56,1963302,Vehicle Purchase,36,5971432,173633,2523254,1848984,100411,571,3,1,Inventory,269464
+275,Gobabis Retail,Tourism,Oshana,24,149,993225,Equipment Purchase,24,5779860,603736,2527070,667222,26177,670,3,0,Inventory,3151490
+276,Kunene Transport,Food Services,Kavango East,13,80,2211288,Expansion,48,3314302,684141,2559143,2579308,52569,541,3,0,Equipment,4931596
+277,Otji Trading,Food Services,Erongo,17,60,2276847,Vehicle Purchase,12,1179160,65326,1235710,627169,26687,575,3,0,Savings,4462930
+278,Swakop Trading,Manufacturing,Erongo,24,60,2149227,Vehicle Purchase,12,8356860,733998,799610,3328102,79279,644,0,0,Savings,403849
+279,Namib Transport,Construction,Kavango East,22,35,1158034,Inventory,12,13765880,381151,2996662,2863198,118263,610,0,0,Vehicle,4400914
+280,Swakop Trading,Food Services,Karas,18,47,2402135,Payroll Support,48,4418812,95691,2999091,2253614,93962,529,4,0,Vehicle,4219558
+281,Kunene Logistics,Agriculture,Khomas,24,25,282223,Expansion,48,7509628,499065,2804220,1675298,54725,771,4,1,Savings,3307926
+282,Etosha Trading,Technology,Otjozondjupa,12,144,1139639,Working Capital,48,14832657,465014,387451,478803,8672,587,5,0,Inventory,500059
+283,Etosha Farming,Food Services,Oshikoto,5,248,615375,Expansion,12,11409342,350974,2846953,3274362,10046,752,6,1,Savings,749411
+284,Windhoek Retail,Mining Services,Karas,4,16,1383901,Working Capital,60,11705539,183508,651406,2667288,114456,588,4,1,Vehicle,1518740
+285,Gobabis Supplies,Transport,Hardap,24,113,826093,Equipment Purchase,48,8639757,140915,2023543,3736379,46998,727,0,0,Livestock,1800630
+286,Erongo Manufacturing,Logistics,Oshana,20,140,1265947,Equipment Purchase,36,13673968,264717,358887,441570,78783,600,0,0,Equipment,3590635
+287,Erongo Food Services,Construction,Khomas,14,105,81616,Vehicle Purchase,36,7181400,165071,1417024,2861060,11367,564,8,0,Property,348079
+288,Erongo Trading,Construction,Kavango West,18,63,1303035,Expansion,24,3395092,99569,1455462,3983349,38966,526,8,0,Savings,2478208
+289,Namib Food Services,Logistics,Oshana,21,49,2227006,Vehicle Purchase,36,11199695,346087,1463005,1029634,61323,456,7,0,Inventory,2814745
+290,Gobabis Retail,Logistics,Karas,23,12,1570340,Equipment Purchase,60,14555666,303386,1128088,2140774,25773,559,6,0,Savings,1233766
+291,Namib Technologies,Tourism,Oshikoto,14,179,1033038,Inventory,24,11789175,554946,902650,2411692,95796,696,8,1,Property,4470086
+292,Kalahari Transport,Agriculture,Kavango West,22,36,95765,Working Capital,48,11803791,480442,2587063,1760611,65536,834,2,0,Inventory,4220521
+293,Katima Construction,Transport,Otjozondjupa,21,246,1049134,Inventory,36,3474888,338180,1156802,399976,11019,489,2,0,Vehicle,2293705
+294,Walvis Food Services,Manufacturing,Kavango West,12,239,440912,Inventory,24,7296549,647648,1560331,2101663,66299,722,2,0,Livestock,4985435
+295,Luderitz Retail,Technology,Khomas,5,41,1032485,Vehicle Purchase,60,6974092,598248,1766330,3781875,1819,547,6,0,Inventory,3167838
+296,Okavango Construction,Agriculture,Kavango East,14,32,397220,Inventory,12,13818441,146238,979867,2535655,112063,661,7,1,Equipment,4401693
+297,Katima Transport,Manufacturing,Hardap,6,187,1629094,Expansion,48,12052191,477192,2570431,3490206,17758,640,1,0,Equipment,4172896
+298,Erongo Farming,Agriculture,Khomas,13,229,2413402,Inventory,60,14038458,562824,1646070,3720108,90495,512,4,0,Livestock,208975
+299,Windhoek Construction,Logistics,Hardap,4,4,495398,Payroll Support,60,12526074,477534,1217317,3188918,109533,502,7,0,Vehicle,1627908
+300,Swakop Retail,Retail,Karas,9,151,1673785,Expansion,12,7960508,319740,1786239,2726244,40201,498,5,0,Vehicle,667864
+301,Oshana Fishing,Construction,Kavango West,12,95,154691,Equipment Purchase,12,2587104,660232,1560352,755394,119254,576,6,0,Vehicle,4222732
+302,Kalahari Technologies,Transport,Erongo,3,158,949221,Inventory,60,2638967,585084,1973428,3702057,36888,574,1,0,Livestock,1505459
+303,Namib Supplies,Tourism,Khomas,14,124,2328666,Technology Upgrade,60,9353227,719166,144889,1647462,45107,558,0,0,Inventory,2252952
+304,Oshana Trading,Manufacturing,Otjozondjupa,16,235,435979,Equipment Purchase,24,11101107,197329,1241084,3519548,68670,728,7,0,Property,3513222
+305,Otji Transport,Agriculture,Khomas,21,198,1510042,Technology Upgrade,60,814963,85732,1454987,1316532,47257,457,5,1,Livestock,1108899
+306,Erongo Logistics,Agriculture,Oshana,5,50,2001496,Construction,60,14816868,201743,1145324,2006761,48461,791,8,0,Vehicle,4350093
+307,Caprivi Transport,Tourism,Oshana,18,105,1660365,Expansion,24,10155971,794938,1496259,2725860,111853,703,1,0,Livestock,1928804
+308,Caprivi Transport,Technology,Erongo,23,92,1403413,Working Capital,60,7657868,485696,2725593,856664,40438,717,1,0,Livestock,4306383
+309,Namib Tours,Retail,Oshana,7,221,1287741,Equipment Purchase,12,2063885,562947,427945,2278190,3157,736,1,0,Equipment,1744697
+310,Kunene Trading,Agriculture,Oshana,9,127,720730,Construction,48,7338611,280233,10582,962339,64608,512,8,0,Livestock,2968032
+311,Gobabis Retail,Agriculture,Khomas,6,12,193243,Construction,24,12265248,218295,300550,2494089,43721,530,4,0,Livestock,628363
+312,Windhoek Farming,Retail,Oshikoto,4,129,220508,Inventory,12,5669008,509859,2395455,2456243,104620,773,0,0,Inventory,4199092
+313,Katima Farming,Construction,Kavango East,8,43,1324090,Equipment Purchase,36,13644600,746468,1553043,3038733,35045,525,0,0,Vehicle,762922
+314,Okavango Tours,Logistics,Oshana,3,75,1317161,Inventory,24,11885487,608430,1584254,1067131,72429,764,3,0,Livestock,2773638
+315,Kunene Food Services,Mining Services,Oshana,15,97,1665948,Vehicle Purchase,60,9248280,133660,1971665,2160691,3625,753,0,0,Savings,4464426
+316,Otji Supplies,Construction,Kavango East,6,107,2009575,Vehicle Purchase,36,8577800,126437,1513272,1389829,49444,807,4,1,Vehicle,4412073
+317,Walvis Manufacturing,Logistics,Hardap,11,25,1134654,Payroll Support,12,2881917,794773,1451838,3162706,69840,485,2,1,Vehicle,441557
+318,Windhoek Technologies,Manufacturing,Kavango East,14,126,1591480,Equipment Purchase,48,8978364,578192,2568228,1152494,66611,727,5,0,Property,850416
+319,Namib Fishing,Retail,Oshikoto,2,95,2396526,Equipment Purchase,36,2288250,273074,1300588,593752,94420,831,4,0,Vehicle,2677764
+320,Okavango Tours,Agriculture,Kavango East,17,228,1859897,Technology Upgrade,24,8900758,246165,2987593,578019,108113,500,2,0,Savings,2276073
+321,Kalahari Supplies,Manufacturing,Hardap,14,118,612313,Expansion,36,8153090,439871,593575,2339865,9106,723,0,1,Equipment,223426
+322,Katima Logistics,Manufacturing,Otjozondjupa,24,108,51787,Construction,36,8565350,422244,1988723,3548571,59865,517,3,1,Equipment,427381
+323,Etosha Construction,Tourism,Karas,15,66,1524374,Technology Upgrade,12,8942025,405164,1597732,2511612,50007,458,1,1,Vehicle,1744684
+324,Walvis Logistics,Mining Services,Hardap,24,18,2311992,Equipment Purchase,60,6980625,331545,1109529,2301527,56904,825,7,0,Livestock,4604787
+325,Katima Construction,Transport,Hardap,12,16,309421,Working Capital,24,3828161,207950,1012969,2171885,26459,848,3,0,Savings,3254588
+326,Namib Trading,Construction,Karas,7,79,2366692,Technology Upgrade,48,7356422,90226,819490,2213235,10343,781,0,0,Savings,2021847
+327,Oshana Fishing,Retail,Kavango West,4,64,69566,Expansion,36,10597931,689881,2955040,2917904,94641,670,5,0,Livestock,525255
+328,Erongo Trading,Technology,Otjozondjupa,22,35,1782266,Working Capital,36,2995910,729860,469692,830718,13141,491,3,0,Inventory,3882703
+329,Etosha Supplies,Food Services,Hardap,17,101,1815538,Technology Upgrade,24,6326375,556006,479323,3768201,3510,829,1,0,Savings,1481936
+330,Oshana Technologies,Retail,Karas,2,188,2017626,Working Capital,12,9932515,567901,181219,3173208,45556,652,8,0,Livestock,3059337
+331,Windhoek Supplies,Agriculture,Hardap,11,55,441085,Expansion,24,4267733,36730,1652796,3174338,94980,452,5,0,Property,3239197
+332,Gobabis Trading,Logistics,Oshikoto,11,57,820857,Equipment Purchase,36,8530410,622375,2895897,1788020,99732,562,7,0,Inventory,817107
+333,Katima Construction,Construction,Karas,23,163,140862,Equipment Purchase,36,3130069,430901,2163783,3418207,58843,836,0,0,Equipment,345929
+334,Etosha Construction,Construction,Oshana,17,73,1083317,Payroll Support,48,6974294,167261,409069,112341,69515,542,8,1,Property,1490069
+335,Windhoek Farming,Mining Services,Kavango West,12,246,679665,Working Capital,24,2333324,299908,1862210,863709,113377,476,7,1,Inventory,1290332
+336,Gobabis Supplies,Food Services,Kavango West,12,29,949446,Expansion,60,13843217,723497,2836087,347265,76874,628,7,1,Equipment,985937
+337,Kalahari Technologies,Construction,Kavango West,17,199,1646160,Equipment Purchase,48,5182923,259948,12825,1941337,93940,519,8,1,Savings,4978498
+338,Namib Construction,Construction,Hardap,21,197,2373352,Construction,24,10663216,156782,1877876,3857188,50480,480,7,0,Savings,1362249
+339,Swakop Trading,Transport,Otjozondjupa,8,223,1220953,Payroll Support,12,5039972,649326,1069082,3969810,64628,618,7,0,Inventory,3262861
+340,Oshana Technologies,Construction,Karas,5,118,130028,Expansion,12,10542014,530527,2696894,1576841,95259,692,7,0,Inventory,3233864
+341,Namib Construction,Logistics,Otjozondjupa,13,242,1550893,Expansion,12,3822033,483353,1025434,2944560,18462,495,3,0,Livestock,2225236
+342,Windhoek Tours,Retail,Karas,3,226,273292,Vehicle Purchase,60,11858911,515434,1592907,1328324,39584,786,8,0,Vehicle,2859232
+343,Windhoek Construction,Logistics,Karas,19,102,1756896,Expansion,60,4621286,313871,819493,2528311,37796,536,4,0,Vehicle,1327288
+344,Etosha Trading,Logistics,Kavango East,6,52,2444036,Vehicle Purchase,12,14173916,24273,392859,3164897,29065,590,7,0,Equipment,4948538
+345,Katima Farming,Manufacturing,Kavango East,5,58,705512,Payroll Support,12,3676996,786239,1518043,3012991,45353,705,3,0,Equipment,2865385
+346,Kunene Manufacturing,Tourism,Karas,20,168,1002372,Vehicle Purchase,60,14394504,215894,2209591,2274558,82330,690,0,0,Livestock,3838701
+347,Gobabis Supplies,Tourism,Kavango East,17,106,352426,Working Capital,48,458803,85411,1735234,3530496,85212,779,3,0,Inventory,3457361
+348,Swakop Transport,Food Services,Karas,16,155,1180011,Working Capital,12,4952951,615927,375636,2435864,54169,557,7,0,Savings,2409396
+349,Katima Technologies,Tourism,Hardap,14,219,626846,Expansion,36,13453767,143210,1858517,3455975,83585,497,0,0,Equipment,3022507
+350,Okavango Farming,Transport,Erongo,2,128,1807436,Construction,12,11823643,167734,153217,480718,101109,686,2,1,Savings,4079914
+351,Namib Supplies,Agriculture,Oshikoto,9,202,519404,Inventory,36,8232295,477614,2235045,1940874,11830,662,0,0,Livestock,3415310
+352,Gobabis Fishing,Logistics,Oshana,10,184,169625,Inventory,12,9857356,370957,314973,1852551,42926,711,3,1,Livestock,2279347
+353,Gobabis Supplies,Tourism,Oshikoto,1,245,1670794,Inventory,36,12855631,105236,2800900,3527459,116245,652,2,0,Property,1305755
+354,Okavango Tours,Tourism,Oshikoto,22,167,585443,Payroll Support,60,9055106,239203,2718539,2024176,15131,519,1,0,Vehicle,4238179
+355,Luderitz Retail,Logistics,Khomas,7,188,681656,Technology Upgrade,24,6518097,628601,2545465,3085036,89755,834,7,0,Savings,2591626
+356,Etosha Fishing,Retail,Kavango West,23,232,1294175,Equipment Purchase,60,12028815,56565,1365831,3750889,97792,824,1,1,Vehicle,446484
+357,Walvis Construction,Agriculture,Otjozondjupa,9,53,605031,Equipment Purchase,60,669586,197234,2241369,1917615,88486,465,4,0,Livestock,2764915
+358,Windhoek Technologies,Tourism,Kavango West,15,197,1983628,Working Capital,24,7547441,628753,2643707,3082089,29441,531,4,0,Livestock,2933184
+359,Oshana Farming,Retail,Oshikoto,7,38,1471700,Construction,48,9489030,425009,2796399,46576,54667,584,2,1,Livestock,2464780
+360,Erongo Retail,Logistics,Karas,20,228,1833036,Equipment Purchase,60,9032855,402444,388885,897348,116222,576,1,1,Property,1873170
+361,Walvis Fishing,Tourism,Kavango West,3,139,1701504,Technology Upgrade,36,11804882,688944,1676687,1395946,64062,548,5,0,Inventory,1302256
+362,Namib Trading,Retail,Karas,23,42,970850,Inventory,48,2044082,148248,1231860,1347111,110611,610,4,0,Vehicle,218332
+363,Okavango Technologies,Agriculture,Hardap,15,182,153933,Working Capital,36,3133645,81811,1675512,1230539,110668,483,8,1,Vehicle,3922066
+364,Kunene Tours,Tourism,Erongo,25,120,212507,Working Capital,12,5702437,739489,2959390,846787,39673,818,2,0,Livestock,1476586
+365,Swakop Fishing,Agriculture,Oshikoto,21,147,1085226,Inventory,48,6160740,473377,2698165,2000541,58189,837,0,0,Vehicle,3358208
+366,Kunene Trading,Retail,Khomas,23,106,657639,Equipment Purchase,24,621419,216258,1812871,3510152,10887,732,4,0,Inventory,2821987
+367,Caprivi Manufacturing,Tourism,Oshikoto,25,129,1333261,Working Capital,60,2339883,608626,2281258,3505753,104785,810,8,1,Savings,1447359
+368,Namib Construction,Logistics,Erongo,2,40,186158,Expansion,24,5122221,708897,1610053,1652358,46394,793,6,0,Inventory,3382464
+369,Kunene Trading,Manufacturing,Karas,1,96,1928632,Vehicle Purchase,24,9276788,538348,319796,3526580,93885,630,4,0,Savings,2292135
+370,Katima Retail,Construction,Kavango West,21,192,1064671,Inventory,48,714961,323791,2128311,3360663,70798,593,1,0,Inventory,4988347
+371,Namib Supplies,Logistics,Oshana,9,182,2233339,Equipment Purchase,48,5593484,666289,159049,2351975,93017,663,5,0,Inventory,4151811
+372,Swakop Supplies,Manufacturing,Oshikoto,2,250,1782494,Vehicle Purchase,36,14553350,501395,1136643,1223840,34782,526,2,0,Savings,438792
+373,Otji Fishing,Manufacturing,Khomas,14,37,1258237,Payroll Support,24,8070636,217989,1704546,363549,28729,744,0,0,Inventory,2218346
+374,Windhoek Technologies,Agriculture,Karas,5,42,2172874,Working Capital,36,8495078,486424,493655,3096539,9251,615,1,0,Property,1529311
+375,Otji Supplies,Food Services,Oshana,2,61,656801,Working Capital,12,10512749,331886,1617610,1684853,119559,529,0,1,Property,2275642
+376,Oshana Technologies,Construction,Kavango East,19,53,501996,Equipment Purchase,36,14138695,662600,1370865,3361150,15823,842,8,1,Equipment,320913
+377,Etosha Construction,Tourism,Erongo,6,27,116090,Inventory,36,5438536,205247,2423461,2335537,100540,493,0,0,Vehicle,1571154
+378,Katima Tours,Technology,Otjozondjupa,19,85,1882248,Payroll Support,36,5677608,120269,2097424,1193962,119622,505,1,1,Equipment,1870135
+379,Windhoek Logistics,Logistics,Khomas,22,75,1961279,Construction,24,2227245,568998,1579869,1402951,115226,633,8,0,Vehicle,2005634
+380,Walvis Tours,Tourism,Erongo,25,98,2019797,Vehicle Purchase,48,12589738,419660,465214,1933215,71136,803,0,0,Livestock,911659
+381,Caprivi Manufacturing,Technology,Erongo,14,119,1329829,Payroll Support,12,6827668,456072,2816277,3203727,48489,467,5,0,Inventory,3085188
+382,Luderitz Transport,Logistics,Kavango East,12,43,2185479,Technology Upgrade,36,11083531,38636,1791254,2550625,52937,805,0,0,Property,1196967
+383,Swakop Retail,Manufacturing,Erongo,18,77,259343,Vehicle Purchase,24,740429,783277,2274425,3375007,48675,510,0,1,Inventory,3804031
+384,Caprivi Construction,Retail,Khomas,14,201,1827192,Inventory,48,9540512,553075,707870,1820043,75731,850,3,0,Savings,4731204
+385,Gobabis Technologies,Agriculture,Erongo,8,171,1568897,Working Capital,36,1557049,515167,32742,3579983,14325,767,3,0,Equipment,673446
+386,Etosha Tours,Transport,Kavango West,17,118,324031,Working Capital,24,13296235,524137,2065289,982805,115889,455,3,0,Vehicle,928439
+387,Luderitz Manufacturing,Agriculture,Kavango East,2,144,1804124,Construction,24,8969079,59016,1944806,2506194,61160,610,7,0,Inventory,3254287
+388,Namib Farming,Tourism,Khomas,25,163,1449514,Payroll Support,12,4898793,360939,2738701,1710381,68883,849,4,0,Property,2455494
+389,Erongo Trading,Technology,Hardap,18,75,2015111,Expansion,12,12315367,88625,2679012,1349221,42254,450,5,0,Property,2831597
+390,Windhoek Construction,Mining Services,Erongo,21,20,1784706,Expansion,36,11110104,366420,237211,930405,31221,560,8,0,Property,2530526
+391,Caprivi Retail,Food Services,Hardap,2,143,1855914,Inventory,36,2633013,39318,2032447,1236093,25225,740,0,0,Savings,4202145
+392,Gobabis Manufacturing,Food Services,Erongo,7,96,1208504,Construction,12,9100318,157973,1727185,2006732,109095,761,2,0,Vehicle,2307691
+393,Oshana Logistics,Technology,Oshikoto,20,143,835540,Technology Upgrade,12,8804356,610925,836617,1042192,11582,490,6,1,Inventory,1139421
+394,Caprivi Construction,Agriculture,Erongo,9,170,1163982,Technology Upgrade,12,4489987,711392,1993501,1598191,74608,849,1,1,Livestock,1882140
+395,Okavango Fishing,Technology,Otjozondjupa,8,183,756633,Construction,36,13376768,658918,2341220,801943,16801,711,6,0,Property,4683629
+396,Namib Transport,Construction,Hardap,5,115,2433406,Inventory,36,9323558,583141,2005772,3577940,85333,656,5,0,Property,1966441
+397,Swakop Supplies,Tourism,Khomas,7,189,1276358,Vehicle Purchase,36,1398234,614927,1019758,263403,79786,501,8,0,Property,4468497
+398,Windhoek Farming,Tourism,Oshikoto,17,40,2230852,Working Capital,48,2864151,502640,2677705,11399,70928,708,4,0,Livestock,2249702
+399,Oshana Logistics,Technology,Oshana,25,18,1491234,Inventory,36,13237911,198215,2762318,574286,13859,731,6,0,Livestock,3095360
+400,Kalahari Fishing,Construction,Oshana,2,212,1174320,Payroll Support,12,14140483,505587,571260,3087244,56322,682,8,0,Livestock,1122395
+401,Okavango Manufacturing,Technology,Kavango West,18,232,66423,Construction,48,11050209,533260,2741190,1791157,114240,664,8,0,Vehicle,949082
+402,Etosha Farming,Tourism,Oshana,12,165,1032208,Equipment Purchase,60,14783108,550148,67369,2212851,68013,633,5,0,Inventory,110211
+403,Otji Logistics,Agriculture,Kavango West,7,218,621719,Technology Upgrade,60,592639,306587,1161374,1004549,7826,757,2,1,Inventory,4362333
+404,Katima Technologies,Manufacturing,Hardap,16,61,211012,Payroll Support,36,8594140,442450,927884,1356556,47097,558,1,0,Property,1860639
+405,Caprivi Farming,Transport,Kavango West,2,41,2485294,Equipment Purchase,36,8868013,647084,1635684,2054512,104379,828,4,0,Vehicle,140288
+406,Otji Manufacturing,Retail,Karas,23,105,674988,Working Capital,24,3703291,235734,1502598,1985891,97375,731,6,0,Property,776457
+407,Gobabis Tours,Construction,Erongo,15,18,719798,Payroll Support,12,11194069,789835,961157,2326990,18928,838,6,0,Savings,852230
+408,Windhoek Construction,Tourism,Oshikoto,8,152,1127792,Working Capital,60,9483561,436968,2433787,1848921,60655,567,7,0,Inventory,64033
+409,Etosha Supplies,Transport,Hardap,3,151,506438,Vehicle Purchase,24,10756408,272729,1785762,1140096,62991,835,6,1,Equipment,796719
+410,Walvis Trading,Technology,Oshana,24,167,2150484,Payroll Support,12,1304444,568735,1458682,1836059,63512,514,3,0,Livestock,2208145
+411,Gobabis Supplies,Logistics,Khomas,10,14,602890,Payroll Support,48,2282921,595902,507554,1708350,71299,629,7,0,Savings,4558657
+412,Okavango Manufacturing,Food Services,Oshikoto,3,186,490249,Vehicle Purchase,12,2843109,90378,1749997,1958591,60405,625,2,0,Equipment,4826876
+413,Namib Manufacturing,Logistics,Oshana,19,52,1945424,Payroll Support,36,3007998,112283,1613825,1339083,60301,573,7,0,Equipment,3248874
+414,Windhoek Tours,Retail,Otjozondjupa,10,34,671878,Working Capital,24,12486059,713526,148912,1055007,87962,754,4,0,Vehicle,352867
+415,Namib Technologies,Technology,Erongo,2,218,397722,Working Capital,60,1899998,471247,2756008,3023494,94513,816,1,0,Vehicle,234886
+416,Windhoek Logistics,Mining Services,Khomas,23,71,2456265,Expansion,60,7539131,577154,2061112,2067433,80681,489,4,0,Vehicle,348842
+417,Otji Food Services,Logistics,Erongo,12,184,1254714,Payroll Support,36,6621211,573883,598431,2486268,1208,721,6,0,Equipment,650555
+418,Erongo Supplies,Tourism,Oshikoto,12,106,1840997,Construction,48,5757106,357604,1784445,510857,93107,486,2,1,Livestock,1132325
+419,Luderitz Retail,Construction,Oshana,23,50,1058228,Payroll Support,60,9881691,36140,2488883,3107678,117937,583,7,1,Savings,811486
+420,Katima Technologies,Transport,Otjozondjupa,21,56,2037585,Expansion,36,13606020,169967,696333,1551705,46257,832,8,0,Savings,4672349
+421,Luderitz Transport,Tourism,Oshana,6,94,1231103,Working Capital,24,7722527,452750,1158957,2139129,30467,830,3,0,Inventory,3199804
+422,Oshana Farming,Manufacturing,Otjozondjupa,19,241,897307,Payroll Support,48,1135436,484427,1067261,3276877,23513,667,6,0,Vehicle,1960373
+423,Kalahari Transport,Tourism,Oshana,12,175,176695,Vehicle Purchase,24,12807803,622251,1804196,2112174,56947,551,7,0,Livestock,1369950
+424,Walvis Retail,Agriculture,Khomas,18,4,1092370,Expansion,60,9004915,520405,2587216,3285795,32497,700,0,0,Livestock,3051004
+425,Kalahari Trading,Retail,Kavango West,18,105,2471940,Construction,24,8332307,265259,2689396,1158229,70833,502,2,0,Livestock,4236364
+426,Katima Fishing,Transport,Kavango West,2,100,1301489,Working Capital,48,8193302,645282,465080,1527229,102016,636,5,0,Property,3587478
+427,Luderitz Construction,Food Services,Hardap,23,68,1980119,Vehicle Purchase,24,7138880,82285,743514,168756,90656,623,0,0,Livestock,3559295
+428,Kalahari Food Services,Technology,Kavango East,17,63,2327806,Working Capital,36,8667434,495969,2971026,2236037,55107,830,3,0,Savings,1945007
+429,Oshana Technologies,Technology,Khomas,14,208,1944630,Technology Upgrade,48,6125760,354563,1793642,147444,18748,775,1,0,Savings,1880559
+430,Otji Logistics,Logistics,Oshana,6,35,1114939,Construction,12,6889864,219442,2601331,2201479,8377,519,0,0,Equipment,3868340
+431,Etosha Transport,Retail,Hardap,3,7,1001512,Construction,36,8077700,212913,1221046,1606635,48767,559,5,0,Savings,4505484
+432,Walvis Fishing,Technology,Oshana,13,215,217630,Expansion,12,10797023,577936,1975941,2300710,107648,737,4,1,Vehicle,1570747
+433,Caprivi Food Services,Construction,Kavango East,14,26,1125049,Payroll Support,12,14727552,42762,2869644,2366705,99459,728,8,0,Livestock,2696260
+434,Walvis Fishing,Manufacturing,Kavango East,12,69,2240917,Technology Upgrade,60,898760,653046,2275615,3489683,99774,740,7,0,Livestock,2138792
+435,Erongo Fishing,Manufacturing,Karas,8,220,1997590,Construction,36,8091728,590307,247066,2449803,33624,481,5,0,Property,2733509
+436,Kalahari Logistics,Logistics,Karas,12,239,133399,Working Capital,36,4297233,415763,2132267,1388163,70416,707,4,1,Livestock,4099732
+437,Erongo Manufacturing,Transport,Karas,11,197,2407941,Working Capital,48,9626632,557356,1450533,3102452,74747,669,7,0,Savings,1015709
+438,Erongo Construction,Logistics,Otjozondjupa,6,66,1688173,Technology Upgrade,36,11044273,591760,2722660,412639,37454,477,5,0,Vehicle,4041330
+439,Walvis Tours,Logistics,Kavango East,24,233,566798,Vehicle Purchase,36,3022747,117993,2567960,3812507,18878,713,8,0,Inventory,3439187
+440,Katima Technologies,Food Services,Khomas,21,173,1769161,Working Capital,48,2621458,206078,1968808,189874,25241,450,5,0,Equipment,867077
+441,Walvis Manufacturing,Transport,Oshana,16,120,1336403,Payroll Support,60,6371831,163381,1224963,2881978,45583,669,2,0,Inventory,1589827
+442,Katima Construction,Construction,Kavango East,22,213,302837,Expansion,48,4062011,426754,878641,3460764,78717,545,2,0,Inventory,4535265
+443,Kunene Logistics,Manufacturing,Khomas,22,95,2056781,Expansion,60,12228039,183458,2953073,3917743,63705,825,3,0,Vehicle,4343216
+444,Erongo Tours,Technology,Karas,7,214,1124740,Payroll Support,60,10563818,50286,2776426,138000,47779,748,0,0,Equipment,4431723
+445,Namib Logistics,Manufacturing,Kavango West,25,14,1511035,Expansion,48,4814377,589840,2591242,414940,25792,692,6,0,Savings,3569398
+446,Etosha Farming,Mining Services,Hardap,19,81,65937,Expansion,48,1176710,437938,602049,1791121,107726,818,4,0,Equipment,678278
+447,Walvis Fishing,Food Services,Oshana,20,219,2303967,Working Capital,36,3904389,36946,2888550,3184802,13608,687,0,0,Equipment,2768291
+448,Luderitz Tours,Mining Services,Oshikoto,9,225,1857762,Equipment Purchase,24,9371050,506403,2304165,1867481,91740,585,8,0,Property,227299
+449,Windhoek Retail,Retail,Kavango West,9,30,1970653,Technology Upgrade,60,12359854,515714,2383310,698771,1829,467,7,1,Property,1823047
+450,Swakop Supplies,Transport,Oshana,4,49,2315260,Inventory,24,7028812,402894,1011690,1076601,96116,696,0,0,Vehicle,1253775
+451,Kalahari Technologies,Agriculture,Khomas,12,14,2139932,Construction,48,925223,506156,480427,806145,105033,587,7,0,Vehicle,2223411
+452,Katima Tours,Agriculture,Khomas,10,107,1085557,Working Capital,48,10984089,286575,1786822,206477,42261,678,8,0,Vehicle,4379033
+453,Oshana Farming,Transport,Khomas,18,185,1498258,Equipment Purchase,12,5846544,648714,348214,173038,91098,562,2,1,Livestock,4756745
+454,Walvis Trading,Logistics,Oshikoto,16,81,55556,Construction,36,3614646,147294,2038100,2877154,72460,470,4,0,Property,2672300
+455,Swakop Construction,Agriculture,Erongo,3,36,2252816,Vehicle Purchase,48,12374528,583183,2572100,3944878,69371,522,2,1,Inventory,872571
+456,Erongo Manufacturing,Logistics,Khomas,14,90,1114120,Construction,24,10145091,748503,2579266,998061,102144,545,0,0,Vehicle,977538
+457,Okavango Logistics,Tourism,Hardap,20,196,778406,Inventory,24,6008013,336845,528796,2029694,53558,482,2,1,Equipment,837482
+458,Kunene Construction,Construction,Erongo,25,89,1955769,Working Capital,12,8677316,370379,1379706,2416700,117602,779,1,0,Equipment,3829253
+459,Erongo Supplies,Tourism,Erongo,14,188,652623,Inventory,12,1130411,597685,2314172,3634515,48665,649,3,1,Equipment,4053488
+460,Otji Technologies,Agriculture,Hardap,9,147,2142811,Payroll Support,36,2770991,544296,2730721,3607206,25254,457,7,0,Property,3662130
+461,Caprivi Retail,Construction,Kavango East,10,159,782802,Payroll Support,60,13173268,50076,1790788,750199,117844,850,4,0,Inventory,1441846
+462,Okavango Technologies,Retail,Oshikoto,18,17,890760,Construction,36,12961215,464072,2087794,2643327,92052,583,7,1,Inventory,4751645
+463,Namib Construction,Logistics,Otjozondjupa,24,39,1263969,Equipment Purchase,48,9493612,118215,1604486,580057,45324,760,2,0,Vehicle,759107
+464,Otji Construction,Logistics,Kavango East,16,159,1710980,Equipment Purchase,60,743815,419325,2949941,536750,1476,736,5,1,Inventory,2565987
+465,Etosha Retail,Tourism,Kavango East,18,78,842477,Working Capital,48,3513915,46538,915379,3702155,5540,799,2,1,Livestock,1102315
+466,Erongo Logistics,Manufacturing,Karas,8,244,124648,Equipment Purchase,60,14196764,716265,1735539,3923038,99704,742,2,0,Inventory,1917280
+467,Oshana Logistics,Mining Services,Otjozondjupa,3,21,1732320,Working Capital,60,8632586,514469,2845378,1415122,48385,522,8,0,Property,4918143
+468,Windhoek Construction,Logistics,Hardap,12,135,1658071,Payroll Support,24,5533341,375988,2373867,3391755,51448,697,8,0,Property,1696627
+469,Windhoek Fishing,Technology,Oshikoto,11,157,1504225,Inventory,12,7338361,47487,1989645,3136882,79371,789,4,0,Equipment,4735697
+470,Gobabis Manufacturing,Manufacturing,Karas,21,34,2328177,Payroll Support,60,13019802,468374,975129,3136203,59439,451,8,0,Equipment,4064172
+471,Okavango Construction,Construction,Karas,3,221,581099,Technology Upgrade,48,9411694,691319,2349203,9224,54738,562,6,1,Property,4384665
+472,Namib Trading,Tourism,Erongo,8,130,1024192,Expansion,12,14809747,370556,1687616,3882657,35263,507,6,1,Livestock,3958409
+473,Namib Transport,Manufacturing,Hardap,3,145,2489129,Equipment Purchase,12,13093118,69583,720237,2676064,107551,666,4,0,Savings,3319114
+474,Caprivi Logistics,Tourism,Erongo,20,238,2199555,Payroll Support,60,12465463,516338,742470,2145594,55014,459,5,0,Property,2165855
+475,Namib Tours,Agriculture,Khomas,14,117,2031225,Working Capital,12,5109316,790528,2585994,315841,46035,499,3,1,Property,1644940
+476,Otji Tours,Logistics,Erongo,23,31,1006863,Working Capital,48,10122219,735765,2872369,2450057,53995,484,4,1,Equipment,3295651
+477,Katima Farming,Technology,Otjozondjupa,4,66,1182762,Equipment Purchase,60,1324664,581737,2633051,1716790,79574,576,2,0,Livestock,1416557
+478,Windhoek Fishing,Agriculture,Otjozondjupa,1,80,570425,Payroll Support,60,2575215,524246,220951,3440284,86293,565,1,0,Property,3230198
+479,Windhoek Supplies,Retail,Erongo,12,107,1384658,Working Capital,24,4529310,70823,2209833,2736275,44433,774,3,0,Savings,638119
+480,Kunene Retail,Technology,Otjozondjupa,19,21,1378237,Construction,36,12578797,453926,2364873,1499168,39790,733,7,0,Livestock,4516724
+481,Kalahari Transport,Manufacturing,Oshana,6,79,2112266,Inventory,12,6567774,556327,1368918,2524281,105669,473,2,1,Inventory,2876480
+482,Kunene Logistics,Retail,Erongo,8,246,746693,Construction,36,2496178,284662,2086661,654198,69082,626,5,0,Livestock,1118724
+483,Gobabis Logistics,Manufacturing,Erongo,6,23,128784,Technology Upgrade,48,14037332,166812,527237,2266194,41114,651,7,0,Property,2432245
+484,Kalahari Construction,Agriculture,Kavango East,14,7,470469,Working Capital,60,7345867,525943,1484808,3333275,95552,530,4,0,Livestock,2740360
+485,Namib Tours,Manufacturing,Kavango West,21,17,1606007,Construction,36,10195972,459265,168104,3899442,12572,519,0,0,Equipment,2388484
+486,Otji Tours,Manufacturing,Oshikoto,19,177,705063,Vehicle Purchase,60,2731974,682407,457118,1899598,9241,688,5,0,Equipment,1610869
+487,Etosha Retail,Manufacturing,Erongo,11,2,1301667,Construction,48,832785,517456,1886315,2999251,92517,678,4,0,Inventory,3100263
+488,Walvis Construction,Mining Services,Otjozondjupa,17,102,1387071,Vehicle Purchase,36,5744086,434150,341699,2631908,33047,822,4,0,Savings,223477
+489,Windhoek Logistics,Agriculture,Khomas,15,151,1476457,Payroll Support,12,7857848,462908,2590111,441775,8713,468,0,1,Savings,1888584
+490,Walvis Logistics,Tourism,Oshikoto,21,41,585727,Working Capital,12,7233324,784073,2382138,183881,47608,581,7,1,Savings,4998716
+491,Namib Transport,Transport,Erongo,5,36,1275858,Vehicle Purchase,12,9344728,173430,348439,2874394,72603,471,8,0,Property,681578
+492,Otji Tours,Food Services,Oshana,3,139,1433375,Equipment Purchase,48,2525014,764736,1687283,3019454,14055,779,7,0,Equipment,3649056
+493,Kunene Retail,Manufacturing,Kavango East,19,52,2117331,Construction,36,12089468,33868,1033373,3721126,23242,526,3,1,Vehicle,2519456
+494,Oshana Farming,Food Services,Khomas,15,135,1478218,Equipment Purchase,36,11199600,333053,2466801,3465137,87713,476,4,0,Savings,2893806
+495,Kunene Trading,Tourism,Khomas,2,207,1169275,Expansion,60,3576104,596398,1678748,3193048,22317,619,2,1,Inventory,3017310
+496,Katima Trading,Tourism,Kavango East,11,5,317920,Working Capital,36,9336375,405745,973833,1160006,29405,491,3,0,Vehicle,485205
+497,Gobabis Food Services,Technology,Kavango West,18,61,554415,Equipment Purchase,24,9214194,382267,67389,1539578,103950,478,1,0,Property,484838
+498,Luderitz Food Services,Construction,Karas,21,178,142487,Working Capital,48,5731912,269571,1787323,2628947,9142,839,6,0,Livestock,705331
+499,Erongo Manufacturing,Manufacturing,Erongo,16,120,283740,Working Capital,48,3189163,105648,979064,3006521,89531,626,0,1,Property,3500464
+500,Caprivi Logistics,Construction,Karas,7,98,1177006,Expansion,36,8706816,140620,1035570,2878144,71415,807,6,0,Property,4217000
+501,Gobabis Fishing,Tourism,Erongo,6,130,1328947,Vehicle Purchase,60,8759494,535529,208609,2621098,107559,762,2,0,Equipment,1010046
+502,Okavango Transport,Tourism,Oshana,6,38,226369,Inventory,12,9374439,475131,2257324,473214,16533,481,7,1,Livestock,470651
+503,Swakop Manufacturing,Construction,Oshana,25,35,120635,Vehicle Purchase,48,12732315,22492,109552,3776557,56315,795,4,0,Property,4188802
+504,Katima Trading,Agriculture,Oshana,23,168,741513,Technology Upgrade,12,13883599,366545,1129078,3980215,65867,525,3,1,Property,2063556
+505,Etosha Fishing,Construction,Kavango East,5,4,1355940,Payroll Support,24,10292526,45189,1363548,3534760,68190,800,0,0,Livestock,138769
+506,Walvis Logistics,Technology,Oshikoto,15,8,1278688,Construction,60,13656642,290089,2489354,3417281,57106,782,5,1,Equipment,412714
+507,Luderitz Transport,Construction,Karas,19,245,64508,Expansion,24,12241495,160993,1578237,2065637,92550,625,2,1,Equipment,4651959
+508,Erongo Manufacturing,Manufacturing,Oshana,18,6,1259530,Expansion,48,10870334,772429,42033,1065611,100414,720,5,0,Property,4155796
+509,Okavango Tours,Logistics,Khomas,12,34,196022,Payroll Support,36,8723856,157001,763241,3501608,77709,503,8,0,Property,2917824
+510,Walvis Construction,Retail,Oshikoto,23,65,1337903,Vehicle Purchase,60,8749759,655765,1705747,3901001,21839,640,4,1,Livestock,3596240
+511,Caprivi Trading,Technology,Hardap,23,203,2472384,Inventory,48,2563744,306052,830491,2024694,65591,641,8,0,Savings,1927929
+512,Swakop Trading,Tourism,Kavango West,2,54,1931410,Payroll Support,12,2717827,78812,911569,3326415,14367,494,4,0,Vehicle,4061058
+513,Otji Technologies,Food Services,Oshikoto,19,34,1590855,Vehicle Purchase,12,12022915,124938,2174413,2326023,9989,496,1,1,Savings,1459518
+514,Windhoek Tours,Technology,Kavango West,5,94,385673,Equipment Purchase,24,10066627,330971,26811,3436656,76002,524,4,1,Equipment,3486905
+515,Swakop Construction,Logistics,Oshana,11,203,2324023,Working Capital,12,6023868,237921,511559,3569836,115382,588,5,0,Inventory,3429351
+516,Caprivi Transport,Retail,Otjozondjupa,25,86,2196509,Payroll Support,24,11207458,547067,2389934,1054617,66382,505,1,0,Savings,3634884
+517,Luderitz Transport,Logistics,Hardap,11,107,669601,Inventory,24,14343029,740935,2356481,1515626,104840,539,6,0,Equipment,3859476
+518,Katima Construction,Technology,Karas,1,37,2194099,Equipment Purchase,36,5142284,506158,2704666,2802880,96563,572,4,0,Savings,617746
+519,Walvis Food Services,Logistics,Karas,8,83,559518,Equipment Purchase,12,3887070,288626,2734809,1429295,69344,798,1,0,Equipment,282589
+520,Okavango Transport,Technology,Kavango East,17,28,2279573,Construction,36,8338692,126526,1747647,2338127,24708,652,4,1,Vehicle,3518569
+521,Katima Retail,Logistics,Erongo,2,52,967060,Construction,36,4434381,532215,2281237,3851566,14865,565,8,1,Vehicle,2577465
+522,Walvis Supplies,Transport,Erongo,5,193,165810,Equipment Purchase,12,8654700,166662,1198499,68664,28932,735,6,0,Savings,2658728
+523,Oshana Retail,Construction,Khomas,2,174,2407075,Payroll Support,24,13235457,500777,2491711,95713,21927,463,5,1,Equipment,3807743
+524,Kunene Logistics,Transport,Kavango East,9,24,1271017,Construction,36,558417,439686,485670,495262,72495,644,2,0,Savings,2076518
+525,Okavango Technologies,Mining Services,Kavango West,1,122,1094841,Payroll Support,24,8877233,475992,1815983,2836869,80300,540,4,0,Equipment,4500697
+526,Gobabis Logistics,Manufacturing,Kavango East,20,152,1133682,Equipment Purchase,48,5924780,458829,1184417,135124,110474,480,5,0,Property,2335097
+527,Namib Retail,Mining Services,Khomas,12,64,792896,Expansion,24,3735964,775594,319315,989620,14306,511,4,0,Equipment,2040284
+528,Walvis Fishing,Construction,Hardap,17,16,1798833,Working Capital,60,7616872,275215,1640843,1567551,68886,670,3,0,Equipment,1107695
+529,Caprivi Construction,Transport,Oshikoto,14,16,842673,Expansion,12,9106240,521234,1024289,2377128,24222,461,2,0,Vehicle,1670944
+530,Walvis Retail,Transport,Oshikoto,9,5,1229716,Vehicle Purchase,48,10572140,562790,895032,3772904,82379,614,6,0,Livestock,1829447
+531,Kalahari Food Services,Agriculture,Hardap,25,166,1493625,Technology Upgrade,48,8152168,422926,2720875,2791148,18364,682,5,0,Property,1360251
+532,Swakop Farming,Mining Services,Khomas,3,224,957681,Vehicle Purchase,48,410651,749931,2410658,198177,118842,704,8,0,Equipment,1618871
+533,Katima Manufacturing,Manufacturing,Otjozondjupa,6,188,1595400,Technology Upgrade,60,11538326,378950,955154,478422,69165,795,8,1,Equipment,549576
+534,Gobabis Transport,Transport,Khomas,16,68,690973,Technology Upgrade,36,3733578,455860,1032141,2783634,88085,782,2,1,Savings,3643286
+535,Kunene Technologies,Agriculture,Oshikoto,3,144,128389,Working Capital,12,10394433,670133,1013392,3467889,7605,828,2,0,Savings,3174578
+536,Kalahari Transport,Food Services,Erongo,16,64,712561,Construction,36,8116298,370211,2156009,2104127,69904,555,1,0,Savings,2657786
+537,Windhoek Trading,Manufacturing,Karas,17,107,595871,Working Capital,12,10989566,586756,2460220,3113587,47094,587,2,1,Livestock,1290404
+538,Namib Retail,Tourism,Khomas,4,158,1402404,Technology Upgrade,24,10641639,792098,21257,3999854,96337,485,8,0,Vehicle,244839
+539,Otji Technologies,Technology,Kavango West,5,167,1326131,Working Capital,48,6760579,592165,265087,3174130,60849,550,3,0,Savings,1681012
+540,Namib Food Services,Tourism,Kavango East,14,209,1527763,Technology Upgrade,24,7299438,493152,2946611,2760556,13365,781,8,0,Livestock,156786
+541,Etosha Transport,Logistics,Hardap,24,191,2165654,Payroll Support,12,733717,737372,1836771,42447,3005,659,5,0,Equipment,3503676
+542,Windhoek Farming,Food Services,Oshikoto,25,150,1895838,Expansion,12,14090199,344975,411084,2985256,23847,687,6,1,Livestock,2729466
+543,Katima Technologies,Mining Services,Otjozondjupa,14,10,783834,Vehicle Purchase,24,704547,685292,1157849,1472293,6126,730,5,0,Savings,1875867
+544,Luderitz Transport,Mining Services,Karas,20,53,529677,Vehicle Purchase,48,13366580,204868,690777,27185,76062,581,4,0,Savings,4545033
+545,Erongo Manufacturing,Retail,Oshana,1,117,1694799,Vehicle Purchase,60,8248919,441810,2889185,2800778,36181,593,0,0,Savings,1372047
+546,Windhoek Fishing,Technology,Oshana,7,244,109021,Payroll Support,36,945135,361717,155490,2149101,57014,838,4,0,Property,1218620
+547,Oshana Construction,Transport,Kavango East,14,186,1554394,Equipment Purchase,12,6616464,537921,170554,1569831,33783,568,1,0,Equipment,298484
+548,Gobabis Farming,Logistics,Khomas,10,178,1221511,Equipment Purchase,12,11388401,638748,2996825,347399,110165,471,5,0,Property,706278
+549,Oshana Manufacturing,Logistics,Otjozondjupa,6,243,1229500,Working Capital,24,14467052,154362,2042407,3392610,56313,576,2,0,Livestock,806033
+550,Gobabis Transport,Food Services,Karas,4,62,1825247,Working Capital,36,2805191,468466,1119930,2311699,105853,741,1,0,Savings,2235146
+551,Namib Farming,Construction,Erongo,6,145,2003591,Expansion,36,1170703,533251,816100,2290195,63938,504,3,0,Livestock,91137
+552,Katima Food Services,Retail,Kavango East,7,44,816987,Expansion,48,1317780,219619,1424765,58473,98096,479,6,0,Property,3950380
+553,Namib Construction,Agriculture,Kavango West,22,109,2302114,Equipment Purchase,24,12632988,129460,440304,1250336,109597,721,8,0,Livestock,4056355
+554,Walvis Fishing,Agriculture,Hardap,8,56,528262,Vehicle Purchase,12,11635427,381241,2471320,624548,76846,695,1,0,Vehicle,4306200
+555,Oshana Technologies,Construction,Erongo,11,186,457948,Construction,24,7650696,350197,346935,3108373,96231,709,5,0,Inventory,1654331
+556,Gobabis Farming,Technology,Otjozondjupa,19,105,1336532,Equipment Purchase,60,4653747,665142,1642078,3970462,3766,777,5,0,Savings,3958629
+557,Walvis Tours,Tourism,Kavango West,10,118,2435779,Vehicle Purchase,24,3606999,657187,646044,2948064,94810,675,6,0,Livestock,2108638
+558,Windhoek Farming,Manufacturing,Karas,19,219,1647403,Payroll Support,24,13009452,494325,404752,3497276,40060,689,0,0,Savings,3237698
+559,Kunene Transport,Manufacturing,Hardap,10,221,313102,Payroll Support,60,6952585,500177,1741410,1477181,24544,849,7,0,Vehicle,4121824
+560,Okavango Transport,Transport,Erongo,6,202,1489293,Vehicle Purchase,24,10467237,367894,2923240,3008896,81655,574,6,0,Livestock,2237421
+561,Katima Tours,Food Services,Oshikoto,24,26,314220,Construction,24,6572266,188133,2771705,453995,110867,468,7,0,Property,4313237
+562,Kalahari Manufacturing,Transport,Kavango East,24,30,348208,Expansion,48,11028526,491883,1006892,1445222,88546,646,0,0,Property,3394888
+563,Kalahari Trading,Retail,Otjozondjupa,15,104,2022808,Expansion,24,2644928,255597,767216,3796741,90587,580,3,0,Inventory,3788630
+564,Oshana Food Services,Food Services,Karas,19,239,2154743,Construction,48,10968076,142316,2801896,2627608,105721,618,4,0,Vehicle,1622311
+565,Walvis Technologies,Transport,Kavango West,5,37,1338233,Payroll Support,48,7309180,409170,1158164,1489851,15696,676,2,0,Equipment,470417
+566,Luderitz Food Services,Transport,Kavango East,4,98,1447657,Inventory,60,4595758,314317,1115540,1109058,116496,760,1,0,Inventory,3912471
+567,Katima Construction,Retail,Khomas,4,66,122513,Expansion,36,4104158,273331,2401257,1676657,22128,507,3,0,Livestock,108151
+568,Oshana Tours,Technology,Kavango East,6,52,782728,Vehicle Purchase,36,6795981,667692,612870,363024,98074,551,6,1,Vehicle,1834471
+569,Erongo Trading,Tourism,Otjozondjupa,8,184,2255176,Vehicle Purchase,60,7230791,608785,2365959,815922,89158,610,3,1,Vehicle,352739
+570,Okavango Construction,Manufacturing,Kavango West,9,184,166020,Inventory,48,14091905,277103,2244298,1054618,77322,694,0,0,Property,1176053
+571,Walvis Construction,Manufacturing,Oshana,2,109,2229399,Working Capital,12,4785550,323985,990266,2499596,48086,624,7,0,Livestock,3984622
+572,Gobabis Tours,Agriculture,Karas,12,249,86288,Equipment Purchase,12,9980208,96085,206007,1990403,48584,831,8,1,Livestock,2714973
+573,Windhoek Farming,Mining Services,Karas,15,69,657007,Equipment Purchase,60,3218057,504694,2117360,3722537,72046,756,5,0,Property,4893390
+574,Luderitz Technologies,Transport,Oshana,14,164,190435,Expansion,12,13793735,164680,1207376,1084893,85788,463,4,0,Property,60770
+575,Erongo Manufacturing,Manufacturing,Khomas,12,179,349995,Working Capital,60,629277,262573,1751833,3509939,50031,781,7,1,Property,4090942
+576,Namib Retail,Manufacturing,Kavango East,12,164,803279,Payroll Support,60,13515012,372299,1168190,2101862,24826,628,2,0,Vehicle,1074821
+577,Okavango Logistics,Manufacturing,Kavango West,6,4,1253081,Technology Upgrade,24,7819354,537273,2667181,1131403,22444,816,0,1,Property,4322798
+578,Otji Fishing,Mining Services,Otjozondjupa,22,13,644743,Inventory,36,4564832,609234,1752687,1533129,31423,836,7,1,Livestock,3951538
+579,Gobabis Supplies,Transport,Kavango West,10,119,1605797,Payroll Support,24,5300877,435801,1956672,564508,73639,654,8,0,Livestock,1367277
+580,Gobabis Retail,Tourism,Oshikoto,22,76,373149,Expansion,36,1256149,635141,164194,487104,84249,845,0,1,Savings,2622903
+581,Etosha Transport,Tourism,Kavango West,1,141,618923,Expansion,48,3987767,33093,1806631,667802,75434,793,8,0,Equipment,66358
+582,Otji Food Services,Agriculture,Oshikoto,12,54,2361360,Technology Upgrade,36,4329838,61223,1613295,119130,20434,510,6,0,Property,1600124
+583,Walvis Retail,Manufacturing,Oshana,4,87,168724,Technology Upgrade,24,10444948,127563,1242377,858718,48707,502,4,0,Savings,1459426
+584,Gobabis Supplies,Food Services,Kavango East,7,193,1739614,Equipment Purchase,36,12295669,722084,880093,3958421,92960,570,4,0,Savings,1510613
+585,Otji Farming,Agriculture,Hardap,11,152,1433761,Working Capital,12,13954478,549672,778251,3447361,44001,633,8,0,Livestock,3084347
+586,Etosha Tours,Tourism,Erongo,22,2,1891435,Expansion,48,2754429,561659,957646,217785,116863,683,5,0,Property,2598406
+587,Okavango Fishing,Agriculture,Karas,6,12,1145633,Technology Upgrade,60,10787374,795130,123445,727117,31731,816,1,1,Inventory,2152135
+588,Namib Farming,Technology,Kavango West,6,150,102399,Working Capital,48,3224374,646952,376983,709139,59038,764,2,0,Property,2075243
+589,Windhoek Tours,Agriculture,Oshana,24,209,1356865,Technology Upgrade,36,11167197,299858,1421627,138344,8862,521,8,0,Vehicle,481902
+590,Otji Fishing,Transport,Kavango East,15,85,309071,Payroll Support,36,6765389,648300,2085715,1037592,96851,463,2,0,Equipment,2632556
+591,Katima Construction,Agriculture,Khomas,13,228,597899,Working Capital,12,3753965,299491,2702665,2431788,81475,790,1,0,Inventory,2208290
+592,Otji Technologies,Tourism,Hardap,25,34,658697,Construction,60,14504275,768881,332236,75799,74920,527,0,1,Property,4348088
+593,Windhoek Transport,Agriculture,Oshikoto,14,176,1785432,Equipment Purchase,24,9271145,439087,2252652,1943217,96257,770,3,0,Equipment,977623
+594,Otji Construction,Technology,Karas,1,18,85519,Construction,48,14455642,428716,1349852,136899,30730,466,1,0,Vehicle,4262821
+595,Kunene Food Services,Agriculture,Oshikoto,19,146,1943729,Construction,60,11208877,168859,2167318,1253291,43182,527,3,1,Property,297513
+596,Windhoek Manufacturing,Retail,Otjozondjupa,16,172,189315,Technology Upgrade,12,1236578,157483,1787264,2978976,119585,836,1,0,Inventory,2029450
+597,Oshana Transport,Manufacturing,Khomas,10,241,946980,Expansion,12,7371653,416850,1927055,2795647,75283,747,5,0,Savings,900081
+598,Gobabis Manufacturing,Construction,Otjozondjupa,13,66,1552997,Payroll Support,12,2450736,200220,1986793,1818327,112395,462,8,0,Equipment,764856
+599,Katima Tours,Construction,Khomas,15,83,285968,Expansion,36,13259636,533517,2833858,748281,104945,591,6,0,Property,595964
+600,Caprivi Logistics,Retail,Hardap,21,52,150859,Technology Upgrade,48,10854792,115413,2767158,3121974,50440,502,6,1,Livestock,2877690
+601,Luderitz Manufacturing,Tourism,Karas,25,209,308599,Vehicle Purchase,12,3806415,40301,2482805,3743202,56464,744,2,0,Inventory,2882849
+602,Oshana Retail,Technology,Oshikoto,8,43,1878481,Construction,12,10403143,214510,1112560,2609741,106091,671,6,1,Property,2303863
+603,Etosha Tours,Transport,Khomas,6,86,1578100,Inventory,36,14619425,202594,2409278,1422259,67080,732,5,0,Livestock,3283143
+604,Okavango Fishing,Agriculture,Otjozondjupa,10,245,1343994,Equipment Purchase,12,9280033,563497,476766,199727,35894,656,4,0,Property,3062958
+605,Gobabis Food Services,Food Services,Kavango East,10,230,1386788,Construction,60,9459368,220198,2576275,1279595,94863,715,5,0,Livestock,331174
+606,Caprivi Manufacturing,Logistics,Erongo,11,174,1337704,Working Capital,12,3525870,795648,990499,3980345,114034,684,8,0,Savings,4724990
+607,Erongo Logistics,Transport,Kavango East,24,216,1078506,Equipment Purchase,36,2014927,650444,102344,1328785,42736,685,5,0,Inventory,3893916
+608,Katima Fishing,Tourism,Oshana,20,137,2018265,Expansion,12,5217873,162533,87942,227773,88099,815,0,0,Property,1585704
+609,Kunene Construction,Agriculture,Otjozondjupa,16,9,191784,Inventory,12,3710360,516973,1775041,3809007,91990,665,5,1,Equipment,3417059
+610,Caprivi Retail,Manufacturing,Erongo,15,184,527922,Payroll Support,24,10488161,116031,861720,1141663,44531,714,5,0,Livestock,3680745
+611,Kalahari Technologies,Mining Services,Karas,14,42,83730,Working Capital,48,12997369,460470,1816991,3676712,43749,831,3,0,Livestock,4272318
+612,Namib Food Services,Logistics,Otjozondjupa,17,51,1283176,Technology Upgrade,48,4423313,760313,2631487,830782,77907,803,1,1,Vehicle,490273
+613,Katima Transport,Construction,Erongo,4,27,1712839,Working Capital,24,5496383,623982,1665418,622066,14588,702,3,0,Inventory,3078282
+614,Caprivi Retail,Tourism,Erongo,8,195,1434387,Construction,36,5965352,235802,2966059,3392097,9492,666,5,0,Vehicle,4663994
+615,Okavango Farming,Logistics,Khomas,11,248,634204,Expansion,12,10160681,144856,709084,1964711,89416,829,2,0,Equipment,2266092
+616,Swakop Tours,Food Services,Oshikoto,22,58,692436,Vehicle Purchase,36,6646160,317933,1348772,367337,57376,731,3,0,Equipment,595439
+617,Gobabis Tours,Technology,Khomas,9,201,1932727,Technology Upgrade,24,3957103,716101,919976,1689751,93034,603,6,0,Inventory,428311
+618,Gobabis Technologies,Construction,Hardap,16,240,74161,Working Capital,24,11825645,346635,1917710,2273589,92555,760,1,0,Equipment,1333872
+619,Katima Manufacturing,Tourism,Karas,9,224,1865554,Expansion,24,14048900,451270,1869733,914328,58995,608,1,0,Property,444757
+620,Erongo Supplies,Mining Services,Kavango East,2,140,2017832,Vehicle Purchase,36,12861176,293844,1014911,1269258,14572,772,4,0,Inventory,920494
+621,Katima Technologies,Mining Services,Hardap,12,240,2056346,Equipment Purchase,48,4486339,264325,1752835,3618366,87163,700,6,0,Inventory,2499214
+622,Swakop Construction,Construction,Khomas,10,55,1488609,Working Capital,60,12087270,331029,128538,1119685,478,584,4,0,Property,2387225
+623,Otji Supplies,Tourism,Otjozondjupa,22,151,1033458,Technology Upgrade,36,6527221,98185,867140,2878332,102383,697,5,0,Savings,4929552
+624,Walvis Farming,Retail,Erongo,2,72,1508169,Working Capital,36,7690671,747978,2164369,3893464,109910,463,1,0,Livestock,1629099
+625,Caprivi Retail,Logistics,Otjozondjupa,18,82,251448,Construction,24,10683823,581031,1431858,2374723,59056,842,2,0,Savings,3233061
+626,Walvis Construction,Manufacturing,Karas,12,169,641247,Working Capital,60,13417454,306206,1891410,2618387,16452,549,8,0,Vehicle,1720227
+627,Katima Trading,Manufacturing,Otjozondjupa,7,20,413953,Construction,12,14173345,640696,2747774,3326524,64896,561,8,1,Inventory,4366118
+628,Windhoek Construction,Agriculture,Oshikoto,21,223,1377776,Vehicle Purchase,36,14748350,609010,904408,2746875,72339,708,2,1,Equipment,3496768
+629,Kunene Logistics,Transport,Hardap,1,5,137518,Working Capital,12,7702630,558172,655811,208854,32856,631,1,0,Savings,4785428
+630,Otji Logistics,Construction,Otjozondjupa,14,77,232563,Working Capital,12,2059468,689219,1958557,3533696,108642,722,3,0,Inventory,1535541
+631,Erongo Fishing,Tourism,Oshana,19,189,1339288,Working Capital,48,6271947,579819,222261,30870,53244,463,0,0,Vehicle,4856927
+632,Kalahari Trading,Agriculture,Karas,3,161,1710804,Working Capital,60,11910697,610827,2827423,681028,118171,518,0,0,Livestock,2569847
+633,Caprivi Retail,Transport,Karas,2,198,2282125,Expansion,48,14622855,256827,11428,3261827,67369,500,7,0,Vehicle,4783148
+634,Kalahari Retail,Agriculture,Otjozondjupa,7,38,608502,Technology Upgrade,12,6477250,459473,193918,1735830,3247,723,8,0,Property,1236031
+635,Caprivi Supplies,Mining Services,Kavango West,6,178,844595,Working Capital,24,8298850,77181,1975893,1132120,15711,819,0,0,Vehicle,3058426
+636,Otji Transport,Tourism,Oshikoto,14,160,1893173,Inventory,60,4125270,30669,110709,1006826,2542,622,8,0,Equipment,2897878
+637,Gobabis Fishing,Technology,Kavango West,25,6,205854,Payroll Support,12,5224942,447712,2000580,245266,34371,627,6,0,Equipment,643252
+638,Walvis Transport,Retail,Hardap,24,97,1745993,Equipment Purchase,24,2374686,63561,2645983,2548679,105914,681,1,0,Savings,1125957
+639,Walvis Retail,Transport,Karas,18,215,2121103,Working Capital,12,12872585,568721,1290519,320467,96630,535,5,0,Inventory,4963678
+640,Etosha Transport,Food Services,Otjozondjupa,20,116,1596572,Payroll Support,48,2969163,795092,418509,2206194,111990,462,6,1,Inventory,3097071
+641,Swakop Food Services,Construction,Oshikoto,12,46,2211594,Payroll Support,24,4219523,382476,1886658,1653903,71853,790,6,1,Equipment,609129
+642,Etosha Logistics,Technology,Khomas,20,66,2212458,Equipment Purchase,60,12523950,707476,2999968,3234409,13108,535,7,0,Inventory,4751893
+643,Swakop Construction,Construction,Oshana,21,6,212272,Working Capital,48,10102531,761399,593807,2349020,103359,583,6,0,Livestock,2312702
+644,Caprivi Technologies,Agriculture,Karas,24,48,984102,Payroll Support,60,14153652,720501,203558,3079980,4051,452,2,0,Livestock,4294788
+645,Katima Retail,Mining Services,Hardap,3,59,241870,Construction,60,12830355,117175,1000866,2815713,41676,749,0,0,Vehicle,4127896
+646,Namib Tours,Agriculture,Oshana,19,23,2062600,Inventory,48,9168073,517064,2588479,503431,37335,512,7,0,Livestock,2596204
+647,Walvis Transport,Agriculture,Oshana,14,228,2367330,Inventory,24,2900423,359444,2598887,3070425,59041,545,4,1,Savings,3182373
+648,Windhoek Transport,Construction,Oshana,24,105,2121446,Inventory,48,11184603,74008,527650,1349538,112622,539,0,0,Property,2127482
+649,Luderitz Logistics,Technology,Oshikoto,13,52,1973243,Working Capital,36,12648061,568841,1243775,1195147,33,716,4,1,Inventory,2641120
+650,Walvis Supplies,Retail,Khomas,18,167,568842,Equipment Purchase,60,7664084,53787,2390417,3838488,28061,838,7,0,Savings,3033767
+651,Swakop Fishing,Transport,Oshikoto,19,231,1656063,Working Capital,48,3183227,106475,2087127,426781,27298,668,0,0,Savings,4397615
+652,Otji Tours,Transport,Kavango West,25,12,1812075,Working Capital,60,729586,554600,1340200,250097,32403,517,6,0,Vehicle,2415984
+653,Oshana Logistics,Technology,Kavango East,13,135,307574,Expansion,60,3927462,108049,735635,3146290,51341,463,1,0,Equipment,4566845
+654,Oshana Fishing,Manufacturing,Khomas,23,126,2073177,Construction,24,10306233,781701,952382,1359640,28523,782,0,0,Savings,4054433
+655,Okavango Technologies,Construction,Kavango East,4,21,2386108,Inventory,24,14799196,129756,1120306,1266430,6651,490,8,0,Property,3266426
+656,Windhoek Supplies,Manufacturing,Erongo,10,106,451057,Expansion,60,1653558,169605,2968208,2692117,53953,692,6,0,Property,3721243
+657,Okavango Construction,Construction,Erongo,18,104,890240,Inventory,12,11274427,143892,1901682,980643,79450,453,4,0,Livestock,3299987
+658,Oshana Tours,Agriculture,Erongo,12,28,1693204,Construction,24,927547,458638,2995765,257841,238,766,3,1,Inventory,3566104
+659,Namib Retail,Technology,Oshikoto,15,118,2496535,Technology Upgrade,12,5634525,724070,2578411,689110,114724,617,6,0,Vehicle,3764149
+660,Oshana Transport,Manufacturing,Otjozondjupa,8,164,781015,Construction,48,12153340,615481,1927938,3397985,30414,569,5,0,Equipment,837753
+661,Oshana Supplies,Logistics,Khomas,10,190,1378958,Working Capital,48,13019793,398084,2644474,3907491,97878,602,3,1,Equipment,3871933
+662,Luderitz Logistics,Manufacturing,Erongo,4,98,606729,Construction,12,7169697,111027,305319,2622309,82443,694,2,0,Equipment,2280562
+663,Caprivi Technologies,Construction,Oshikoto,25,215,1067838,Expansion,36,1488774,110379,1062501,2968855,8850,647,7,1,Property,4677414
+664,Etosha Tours,Transport,Oshikoto,7,70,1961753,Working Capital,24,12702785,266208,1067534,1931021,70916,504,5,1,Vehicle,4247764
+665,Okavango Logistics,Tourism,Kavango West,15,132,1433404,Inventory,12,1833080,370001,2098200,881422,106852,686,8,0,Equipment,3591513
+666,Namib Logistics,Logistics,Kavango East,22,11,1048603,Technology Upgrade,48,689034,450008,993021,1218805,79124,508,6,0,Inventory,383429
+667,Okavango Transport,Mining Services,Oshikoto,21,76,1982290,Technology Upgrade,60,11641769,210397,2490163,3479784,63429,500,4,0,Savings,2927526
+668,Gobabis Farming,Tourism,Oshana,23,67,2280248,Inventory,12,6052778,25072,1257645,478630,61149,708,0,1,Livestock,1082481
+669,Windhoek Farming,Logistics,Kavango West,4,112,972248,Expansion,48,10137447,243461,1120644,1535516,18261,472,6,0,Vehicle,803830
+670,Swakop Manufacturing,Manufacturing,Karas,20,240,1033398,Technology Upgrade,60,546279,220435,941726,3836623,8281,701,4,1,Inventory,1909632
+671,Okavango Construction,Construction,Hardap,20,225,1369172,Equipment Purchase,48,5596093,162110,749467,2497218,87736,559,0,0,Livestock,524352
+672,Otji Fishing,Technology,Kavango West,19,233,1712638,Construction,60,6560521,699116,1772310,896349,103302,675,5,0,Savings,1118394
+673,Caprivi Fishing,Logistics,Khomas,21,26,2249502,Vehicle Purchase,60,9350304,363063,1032239,3730349,3825,807,0,0,Vehicle,1264014
+674,Namib Farming,Food Services,Oshana,17,230,1077922,Vehicle Purchase,36,8300889,433020,714817,1871817,12174,850,1,0,Vehicle,2476986
+675,Oshana Supplies,Manufacturing,Hardap,11,150,1153555,Construction,24,6415109,120815,2474898,1115589,23173,459,8,0,Equipment,2073930
+676,Otji Manufacturing,Retail,Kavango West,15,194,493773,Payroll Support,36,10964056,594038,1449542,1946807,103168,647,4,0,Vehicle,1557803
+677,Gobabis Food Services,Food Services,Khomas,10,237,1896224,Technology Upgrade,24,11026411,435715,2538120,1530672,85786,758,2,0,Vehicle,1981028
+678,Luderitz Fishing,Mining Services,Karas,9,239,1987552,Inventory,48,906359,748442,1449526,3165461,1505,573,1,0,Vehicle,1516742
+679,Etosha Supplies,Logistics,Karas,11,218,843919,Inventory,12,11493213,204610,2695362,3021041,823,558,1,0,Livestock,4961166
+680,Gobabis Supplies,Tourism,Kavango West,15,36,1409980,Inventory,24,10634653,707237,2396118,498921,95336,822,5,0,Savings,1784611
+681,Otji Technologies,Mining Services,Kavango East,13,95,742762,Expansion,60,14657526,592289,1799387,2682206,108035,542,7,0,Savings,4209558
+682,Oshana Tours,Food Services,Karas,14,54,905545,Payroll Support,36,8357835,455134,2746378,2820803,49199,655,1,0,Property,124006
+683,Okavango Construction,Food Services,Oshana,22,213,2252727,Construction,36,11449430,131533,702957,2018322,55010,618,0,0,Vehicle,1172419
+684,Walvis Fishing,Technology,Karas,2,49,2199232,Vehicle Purchase,12,6070701,156185,2284555,3975726,80786,728,4,0,Property,1327884
+685,Gobabis Farming,Manufacturing,Otjozondjupa,25,148,1364465,Working Capital,36,4614932,450410,2964191,2915869,32222,605,5,0,Equipment,4101605
+686,Kalahari Retail,Manufacturing,Khomas,7,38,2193905,Vehicle Purchase,36,14427162,609899,273569,3414832,71526,619,2,1,Vehicle,2159076
+687,Swakop Technologies,Agriculture,Kavango West,1,5,1698277,Inventory,24,7849934,281169,59409,435195,37594,594,6,1,Inventory,2891471
+688,Walvis Technologies,Transport,Oshana,3,189,2319763,Inventory,12,8745017,103488,1595518,1267474,87381,561,2,1,Livestock,3654571
+689,Luderitz Logistics,Food Services,Otjozondjupa,13,110,792887,Working Capital,36,3713762,105827,1298030,3705052,14475,711,1,0,Property,2300464
+690,Erongo Construction,Transport,Erongo,8,79,2116953,Working Capital,48,7795335,678588,484120,3322568,44741,685,4,0,Equipment,953407
+691,Otji Construction,Manufacturing,Khomas,11,183,2411959,Expansion,48,8713830,88052,1310984,172167,40817,827,6,0,Livestock,4923936
+692,Kunene Construction,Technology,Erongo,18,68,1310977,Payroll Support,48,11724410,37683,151968,2426475,57126,679,7,0,Property,2193649
+693,Caprivi Transport,Manufacturing,Oshikoto,4,17,907211,Working Capital,60,9132294,142162,2012206,1313001,8758,720,8,1,Inventory,3414866
+694,Luderitz Food Services,Agriculture,Kavango East,4,190,933978,Technology Upgrade,24,11700785,701863,437373,2213077,92613,845,7,1,Property,532352
+695,Kunene Tours,Manufacturing,Hardap,19,53,1837872,Inventory,36,1220813,602604,1791168,1500221,4541,757,3,0,Livestock,664123
+696,Namib Manufacturing,Retail,Erongo,14,70,1916274,Vehicle Purchase,36,2108231,55166,201523,3753926,73843,780,4,0,Equipment,4995063
+697,Walvis Construction,Mining Services,Oshikoto,15,18,1435003,Expansion,24,6215533,542801,1056547,1450610,78682,848,8,0,Livestock,2850724
+698,Walvis Tours,Agriculture,Kavango West,14,112,1704136,Expansion,36,13220828,311619,410955,870182,9413,484,6,0,Equipment,577336
+699,Okavango Retail,Transport,Oshana,17,48,1726440,Technology Upgrade,12,14559698,778010,1226239,2558774,77196,578,1,0,Property,2160222
+700,Luderitz Food Services,Agriculture,Oshana,22,103,1392144,Vehicle Purchase,48,4529350,286154,49551,2358708,89767,482,2,0,Property,651547
+701,Swakop Supplies,Manufacturing,Otjozondjupa,20,162,1450338,Construction,24,12866680,86388,1980328,3989928,25482,612,3,0,Vehicle,284008
+702,Windhoek Construction,Agriculture,Erongo,8,164,652888,Equipment Purchase,60,12749719,782845,153479,1598543,73816,468,8,0,Equipment,1492858
+703,Luderitz Farming,Construction,Otjozondjupa,20,51,2315329,Inventory,60,9712190,473412,2706319,3901231,20969,763,5,0,Equipment,1826748
+704,Okavango Fishing,Mining Services,Otjozondjupa,11,151,2111264,Working Capital,60,12288320,250256,1361540,2826899,54900,557,1,1,Vehicle,4023977
+705,Erongo Transport,Construction,Hardap,5,35,1650886,Equipment Purchase,24,3513247,544599,2740916,3198270,76523,819,6,0,Vehicle,4906221
+706,Swakop Construction,Transport,Oshana,10,205,1191369,Technology Upgrade,24,10722810,191162,1569745,136382,104669,706,5,0,Savings,2305601
+707,Windhoek Construction,Agriculture,Hardap,3,94,1051647,Inventory,48,12480204,442795,1122748,2444861,100488,704,4,0,Vehicle,4983082
+708,Erongo Supplies,Agriculture,Khomas,20,249,192920,Vehicle Purchase,36,10613547,69769,886189,2036911,4168,580,3,0,Savings,2360874
+709,Otji Transport,Transport,Oshana,8,25,2073728,Inventory,60,462566,47980,2085183,306637,8200,749,1,1,Savings,4036694
+710,Swakop Manufacturing,Technology,Khomas,10,83,531148,Payroll Support,48,12226668,315550,1986576,1939915,93270,552,7,0,Equipment,4768466
+711,Walvis Manufacturing,Construction,Khomas,9,93,869801,Technology Upgrade,36,942232,780167,130971,2532825,25811,477,2,0,Livestock,4588778
+712,Okavango Food Services,Logistics,Hardap,1,50,1484257,Expansion,48,12793541,381061,878966,3659820,50294,724,2,0,Savings,1827005
+713,Walvis Supplies,Logistics,Kavango East,3,180,1648688,Working Capital,60,10791500,231712,2048626,1195937,57537,707,6,0,Inventory,4413139
+714,Windhoek Trading,Transport,Kavango East,9,123,149155,Expansion,12,6276560,685109,1839283,2149530,98968,676,4,1,Livestock,2458401
+715,Kunene Manufacturing,Retail,Oshana,2,31,1029800,Construction,60,2946198,121938,1728091,3663312,35532,624,1,0,Savings,3056695
+716,Luderitz Logistics,Mining Services,Oshana,13,128,234487,Working Capital,60,7710272,576354,490442,3729831,19745,692,5,0,Vehicle,219245
+717,Caprivi Supplies,Agriculture,Oshikoto,9,241,574491,Vehicle Purchase,36,12275200,449592,872361,1983091,5365,656,1,0,Savings,1289927
+718,Otji Farming,Technology,Otjozondjupa,19,31,364909,Working Capital,24,5797213,586168,1460855,1888649,18166,590,2,1,Property,898312
+719,Swakop Food Services,Logistics,Oshikoto,16,36,1246405,Construction,36,11045904,347385,2755552,3496968,107361,758,5,0,Livestock,4749410
+720,Okavango Trading,Tourism,Kavango East,13,95,1307370,Working Capital,48,3584677,128511,2510072,3592178,107800,711,3,0,Equipment,951832
+721,Luderitz Trading,Tourism,Kavango East,14,182,1624630,Expansion,48,6377497,541137,2335727,3674089,62824,599,0,0,Property,1530583
+722,Kunene Tours,Technology,Kavango East,22,115,533406,Expansion,48,3387093,696586,1791603,2320812,93665,782,4,0,Property,4070857
+723,Walvis Technologies,Tourism,Oshikoto,23,168,1715415,Inventory,12,4835483,316231,50342,798630,36278,693,3,0,Equipment,2405094
+724,Caprivi Transport,Retail,Hardap,15,225,2026711,Construction,12,10388315,742059,111244,817882,87301,756,1,0,Livestock,4461157
+725,Etosha Food Services,Construction,Oshikoto,14,127,1218289,Equipment Purchase,24,10718804,114103,536713,1973035,48401,450,6,0,Vehicle,4449483
+726,Windhoek Fishing,Agriculture,Khomas,7,54,650395,Payroll Support,48,5289142,508682,2421585,1208553,10725,545,4,0,Property,2857022
+727,Okavango Tours,Construction,Kavango West,13,235,2094386,Inventory,12,5267298,413022,1226043,1035326,72139,678,2,0,Equipment,1424372
+728,Oshana Retail,Construction,Khomas,5,193,1003355,Construction,12,7676184,166940,2343199,659596,116782,838,0,1,Equipment,1769825
+729,Erongo Transport,Retail,Oshikoto,6,229,2095946,Working Capital,36,10308607,474390,2412937,1118277,2281,731,3,1,Equipment,3611985
+730,Okavango Fishing,Logistics,Kavango West,11,24,904102,Construction,12,14182730,696436,535835,1911504,61268,484,4,1,Inventory,632328
+731,Okavango Supplies,Food Services,Hardap,4,238,1636085,Vehicle Purchase,36,7961722,636923,2696845,2506627,118108,807,2,0,Property,4820700
+732,Etosha Construction,Food Services,Oshikoto,22,206,1805294,Equipment Purchase,24,13321049,727355,2586671,3110419,6060,649,6,0,Livestock,1869777
+733,Katima Food Services,Construction,Hardap,15,210,2219572,Equipment Purchase,48,2229090,466935,1024712,1951066,15310,835,5,0,Property,3907873
+734,Caprivi Retail,Manufacturing,Hardap,13,215,590161,Inventory,60,9985528,142852,2833911,690317,37831,575,7,0,Inventory,218903
+735,Caprivi Retail,Manufacturing,Otjozondjupa,4,7,698215,Payroll Support,12,1782654,37463,902465,391717,50914,522,1,0,Property,1099395
+736,Kalahari Food Services,Construction,Oshana,24,47,1896300,Technology Upgrade,48,6060818,205923,2140620,2573351,117954,509,7,0,Equipment,1373856
+737,Caprivi Supplies,Agriculture,Kavango West,22,127,1043166,Technology Upgrade,36,7798740,574381,1015594,2895557,54425,804,3,0,Vehicle,1552764
+738,Walvis Fishing,Construction,Khomas,3,146,1575488,Construction,36,5789220,710363,1550078,15481,69321,592,3,0,Property,3749829
+739,Luderitz Trading,Logistics,Erongo,20,104,1141164,Inventory,60,12766867,529187,1865038,2745099,19198,707,2,0,Livestock,3181721
+740,Luderitz Supplies,Transport,Oshikoto,24,113,1443477,Expansion,24,14041601,272135,2617627,531291,60014,691,4,0,Savings,2797027
+741,Gobabis Manufacturing,Transport,Otjozondjupa,18,211,1022675,Working Capital,12,12566208,707680,663202,2361740,58730,514,5,1,Vehicle,3598607
+742,Katima Tours,Food Services,Karas,20,80,89945,Technology Upgrade,24,5373505,687985,984679,242572,25950,671,0,0,Inventory,1061191
+743,Otji Farming,Mining Services,Kavango East,23,35,1306936,Construction,12,1846730,279770,1486592,3317783,90974,741,2,0,Vehicle,1235190
+744,Namib Tours,Mining Services,Karas,10,61,1112854,Technology Upgrade,48,14301523,398541,1536551,234600,79990,783,4,1,Livestock,700292
+745,Caprivi Logistics,Construction,Hardap,22,55,2480975,Technology Upgrade,36,7692231,420140,1376101,2804043,35885,638,0,0,Vehicle,2440475
+746,Otji Trading,Retail,Otjozondjupa,1,245,1322849,Inventory,24,428201,773799,619155,1225253,37839,470,5,0,Equipment,3498913
+747,Caprivi Construction,Construction,Karas,1,119,1158023,Inventory,48,5561649,521379,2780417,2505063,113664,563,4,0,Inventory,4231831
+748,Okavango Manufacturing,Manufacturing,Erongo,18,76,1565512,Equipment Purchase,60,14006068,628714,1586396,3207648,37003,741,4,0,Vehicle,3062794
+749,Katima Fishing,Construction,Oshana,21,20,1473662,Inventory,60,8572024,136095,397602,2175102,96805,543,2,0,Inventory,3328802
+750,Oshana Supplies,Food Services,Hardap,3,201,1725355,Construction,12,9833188,147200,1557290,3618571,27135,746,6,1,Inventory,1423445
+751,Luderitz Logistics,Logistics,Oshikoto,1,199,757643,Technology Upgrade,36,11138415,200358,254652,230069,32508,814,0,0,Inventory,243703
+752,Erongo Technologies,Construction,Erongo,13,81,1998151,Inventory,60,14221830,303037,1468934,154175,101767,603,1,0,Vehicle,110797
+753,Luderitz Farming,Logistics,Otjozondjupa,10,59,1335021,Working Capital,60,14371501,612393,1185979,1582240,117755,485,2,0,Equipment,1445873
+754,Oshana Retail,Agriculture,Oshikoto,20,33,1592571,Vehicle Purchase,24,12193923,558082,332441,3152402,50486,491,4,0,Savings,313967
+755,Luderitz Manufacturing,Retail,Oshikoto,10,232,927281,Expansion,48,1049579,319029,26437,2812026,72991,533,2,0,Property,907371
+756,Okavango Supplies,Construction,Hardap,6,249,1593840,Equipment Purchase,48,12380134,160582,2522904,929820,18114,568,4,0,Inventory,1895683
+757,Katima Logistics,Mining Services,Hardap,11,204,1473625,Construction,48,8906883,99789,1439076,1736047,115213,516,4,0,Inventory,1846604
+758,Katima Logistics,Retail,Oshikoto,10,151,182296,Equipment Purchase,24,11011284,677594,1381095,849581,107587,526,5,1,Livestock,2557544
+759,Kunene Food Services,Mining Services,Khomas,12,12,2254882,Working Capital,48,9574555,309115,1824085,3208138,78692,454,1,0,Equipment,856245
+760,Namib Supplies,Food Services,Kavango West,12,47,2226420,Inventory,60,14141316,431856,2214379,2151286,2294,831,6,0,Vehicle,3719919
+761,Windhoek Tours,Transport,Kavango West,25,59,1391198,Inventory,12,3374846,626958,495904,1078922,100173,572,6,0,Property,210664
+762,Luderitz Farming,Agriculture,Oshikoto,7,86,96533,Expansion,48,8281758,142809,1675969,658360,33479,653,5,1,Savings,3655435
+763,Windhoek Supplies,Construction,Otjozondjupa,19,171,927050,Technology Upgrade,24,6354459,148758,1933938,1427585,45914,562,4,1,Equipment,3088173
+764,Caprivi Construction,Mining Services,Kavango West,7,65,841581,Construction,24,14121996,132528,314404,2262117,45934,603,0,1,Equipment,3935942
+765,Namib Technologies,Retail,Karas,23,75,2096562,Technology Upgrade,36,7601852,557131,1108887,2107871,58768,500,4,1,Property,3393096
+766,Windhoek Farming,Food Services,Oshikoto,21,99,2318127,Working Capital,60,8478904,432598,356185,2510511,38559,713,3,0,Savings,4831163
+767,Otji Supplies,Food Services,Oshikoto,19,44,1177888,Payroll Support,36,3159145,76710,2974347,1038541,31286,572,6,0,Property,913984
+768,Swakop Tours,Food Services,Oshikoto,7,191,1430106,Construction,12,12138780,360241,1218212,2318451,9644,624,5,0,Livestock,3900621
+769,Gobabis Supplies,Agriculture,Hardap,17,224,1850004,Construction,48,13895294,404826,573858,980021,105661,725,2,0,Livestock,2362822
+770,Etosha Retail,Agriculture,Kavango West,21,29,2430210,Construction,24,10474685,100525,1633848,1524958,97454,694,4,0,Savings,2293101
+771,Katima Fishing,Construction,Oshikoto,20,7,225956,Technology Upgrade,60,3469254,321267,1227338,2055575,82438,768,8,0,Equipment,4952188
+772,Namib Retail,Technology,Hardap,23,175,309951,Inventory,12,2052990,246372,1084347,1756003,113027,602,2,0,Property,4015748
+773,Caprivi Fishing,Agriculture,Oshana,20,151,1547745,Vehicle Purchase,24,2313570,164125,1768936,996925,30492,554,4,1,Savings,4053144
+774,Kunene Tours,Transport,Oshikoto,8,147,1573848,Inventory,48,9025488,103677,493583,2228160,14105,766,0,0,Vehicle,487643
+775,Walvis Manufacturing,Manufacturing,Kavango West,12,248,485116,Expansion,60,7050917,322334,2154281,3690798,79950,567,5,0,Inventory,2231969
+776,Namib Tours,Retail,Kavango East,20,50,485735,Expansion,24,13923487,194061,436463,2059839,20274,848,0,0,Inventory,121259
+777,Oshana Logistics,Construction,Otjozondjupa,2,87,1782334,Inventory,48,7145973,776864,2087366,3963550,44776,832,6,1,Property,2701999
+778,Katima Supplies,Logistics,Erongo,16,220,887752,Vehicle Purchase,12,13875105,784046,1705837,3136756,77947,643,0,0,Inventory,4545561
+779,Luderitz Technologies,Mining Services,Oshikoto,9,241,1439492,Vehicle Purchase,60,6463311,65068,1857700,3168231,98892,546,2,0,Livestock,2510407
+780,Walvis Trading,Retail,Erongo,22,154,2152491,Inventory,48,13667030,160312,1581979,1389805,100534,650,0,0,Property,3973116
+781,Walvis Fishing,Food Services,Karas,20,89,947215,Inventory,48,2540589,762325,864577,704521,68506,652,8,0,Property,2035663
+782,Kunene Food Services,Food Services,Kavango West,15,138,1281501,Expansion,48,14066478,478906,49608,2335531,70969,508,4,0,Property,2644715
+783,Etosha Fishing,Agriculture,Karas,20,79,1548636,Working Capital,48,6617967,460755,2109845,2262541,98760,554,5,1,Savings,4161108
+784,Oshana Manufacturing,Retail,Erongo,10,194,2177284,Inventory,60,4410337,490753,944800,2541804,62351,460,1,0,Savings,1466711
+785,Luderitz Manufacturing,Tourism,Khomas,23,85,933677,Expansion,48,13506583,570218,2235464,2786658,61485,780,1,0,Property,1792097
+786,Windhoek Farming,Technology,Oshana,16,39,2425694,Payroll Support,36,7438605,438620,2696144,862038,115830,837,0,0,Property,4164604
+787,Walvis Technologies,Agriculture,Kavango West,4,59,1079186,Expansion,36,11152129,587387,1677230,261716,91896,710,5,0,Equipment,4377032
+788,Caprivi Retail,Food Services,Otjozondjupa,6,76,1904122,Construction,24,14468080,619576,2188272,636491,20974,823,6,0,Inventory,3751352
+789,Kalahari Manufacturing,Food Services,Oshikoto,1,159,1999088,Construction,12,14163625,713313,292554,1584075,47149,499,7,0,Livestock,1913588
+790,Oshana Trading,Agriculture,Otjozondjupa,2,223,1919538,Vehicle Purchase,48,1524556,710714,308469,3194964,82159,732,5,1,Livestock,869967
+791,Katima Technologies,Technology,Hardap,13,23,1059659,Vehicle Purchase,48,9512362,219242,1469366,1588989,114648,749,0,1,Livestock,80491
+792,Katima Farming,Manufacturing,Oshana,15,242,1117778,Working Capital,36,12033228,276711,805017,1114960,1289,826,2,0,Livestock,1633988
+793,Namib Construction,Technology,Oshikoto,24,150,1086985,Inventory,48,14898937,180072,2787710,3871945,31001,836,3,0,Savings,318762
+794,Caprivi Construction,Transport,Hardap,3,174,106351,Vehicle Purchase,48,11029623,230935,2699855,3600708,32325,500,6,0,Vehicle,2199765
+795,Etosha Construction,Manufacturing,Kavango West,1,60,1897855,Expansion,12,8352745,709961,1248708,1327512,56712,479,4,0,Savings,3986181
+796,Swakop Transport,Food Services,Erongo,8,76,1950745,Expansion,48,9720987,171058,2986820,1193023,99193,678,7,0,Property,727558
+797,Etosha Transport,Logistics,Karas,10,237,1813478,Inventory,60,14170120,666364,1403345,706004,32191,656,6,0,Inventory,3677060
+798,Swakop Logistics,Transport,Kavango West,3,89,732152,Vehicle Purchase,12,14656027,796514,71388,2823648,29637,608,4,0,Property,1718770
+799,Kalahari Fishing,Tourism,Karas,9,205,1686260,Payroll Support,24,13876608,61681,2737132,2369173,114789,519,3,1,Vehicle,2571354
+800,Otji Fishing,Logistics,Oshikoto,4,79,915572,Expansion,48,7841076,382755,2610701,33378,75466,721,8,1,Property,2584385
+801,Erongo Retail,Transport,Oshikoto,16,54,1300517,Payroll Support,24,6382036,366777,2115201,1172082,41133,538,5,0,Savings,2399765
+802,Oshana Fishing,Agriculture,Oshikoto,24,136,2002750,Technology Upgrade,60,2442531,639876,1385348,1974304,55888,660,4,1,Livestock,2861799
+803,Erongo Supplies,Manufacturing,Karas,1,84,185580,Technology Upgrade,24,11935195,397909,1087334,3543096,36031,678,2,0,Vehicle,1739125
+804,Katima Construction,Agriculture,Erongo,6,236,1859055,Inventory,60,4206898,334676,181151,2223034,83833,518,1,0,Equipment,4279871
+805,Otji Trading,Technology,Karas,24,182,1217899,Working Capital,24,7856646,215986,2507860,2368555,23647,669,6,0,Inventory,3846155
+806,Erongo Retail,Mining Services,Oshikoto,8,244,1350398,Equipment Purchase,48,5166022,710544,1943373,3402213,71175,752,0,0,Equipment,4081773
+807,Namib Fishing,Mining Services,Hardap,3,152,222934,Payroll Support,60,5746743,269037,2105515,1408107,67841,566,8,0,Property,2847086
+808,Okavango Construction,Food Services,Oshikoto,24,235,1746538,Technology Upgrade,24,8721256,88552,2320065,2487799,456,830,1,0,Equipment,3147582
+809,Namib Food Services,Construction,Kavango West,18,179,1278211,Technology Upgrade,24,10021579,733333,889703,669546,57732,785,2,0,Livestock,3484030
+810,Kalahari Construction,Food Services,Khomas,1,229,1897372,Payroll Support,36,3197299,440034,1381369,3081763,24185,593,4,1,Livestock,3371022
+811,Walvis Supplies,Tourism,Hardap,3,112,2320042,Inventory,12,10926533,435368,2653053,64948,114898,712,4,0,Vehicle,1965905
+812,Swakop Logistics,Tourism,Oshikoto,23,235,2208233,Payroll Support,60,3683152,283566,1110306,3769299,93452,527,3,0,Vehicle,3637146
+813,Katima Construction,Transport,Otjozondjupa,9,185,1991634,Working Capital,60,13592929,78497,1576314,1543952,19976,630,3,0,Savings,4756010
+814,Kunene Technologies,Logistics,Hardap,15,15,332273,Payroll Support,12,2804931,629811,800083,2540638,108862,817,1,0,Equipment,4104989
+815,Otji Farming,Retail,Khomas,1,80,2024508,Inventory,60,11712136,386083,900194,1319520,9289,494,1,0,Savings,2861656
+816,Etosha Supplies,Technology,Oshana,16,124,1416172,Payroll Support,36,11513036,190734,1248112,1880022,9867,499,3,0,Equipment,727656
+817,Kalahari Technologies,Tourism,Hardap,5,210,2264717,Expansion,12,7941625,410334,2639435,3007091,92049,474,5,1,Livestock,796574
+818,Erongo Manufacturing,Mining Services,Oshana,20,177,2483696,Inventory,12,5027045,773782,415534,3861607,99150,476,2,1,Vehicle,2990831
+819,Swakop Retail,Manufacturing,Kavango East,22,124,1933819,Technology Upgrade,12,3237962,747342,1042934,3510405,97689,732,1,1,Vehicle,3778697
+820,Erongo Manufacturing,Construction,Karas,5,103,2283642,Construction,48,757619,177183,1621590,3194582,71810,511,0,0,Livestock,3239699
+821,Swakop Logistics,Retail,Kavango East,2,183,1674883,Payroll Support,36,14489622,443616,507806,1918604,116850,730,8,0,Property,1337652
+822,Windhoek Trading,Agriculture,Otjozondjupa,11,5,1981196,Equipment Purchase,36,5526115,543714,58236,771961,3593,680,2,1,Savings,1748258
+823,Walvis Fishing,Transport,Oshana,6,168,2257629,Technology Upgrade,60,10224618,545554,953316,1034597,102474,540,8,0,Equipment,3960415
+824,Erongo Food Services,Food Services,Khomas,10,43,287943,Inventory,48,12547405,607408,626325,3511567,11872,772,7,0,Livestock,159735
+825,Namib Logistics,Mining Services,Khomas,14,198,1504585,Construction,60,3305784,639499,1200769,1770932,91611,788,3,0,Savings,554261
+826,Kunene Food Services,Logistics,Oshikoto,7,4,379373,Construction,12,9538708,450804,587584,2693508,104206,816,3,0,Vehicle,4583483
+827,Walvis Technologies,Food Services,Kavango East,20,52,452837,Inventory,24,12478632,113911,118676,2127838,57112,753,0,0,Property,2990136
+828,Windhoek Tours,Retail,Khomas,10,241,2495302,Technology Upgrade,48,13322598,518798,314547,658013,86952,493,0,0,Vehicle,4042025
+829,Oshana Supplies,Construction,Kavango East,10,171,1607980,Technology Upgrade,24,12677552,98524,2414920,3607539,74426,598,2,1,Inventory,1697364
+830,Kunene Transport,Mining Services,Oshikoto,20,60,1701868,Working Capital,12,14234155,419639,315913,2337077,32356,569,2,0,Property,2956019
+831,Swakop Logistics,Retail,Oshikoto,4,215,1390493,Inventory,36,5396251,787880,1442165,2188290,98178,523,5,0,Equipment,1044195
+832,Katima Technologies,Technology,Hardap,7,228,871272,Working Capital,12,13528675,146446,1037519,595119,16593,615,3,0,Vehicle,1678628
+833,Luderitz Food Services,Retail,Karas,6,103,487510,Technology Upgrade,36,9581791,457113,2883152,3610863,85802,709,6,0,Vehicle,2766077
+834,Caprivi Retail,Logistics,Kavango West,10,66,1608552,Working Capital,12,9755735,797529,2494329,2584448,3258,575,1,1,Property,163758
+835,Walvis Construction,Manufacturing,Khomas,4,121,466438,Inventory,24,8320320,197132,326557,2344408,63187,642,2,0,Property,1584457
+836,Windhoek Fishing,Food Services,Oshikoto,14,24,898490,Working Capital,24,4024613,481341,2258268,1041621,39606,502,8,0,Inventory,2121821
+837,Walvis Retail,Logistics,Oshana,18,151,1770768,Payroll Support,36,7889620,47171,2348843,2374693,98223,720,6,0,Savings,2606136
+838,Erongo Food Services,Construction,Hardap,16,142,1035543,Working Capital,60,11237586,497744,1627847,2409603,24336,814,2,0,Vehicle,3220713
+839,Kunene Technologies,Construction,Erongo,6,143,1895635,Technology Upgrade,12,7523994,185662,463178,2162065,107710,516,3,0,Savings,1362447
+840,Kalahari Construction,Mining Services,Hardap,16,130,2441456,Equipment Purchase,48,6274417,34824,327422,3287902,88757,720,1,0,Inventory,4798691
+841,Etosha Food Services,Agriculture,Karas,17,31,2251958,Equipment Purchase,60,14098550,214981,1055872,1976643,9404,634,2,0,Equipment,142603
+842,Okavango Fishing,Retail,Hardap,17,128,2276017,Expansion,36,13068317,505899,1706482,635440,48521,816,4,0,Savings,2199207
+843,Windhoek Technologies,Construction,Khomas,15,178,727752,Working Capital,48,875142,187994,1756832,1904280,41307,484,6,0,Vehicle,1070800
+844,Otji Supplies,Technology,Oshana,23,77,914153,Technology Upgrade,24,2911137,232592,575404,2505994,92160,496,1,0,Vehicle,4689803
+845,Otji Supplies,Manufacturing,Kavango West,20,80,1148614,Construction,12,6324748,532800,1406071,3026986,179,482,6,0,Inventory,3890716
+846,Oshana Retail,Logistics,Oshikoto,19,44,599535,Payroll Support,36,2405675,364959,2921478,260341,104249,479,1,1,Livestock,3789435
+847,Gobabis Food Services,Technology,Khomas,23,194,368246,Vehicle Purchase,48,12974963,585225,710478,1095408,40279,492,2,0,Livestock,4409807
+848,Etosha Supplies,Technology,Karas,7,140,2210651,Construction,48,10735967,413146,1977435,433874,22812,629,2,0,Savings,367477
+849,Namib Transport,Mining Services,Kavango East,12,50,291259,Technology Upgrade,36,3380504,198640,2512854,2702107,112820,796,6,1,Savings,973856
+850,Swakop Farming,Mining Services,Otjozondjupa,19,124,928657,Construction,36,7191934,720532,2831904,935826,42540,749,7,0,Livestock,4463291
+851,Kalahari Tours,Technology,Kavango West,11,250,2190477,Payroll Support,12,4867062,475047,1113967,1345156,26986,679,7,0,Property,2290011
+852,Etosha Retail,Technology,Oshikoto,15,152,2453503,Expansion,60,5904876,289351,1506500,30343,41229,785,1,0,Equipment,3355172
+853,Etosha Food Services,Construction,Oshana,25,233,1375578,Construction,48,1205851,99118,429171,3511584,96184,655,1,1,Property,3789214
+854,Otji Food Services,Technology,Karas,2,83,965265,Construction,12,2658480,628335,364331,1112512,69952,673,0,0,Vehicle,4879542
+855,Luderitz Logistics,Manufacturing,Karas,9,87,2299340,Construction,48,2351501,302185,1356798,2893924,41089,701,2,1,Vehicle,766304
+856,Walvis Construction,Construction,Oshikoto,23,4,1161142,Equipment Purchase,12,656783,405117,956640,847968,114053,686,2,1,Savings,2345630
+857,Otji Logistics,Retail,Kavango West,16,196,1260173,Expansion,60,13723918,561987,2866237,3793878,22114,779,2,0,Property,639390
+858,Caprivi Transport,Logistics,Karas,6,133,744388,Vehicle Purchase,24,9410462,458999,710252,2475756,59258,757,3,0,Livestock,2181537
+859,Caprivi Manufacturing,Logistics,Kavango West,5,39,1488896,Construction,24,14481424,99045,1492059,2222408,68061,680,6,0,Livestock,2636502
+860,Oshana Manufacturing,Logistics,Erongo,3,162,459821,Payroll Support,48,8896041,200260,709228,452132,37803,606,5,0,Vehicle,1031656
+861,Oshana Construction,Technology,Kavango West,5,119,2250384,Payroll Support,36,6913326,63676,2878065,1539369,37917,782,8,0,Inventory,2631224
+862,Erongo Supplies,Retail,Otjozondjupa,4,75,2202245,Inventory,24,4248481,279503,512232,2421690,74961,794,4,0,Equipment,647128
+863,Luderitz Tours,Construction,Kavango East,21,111,548855,Technology Upgrade,36,7714537,715231,1912591,3028862,65633,554,0,1,Property,2154861
+864,Walvis Trading,Technology,Erongo,14,188,1544616,Equipment Purchase,24,3627063,314849,2405331,2091331,106358,841,4,0,Livestock,520997
+865,Katima Tours,Retail,Kavango West,23,4,67026,Technology Upgrade,24,9202166,383246,2054214,3707278,17689,570,5,1,Inventory,3576127
+866,Gobabis Manufacturing,Agriculture,Oshana,22,228,905565,Working Capital,60,12222007,483240,2113174,3243960,103575,565,0,0,Property,4958662
+867,Oshana Food Services,Transport,Oshana,9,100,1628354,Payroll Support,12,5420560,56742,883995,431079,69937,832,6,0,Vehicle,4469390
+868,Oshana Manufacturing,Food Services,Oshana,3,22,1879958,Equipment Purchase,60,847729,354598,1909839,632453,74376,467,5,0,Savings,1881329
+869,Otji Logistics,Tourism,Oshana,6,157,1542541,Vehicle Purchase,36,423990,294222,2045973,3768148,73051,534,3,1,Inventory,1895362
+870,Okavango Food Services,Tourism,Karas,20,102,1884626,Technology Upgrade,24,2350795,799136,972320,895683,16093,845,8,1,Savings,758213
+871,Kunene Food Services,Mining Services,Erongo,4,150,1935845,Working Capital,12,12617628,563496,2872648,1096114,65498,705,7,0,Property,1788544
+872,Otji Transport,Mining Services,Khomas,3,154,1261783,Expansion,60,4355558,560786,2215768,2725096,111608,634,2,0,Livestock,4579033
+873,Kalahari Transport,Logistics,Kavango East,6,41,55300,Working Capital,60,10242598,589111,1730455,579144,91198,642,7,1,Property,2395075
+874,Etosha Retail,Transport,Oshikoto,5,214,2494231,Inventory,24,6944766,358491,36586,420635,17251,628,0,1,Vehicle,4788015
+875,Kalahari Logistics,Food Services,Erongo,8,156,412777,Expansion,36,10263431,413626,604577,3497993,359,830,4,0,Inventory,4712438
+876,Gobabis Construction,Mining Services,Kavango West,6,194,600907,Working Capital,24,14093060,782130,1904530,2318216,110171,791,2,0,Livestock,1416209
+877,Oshana Trading,Tourism,Kavango East,14,157,2351462,Technology Upgrade,60,2427582,185974,1271727,2248082,32010,497,7,0,Inventory,2863524
+878,Gobabis Trading,Agriculture,Karas,13,63,505320,Construction,12,3319146,589654,1952276,2577581,71201,588,7,0,Property,4022907
+879,Namib Trading,Retail,Hardap,5,142,596832,Vehicle Purchase,60,4144798,798395,892050,438135,55055,683,2,0,Savings,2597898
+880,Gobabis Construction,Technology,Otjozondjupa,15,63,1570035,Expansion,48,9691714,121276,1286726,2219208,60192,690,4,0,Savings,432108
+881,Luderitz Manufacturing,Mining Services,Oshana,7,131,1890928,Vehicle Purchase,24,4797685,139780,2861092,2718378,8223,681,5,1,Inventory,4355222
+882,Katima Tours,Transport,Khomas,14,141,363908,Construction,36,1953027,92298,1984757,106937,27458,623,0,0,Property,1061799
+883,Swakop Food Services,Food Services,Oshikoto,17,67,601752,Inventory,12,6785266,420423,629775,160586,76032,823,4,0,Savings,1914927
+884,Gobabis Farming,Retail,Oshana,12,215,1566362,Inventory,12,13305578,627584,2438292,1079138,45188,660,1,1,Equipment,3663222
+885,Kalahari Fishing,Agriculture,Oshana,8,29,1922929,Working Capital,36,13270041,120856,1455416,831237,29880,588,2,0,Livestock,2535682
+886,Swakop Trading,Transport,Kavango West,4,247,1036210,Payroll Support,36,14757004,211258,2958171,1392816,87474,468,6,0,Vehicle,1846434
+887,Erongo Retail,Technology,Hardap,15,230,439840,Vehicle Purchase,48,11783743,36647,860921,2206172,50818,638,2,1,Property,868129
+888,Namib Fishing,Logistics,Kavango West,25,144,2344629,Equipment Purchase,24,14046148,39981,1522203,892371,53585,838,3,0,Property,4745868
+889,Kalahari Logistics,Construction,Hardap,6,5,2308332,Vehicle Purchase,12,2497474,361426,2534280,3568543,102210,667,3,0,Inventory,252734
+890,Okavango Tours,Tourism,Hardap,11,26,357776,Vehicle Purchase,24,12282167,184194,1742877,858659,112920,616,6,0,Property,1944035
+891,Otji Trading,Manufacturing,Oshikoto,22,130,1490800,Working Capital,60,13520270,150062,1568777,1878749,80532,459,5,1,Livestock,4190655
+892,Luderitz Construction,Logistics,Hardap,12,196,1371230,Technology Upgrade,36,13427390,560103,1448950,501252,10779,778,3,1,Equipment,1159824
+893,Kalahari Farming,Food Services,Hardap,22,247,2360478,Payroll Support,12,14962109,329784,2090825,2190547,18660,476,4,0,Savings,4986608
+894,Caprivi Supplies,Tourism,Kavango West,12,173,2415666,Technology Upgrade,24,12458292,542780,566557,3451163,36692,493,2,0,Vehicle,2199317
+895,Gobabis Manufacturing,Mining Services,Kavango West,7,244,704096,Technology Upgrade,60,10625304,411826,2565388,3705744,53247,671,7,1,Livestock,3882074
+896,Kunene Trading,Mining Services,Khomas,23,55,263108,Inventory,48,5966462,528018,2530980,792698,68696,634,1,0,Property,1838207
+897,Luderitz Farming,Retail,Oshikoto,4,109,69836,Equipment Purchase,12,11301534,144818,2089221,2373330,68593,489,3,1,Savings,3711734
+898,Katima Tours,Construction,Oshana,17,230,1107481,Expansion,48,3217728,136602,2908506,204563,101060,719,4,1,Equipment,1976743
+899,Windhoek Technologies,Construction,Kavango West,19,202,353437,Payroll Support,36,6356490,625678,1901442,2353656,82663,705,5,0,Inventory,4835260
+900,Caprivi Technologies,Manufacturing,Oshana,25,182,1165049,Working Capital,48,7902230,668688,182651,1391231,77468,524,1,0,Livestock,4666294
+901,Windhoek Construction,Construction,Oshikoto,14,116,546347,Working Capital,12,6557683,237933,1960082,2197476,61664,580,0,0,Inventory,1624311
+902,Okavango Construction,Tourism,Oshikoto,15,117,748104,Inventory,48,4684872,80310,1162907,3712582,7641,628,6,1,Property,763673
+903,Etosha Farming,Construction,Karas,12,97,1230078,Working Capital,48,10396207,746544,1636465,2220903,99594,598,3,1,Livestock,1609745
+904,Otji Tours,Tourism,Karas,3,159,62258,Payroll Support,36,7182955,113206,1630086,209148,83479,745,2,0,Savings,3788976
+905,Otji Construction,Tourism,Karas,3,215,829542,Equipment Purchase,12,9119448,252455,1363403,1567451,115020,577,6,0,Equipment,3660944
+906,Kunene Logistics,Mining Services,Kavango East,12,21,52701,Working Capital,48,4823229,797730,707742,1516966,57496,773,0,0,Equipment,1675057
+907,Etosha Manufacturing,Construction,Khomas,1,114,204676,Payroll Support,24,4005270,163411,410025,2978662,9663,474,2,0,Savings,4300843
+908,Otji Logistics,Technology,Erongo,15,38,2355723,Working Capital,48,5962950,658350,2893492,1619948,108071,495,4,0,Savings,2737560
+909,Caprivi Construction,Mining Services,Oshikoto,10,152,1864453,Inventory,12,11130811,403371,2167771,2656047,75513,804,2,1,Vehicle,1556665
+910,Erongo Retail,Agriculture,Kavango East,1,143,604717,Equipment Purchase,36,10410980,396371,166308,3904440,113728,716,0,0,Property,4391776
+911,Walvis Trading,Technology,Oshikoto,12,46,2153703,Vehicle Purchase,60,14265992,297269,1066443,15597,77962,740,1,0,Property,2763306
+912,Kunene Supplies,Retail,Otjozondjupa,10,91,1170177,Construction,36,8793884,171454,528779,1813666,59283,745,5,0,Equipment,1062038
+913,Kunene Supplies,Food Services,Oshana,13,171,1040568,Inventory,12,1490127,167805,1513795,1808359,65680,531,7,0,Savings,178160
+914,Kunene Supplies,Logistics,Hardap,20,27,1755318,Payroll Support,60,10212012,622424,628355,1916003,48384,784,2,0,Vehicle,4455646
+915,Oshana Fishing,Retail,Hardap,20,39,1020285,Inventory,12,11443253,599894,105477,2856246,95638,536,1,0,Livestock,1503756
+916,Otji Food Services,Tourism,Hardap,14,26,2436820,Payroll Support,12,10054218,90379,2938026,1129907,79512,756,6,1,Savings,3563761
+917,Namib Technologies,Transport,Hardap,6,36,1619034,Inventory,24,2050078,631994,1855409,2223017,12890,749,8,0,Livestock,1984743
+918,Otji Tours,Retail,Otjozondjupa,14,108,1474178,Payroll Support,48,12824424,680013,471190,1808450,91733,683,7,0,Savings,3776392
+919,Otji Food Services,Agriculture,Otjozondjupa,14,83,1703462,Inventory,36,12941897,286867,692502,2358660,48547,536,6,0,Livestock,3721861
+920,Walvis Transport,Retail,Otjozondjupa,25,240,1784687,Payroll Support,36,13446033,408841,233343,2319369,37078,791,2,0,Property,3396816
+921,Erongo Manufacturing,Food Services,Oshana,24,195,1026423,Inventory,12,7233749,697433,1915507,28560,114367,823,2,1,Inventory,2582379
+922,Otji Construction,Retail,Khomas,15,162,1435305,Construction,48,13492416,400827,105901,2489664,33928,597,6,0,Inventory,4632767
+923,Erongo Logistics,Tourism,Otjozondjupa,24,144,1797825,Expansion,60,10064253,596257,474173,3429809,20991,553,2,1,Equipment,1286070
+924,Etosha Trading,Tourism,Otjozondjupa,4,241,2118205,Expansion,48,417621,48816,1123263,408594,70247,742,6,0,Vehicle,2869006
+925,Kunene Fishing,Tourism,Erongo,20,86,2422974,Payroll Support,48,2463068,174685,1885406,2688622,26104,508,6,0,Savings,3981118
+926,Namib Logistics,Construction,Otjozondjupa,6,62,2093255,Vehicle Purchase,48,3708703,78044,1860384,2612997,118783,803,8,1,Property,1075389
+927,Kalahari Food Services,Manufacturing,Khomas,24,173,703347,Inventory,60,10525967,362442,2020784,2484247,104920,602,4,0,Livestock,3433055
+928,Oshana Logistics,Transport,Oshana,4,155,1297234,Vehicle Purchase,36,10716500,79846,1629477,1197021,19613,799,5,1,Savings,1842822
+929,Gobabis Construction,Technology,Kavango East,8,77,508430,Equipment Purchase,60,6394578,666061,1825780,1695897,118004,644,8,0,Property,2911729
+930,Windhoek Tours,Mining Services,Erongo,7,45,657368,Construction,48,4509405,246583,1454984,103579,98777,676,7,0,Equipment,1622499
+931,Etosha Transport,Transport,Oshikoto,10,190,1120198,Equipment Purchase,60,12915623,366537,1217544,3990773,17737,680,8,0,Equipment,609946
+932,Oshana Logistics,Retail,Oshikoto,18,170,105203,Technology Upgrade,48,14067139,29666,1313396,1926779,117862,792,8,1,Equipment,678236
+933,Etosha Supplies,Tourism,Otjozondjupa,12,6,2416045,Technology Upgrade,36,11672763,352526,2415151,3509485,92797,455,1,0,Livestock,1902889
+934,Gobabis Farming,Logistics,Oshikoto,4,59,363123,Working Capital,60,6460330,178195,1664735,3011524,101797,480,4,0,Livestock,2648483
+935,Gobabis Technologies,Technology,Erongo,9,244,1673127,Construction,36,691763,85352,167621,606025,71217,821,2,1,Property,773182
+936,Okavango Trading,Construction,Kavango West,25,212,1468818,Equipment Purchase,24,4291242,38233,2169723,450501,48863,477,1,0,Vehicle,2873802
+937,Kunene Transport,Retail,Kavango West,22,45,636360,Vehicle Purchase,24,12656308,60893,822163,3872685,88428,467,4,0,Equipment,4631233
+938,Katima Technologies,Agriculture,Karas,5,112,660346,Vehicle Purchase,24,9405652,328035,1239000,2993110,108097,578,4,1,Livestock,4456663
+939,Walvis Construction,Technology,Kavango East,6,230,824920,Expansion,60,4244329,169579,1839340,3372942,62663,556,7,1,Equipment,1898547
+940,Walvis Fishing,Manufacturing,Hardap,3,222,764370,Working Capital,12,743996,71599,832623,3576496,88095,662,8,0,Property,601616
+941,Caprivi Trading,Manufacturing,Kavango West,3,238,955909,Equipment Purchase,24,14611060,776162,539982,3751625,48916,562,1,0,Savings,4837961
+942,Caprivi Tours,Retail,Hardap,17,124,1427695,Working Capital,48,5531197,159348,287008,1972097,48177,626,4,0,Vehicle,1417084
+943,Swakop Food Services,Tourism,Khomas,9,31,872009,Construction,36,6030809,345432,1324969,2691810,14486,560,3,1,Inventory,3233641
+944,Caprivi Technologies,Transport,Karas,12,122,491175,Technology Upgrade,48,7424864,787657,1021266,387853,23971,732,7,0,Inventory,2951556
+945,Erongo Tours,Food Services,Oshikoto,21,146,2270881,Expansion,60,8504726,235786,2180645,3813946,17707,679,7,0,Savings,1257709
+946,Katima Construction,Logistics,Kavango West,24,47,1114119,Inventory,24,3118654,723797,283546,774428,4791,652,3,0,Savings,1743018
+947,Okavango Technologies,Logistics,Kavango East,10,163,1741568,Inventory,24,6642989,527069,2472837,3915899,94483,736,6,0,Equipment,3819892
+948,Oshana Technologies,Retail,Khomas,4,98,2410751,Equipment Purchase,12,1265876,710928,91806,1521343,46024,797,2,0,Inventory,3289407
+949,Caprivi Tours,Transport,Oshana,6,132,638623,Equipment Purchase,36,9158483,361871,1223645,66649,57271,537,3,0,Vehicle,3796517
+950,Swakop Transport,Agriculture,Oshikoto,9,109,1611677,Vehicle Purchase,12,6712692,55505,310028,139956,96216,819,6,0,Vehicle,2401834
+951,Okavango Logistics,Agriculture,Otjozondjupa,22,237,1609363,Inventory,24,12550868,324482,1503620,3137944,110076,691,5,0,Vehicle,1438432
+952,Okavango Manufacturing,Logistics,Erongo,4,164,1269708,Expansion,24,11181506,605907,1301711,1650937,12176,802,3,0,Property,417936
+953,Etosha Supplies,Construction,Erongo,15,32,1788135,Expansion,24,9617952,412824,2744243,2177357,12553,508,0,1,Vehicle,2627030
+954,Walvis Food Services,Construction,Otjozondjupa,25,199,543199,Technology Upgrade,36,4291575,157653,2075893,2938517,15777,841,3,0,Property,2025086
+955,Otji Food Services,Technology,Oshikoto,9,236,2043416,Vehicle Purchase,60,13125931,790259,1699029,1751762,76831,640,1,0,Livestock,849925
+956,Etosha Farming,Mining Services,Oshikoto,7,77,384710,Working Capital,60,8288048,362609,2877576,3671415,118925,533,7,0,Property,326115
+957,Kalahari Supplies,Manufacturing,Erongo,11,2,1818291,Technology Upgrade,36,5138265,230261,2015058,1899346,27974,664,5,1,Inventory,3406561
+958,Erongo Retail,Retail,Karas,21,234,1247161,Inventory,36,2202382,233623,1580369,2865135,89078,597,0,0,Vehicle,4093718
+959,Kunene Tours,Retail,Oshana,4,96,75332,Technology Upgrade,48,5894558,593064,566729,3596460,97221,708,4,1,Livestock,4414204
+960,Luderitz Fishing,Retail,Hardap,12,105,1510303,Technology Upgrade,12,9421536,178567,2907835,2994517,101915,657,6,1,Equipment,4947374
+961,Oshana Supplies,Mining Services,Oshana,19,201,1822083,Working Capital,12,6309514,779114,412613,272602,5920,592,6,0,Property,1961885
+962,Kalahari Construction,Logistics,Otjozondjupa,22,91,530742,Working Capital,12,11284121,204684,2574028,208634,38554,710,8,0,Equipment,956833
+963,Kunene Farming,Retail,Kavango East,21,169,1208729,Equipment Purchase,24,14834093,513064,2316650,2388302,81413,538,8,0,Livestock,412460
+964,Swakop Technologies,Logistics,Kavango East,3,249,1546405,Construction,12,7823205,130340,185311,2609081,20942,739,7,0,Property,2233131
+965,Katima Technologies,Logistics,Khomas,15,204,1416976,Inventory,36,7799917,593813,141305,3113971,70567,549,0,0,Inventory,430771
+966,Oshana Farming,Agriculture,Oshikoto,23,229,1111384,Expansion,36,12442747,328613,1658787,1723814,22663,496,8,0,Property,1143138
+967,Walvis Retail,Manufacturing,Oshikoto,21,55,2499582,Working Capital,48,9210758,721540,441655,243908,42284,577,1,0,Property,396817
+968,Namib Tours,Tourism,Kavango West,7,145,1623545,Equipment Purchase,60,1825571,593761,1734586,3436793,5127,580,4,0,Savings,118883
+969,Kalahari Transport,Transport,Oshikoto,4,40,849890,Technology Upgrade,36,12068362,579029,1898201,3174332,91632,733,6,0,Inventory,4407848
+970,Namib Supplies,Food Services,Oshikoto,12,29,902392,Working Capital,60,14495023,556743,901760,3188952,73976,642,2,0,Vehicle,4547445
+971,Kunene Fishing,Retail,Kavango East,18,157,1956828,Construction,36,3114530,221871,1622777,2215833,6185,560,3,1,Equipment,4782901
+972,Namib Trading,Technology,Oshikoto,11,183,1424658,Vehicle Purchase,36,3038703,678005,2481031,3557248,12253,633,4,1,Property,347236
+973,Etosha Retail,Mining Services,Oshana,9,169,1050630,Inventory,60,5543220,502437,2075369,3521736,59301,787,0,0,Vehicle,711510
+974,Oshana Transport,Logistics,Oshikoto,22,248,1816465,Technology Upgrade,12,12765114,78909,1515121,1860617,68736,620,7,0,Equipment,1343733
+975,Kunene Construction,Technology,Kavango East,13,150,416450,Construction,60,10252028,406582,972059,3577798,106460,538,0,0,Livestock,2601252
+976,Otji Farming,Retail,Oshikoto,10,110,1981647,Expansion,36,12952705,765381,300610,3208144,102963,623,2,0,Vehicle,3524231
+977,Gobabis Technologies,Retail,Erongo,24,20,1223396,Payroll Support,48,4282869,544176,222811,1766014,70413,840,4,0,Property,2510363
+978,Caprivi Construction,Technology,Oshikoto,23,43,428915,Inventory,36,7051897,234682,1476599,2716031,12044,561,2,0,Savings,2323484
+979,Luderitz Transport,Logistics,Erongo,5,250,658440,Vehicle Purchase,24,8033990,102471,1363173,1509095,112727,678,6,0,Equipment,2916249
+980,Katima Manufacturing,Food Services,Hardap,8,28,294437,Expansion,60,14675643,108164,1866299,3969032,74917,728,8,0,Savings,1119919
+981,Kunene Farming,Technology,Oshikoto,22,62,1197421,Payroll Support,24,8145900,609725,13828,2475754,26691,718,8,1,Livestock,721076
+982,Windhoek Trading,Transport,Otjozondjupa,22,172,1901130,Technology Upgrade,60,6709465,741756,2880314,299846,50657,691,1,0,Vehicle,2481627
+983,Kalahari Construction,Technology,Oshana,23,237,360532,Payroll Support,60,11048595,752552,1785316,414054,81812,609,1,0,Inventory,3272198
+984,Gobabis Fishing,Tourism,Khomas,16,161,177814,Expansion,48,11390644,341977,356106,3050524,118638,511,4,0,Livestock,4207966
+985,Namib Trading,Construction,Oshana,1,147,2492119,Expansion,24,2997212,797196,2558662,2184583,12349,698,6,1,Equipment,3276061
+986,Kunene Technologies,Mining Services,Oshikoto,19,187,540827,Technology Upgrade,36,13434283,555085,1374673,3542129,93168,593,5,0,Equipment,1033336
+987,Oshana Farming,Construction,Otjozondjupa,3,150,876452,Inventory,24,13936978,747727,2696150,2088042,48930,714,4,0,Savings,1844023
+988,Caprivi Transport,Technology,Hardap,5,160,1119052,Expansion,60,1569448,629379,475811,49741,19905,575,3,1,Savings,2789478
+989,Erongo Transport,Construction,Oshikoto,21,168,2002831,Equipment Purchase,36,10269367,699979,213320,3505700,93550,675,6,0,Livestock,4510143
+990,Windhoek Manufacturing,Retail,Khomas,2,106,1384766,Equipment Purchase,36,9958773,319507,2848771,2834653,89251,718,3,1,Inventory,4699359
+991,Walvis Tours,Manufacturing,Kavango West,25,161,1190690,Construction,24,3145595,295893,1849460,3791852,117453,537,1,0,Livestock,2019641
+992,Kunene Technologies,Transport,Khomas,12,18,1390507,Vehicle Purchase,60,7459745,425453,2551051,2340117,59851,642,6,0,Equipment,1355769
+993,Erongo Retail,Logistics,Karas,21,171,710816,Vehicle Purchase,60,12752618,605345,778459,746651,52755,837,2,0,Savings,3079837
+994,Okavango Retail,Construction,Hardap,12,59,374628,Equipment Purchase,12,11167879,404030,266272,3799187,99733,780,6,0,Inventory,3591299
+995,Gobabis Transport,Manufacturing,Karas,22,249,2068725,Technology Upgrade,36,6298522,612993,859525,3155155,10705,805,4,0,Livestock,812267
+996,Okavango Retail,Technology,Oshana,24,173,1109002,Working Capital,48,1564121,446939,870447,3345553,34092,639,0,0,Savings,2345386
+997,Swakop Retail,Construction,Hardap,5,168,943939,Construction,24,6380653,550244,2736059,1719246,95704,480,2,1,Equipment,2126475
+998,Gobabis Manufacturing,Transport,Oshana,12,240,1731926,Working Capital,36,9336962,66896,1830858,1584997,100346,577,8,0,Savings,2895686
+999,Okavango Retail,Transport,Karas,11,116,2179275,Construction,48,12492561,450927,390708,2681,11283,639,3,0,Property,3473184
+1000,Luderitz Farming,Technology,Hardap,22,44,1975879,Working Capital,48,14748456,658673,1106465,429446,83897,728,3,0,Vehicle,1837560
+1001,Oshana Trading,Technology,Oshana,20,85,1481174,Technology Upgrade,36,4150294,125495,1523988,52109,99653,752,0,1,Vehicle,1743985
+1002,Otji Technologies,Logistics,Otjozondjupa,7,243,1619559,Expansion,12,6180299,172626,1369754,2923320,115904,485,2,0,Equipment,4408061
+1003,Windhoek Supplies,Logistics,Otjozondjupa,23,235,2267826,Equipment Purchase,36,2603921,603961,2889788,476262,11272,809,8,1,Savings,4179014
+1004,Katima Food Services,Mining Services,Otjozondjupa,1,136,1465053,Expansion,12,14533299,399526,15729,3127205,15836,724,8,0,Savings,1461093
+1005,Windhoek Transport,Agriculture,Kavango West,16,172,163226,Equipment Purchase,24,10575474,607451,1950825,2222266,81344,545,3,0,Livestock,192211
+1006,Okavango Supplies,Construction,Erongo,9,200,855288,Working Capital,60,12300571,717761,1603916,15386,58925,482,2,0,Property,2583750
+1007,Windhoek Logistics,Manufacturing,Oshikoto,9,4,2267495,Construction,60,11922876,763471,727648,1348349,118507,634,8,0,Vehicle,772810
+1008,Caprivi Supplies,Tourism,Kavango West,25,77,1414292,Inventory,36,6955027,35413,678124,1912308,32245,686,8,1,Livestock,2145975
+1009,Windhoek Transport,Agriculture,Khomas,25,141,1986999,Construction,48,3001800,467757,978835,906121,46284,647,1,0,Vehicle,3653543
+1010,Windhoek Food Services,Manufacturing,Khomas,24,113,424282,Inventory,24,7733087,435183,2745016,1699201,116136,587,1,0,Inventory,1750384
+1011,Luderitz Food Services,Construction,Oshikoto,14,160,2359727,Payroll Support,48,8876022,376901,2607457,578781,59086,626,0,0,Property,3808921
+1012,Luderitz Tours,Technology,Kavango West,2,200,597726,Inventory,12,9539336,180536,27597,261218,34284,785,3,0,Equipment,358167
+1013,Etosha Construction,Retail,Karas,6,198,1545398,Equipment Purchase,48,4814620,563595,2936193,3227136,97136,806,7,0,Vehicle,147323
+1014,Otji Fishing,Transport,Karas,7,205,1104919,Equipment Purchase,36,14276954,256384,1843475,2945587,27937,820,7,1,Vehicle,1914489
+1015,Etosha Supplies,Manufacturing,Erongo,20,49,2414633,Working Capital,36,5713949,316035,1854149,1685912,41586,575,0,0,Inventory,752130
+1016,Etosha Farming,Logistics,Oshana,6,62,213423,Working Capital,12,6017569,36733,1512171,583765,117891,791,7,0,Equipment,1346958
+1017,Caprivi Manufacturing,Construction,Erongo,17,213,989843,Working Capital,12,7374272,434443,2700500,2302431,109079,791,0,1,Livestock,3300044
+1018,Walvis Farming,Construction,Erongo,17,247,893837,Expansion,12,640597,662227,1517446,2573961,41055,484,5,0,Equipment,1020610
+1019,Kunene Transport,Mining Services,Erongo,13,121,212062,Vehicle Purchase,36,13351570,175788,2067942,3584054,19950,538,1,0,Property,1444358
+1020,Luderitz Logistics,Technology,Otjozondjupa,10,93,1194285,Vehicle Purchase,12,2127356,190069,111845,2288950,10149,635,4,0,Savings,4922150
+1021,Oshana Tours,Mining Services,Erongo,10,245,1182063,Technology Upgrade,60,2974522,268109,1822978,3089680,81885,737,2,0,Inventory,3100021
+1022,Walvis Farming,Tourism,Oshikoto,19,214,981702,Technology Upgrade,36,5342574,697080,2831254,3390954,43918,716,5,0,Savings,326724
+1023,Oshana Retail,Technology,Oshana,2,149,526986,Inventory,36,7935581,148085,1994211,2541453,906,782,1,0,Livestock,661766
+1024,Oshana Tours,Technology,Khomas,2,63,897221,Payroll Support,36,5650093,422261,724477,1483303,74,657,6,0,Property,1406758
+1025,Windhoek Fishing,Food Services,Karas,5,88,1320521,Expansion,60,1294305,340895,37909,2066578,10196,599,4,1,Savings,4170718
+1026,Erongo Logistics,Manufacturing,Oshana,23,239,674001,Payroll Support,24,1486368,720999,446575,762380,31378,836,5,0,Equipment,1574617
+1027,Luderitz Trading,Tourism,Hardap,21,145,1322341,Vehicle Purchase,36,2856450,724846,1322296,2481525,3650,665,3,1,Equipment,3783543
+1028,Erongo Logistics,Food Services,Erongo,19,219,1307470,Working Capital,24,14975033,570672,1501731,2359795,91050,502,7,0,Property,3562850
+1029,Windhoek Manufacturing,Manufacturing,Oshikoto,23,224,83732,Inventory,60,8952103,296179,2574854,1473797,28424,616,4,1,Inventory,4896884
+1030,Gobabis Supplies,Tourism,Oshikoto,4,127,2270818,Working Capital,12,9147977,563991,757015,3070397,67955,492,1,0,Livestock,3709211
+1031,Luderitz Technologies,Transport,Erongo,2,183,156356,Expansion,12,2689294,350723,1452755,2803155,51065,547,4,0,Inventory,4293313
+1032,Katima Supplies,Transport,Oshikoto,19,192,2455482,Expansion,24,11275914,176357,63020,830194,84545,780,4,1,Inventory,1073268
+1033,Namib Fishing,Retail,Khomas,15,64,1013565,Construction,12,5860430,412155,1325242,3661737,74045,639,4,1,Vehicle,2099957
+1034,Okavango Logistics,Mining Services,Hardap,1,226,535718,Vehicle Purchase,24,6378715,311623,1957393,353474,13996,713,8,0,Equipment,2513166
+1035,Etosha Fishing,Construction,Hardap,3,177,661548,Inventory,24,12770662,306001,1750407,2667317,21300,707,7,0,Vehicle,3866593
+1036,Caprivi Technologies,Mining Services,Karas,3,204,84797,Construction,60,6946909,165270,515853,634185,65763,704,3,0,Equipment,2210772
+1037,Swakop Tours,Retail,Kavango West,22,238,654835,Expansion,48,11283462,777303,798419,840437,38314,731,6,0,Equipment,2387245
+1038,Swakop Farming,Logistics,Hardap,13,156,2143970,Technology Upgrade,48,670345,132725,805876,394165,66707,738,4,1,Inventory,1255333
+1039,Swakop Farming,Transport,Hardap,20,24,135726,Payroll Support,12,12291692,673098,2316033,2316724,73410,847,6,0,Vehicle,4588152
+1040,Swakop Construction,Manufacturing,Kavango East,12,184,1910932,Working Capital,60,4113876,73044,108493,3878255,117813,710,0,0,Vehicle,345946
+1041,Okavango Technologies,Logistics,Otjozondjupa,4,248,421983,Working Capital,36,2422677,611202,2317701,2896998,75068,694,1,1,Equipment,3666125
+1042,Namib Manufacturing,Manufacturing,Kavango West,18,184,1129027,Vehicle Purchase,36,3327172,269161,2168727,3236761,2703,679,8,0,Equipment,4454450
+1043,Etosha Farming,Technology,Hardap,19,37,2380471,Construction,12,8721197,672330,2582852,1697814,59704,658,3,0,Property,4543011
+1044,Erongo Supplies,Technology,Otjozondjupa,15,96,1444411,Technology Upgrade,60,3296799,502160,1574599,1191301,29664,599,3,0,Inventory,2901060
+1045,Kalahari Fishing,Logistics,Hardap,4,136,1356273,Payroll Support,24,6454031,622040,2003988,1326336,57993,451,6,0,Savings,724941
+1046,Walvis Manufacturing,Agriculture,Khomas,5,249,1180792,Payroll Support,60,10655343,662100,1759119,1809198,82382,744,2,0,Livestock,3519905
+1047,Kunene Fishing,Transport,Erongo,1,250,1133125,Equipment Purchase,24,13731995,143584,884066,1195126,85672,829,7,0,Property,1474428
+1048,Windhoek Logistics,Food Services,Erongo,16,208,1483977,Technology Upgrade,60,11124672,65958,1446839,2320004,4857,566,5,0,Property,3483752
+1049,Walvis Fishing,Food Services,Hardap,17,15,950266,Inventory,24,9768019,755386,35718,3302523,26017,739,5,1,Livestock,247084
+1050,Etosha Retail,Mining Services,Oshikoto,7,120,2471582,Working Capital,24,14546165,400673,2529202,1135307,99536,541,8,1,Equipment,4846790
+1051,Swakop Tours,Construction,Oshikoto,14,23,713597,Working Capital,48,2701450,305024,411013,528373,7426,461,8,0,Property,3973865
+1052,Gobabis Logistics,Tourism,Oshana,22,79,1255760,Construction,12,12312755,181915,1789850,1640900,87687,524,5,0,Equipment,1407208
+1053,Katima Food Services,Food Services,Otjozondjupa,23,183,1516758,Expansion,12,2366620,431912,1026333,2800925,7001,690,4,0,Livestock,4132735
+1054,Caprivi Tours,Transport,Otjozondjupa,19,211,1188731,Inventory,12,4880378,254685,198678,27193,74378,489,8,1,Equipment,365960
+1055,Kalahari Transport,Construction,Oshikoto,20,23,1100828,Equipment Purchase,48,10042157,98814,347462,282490,116488,622,6,0,Property,2752763
+1056,Otji Farming,Food Services,Oshana,17,131,2471819,Payroll Support,36,7109653,386354,1524584,1129540,50428,725,6,0,Property,716472
+1057,Namib Construction,Mining Services,Khomas,21,167,2152067,Construction,60,12390868,446402,2919228,2029467,24806,841,8,0,Equipment,4151845
+1058,Swakop Fishing,Agriculture,Oshikoto,19,80,1399727,Vehicle Purchase,48,13028280,682043,1433034,770643,10218,712,3,0,Savings,3233409
+1059,Namib Construction,Retail,Otjozondjupa,24,112,860159,Payroll Support,60,6742085,468613,178550,691768,78247,806,5,1,Property,1883771
+1060,Gobabis Food Services,Retail,Kavango East,13,78,156209,Construction,36,11820165,371009,1488435,2944785,27449,803,3,0,Vehicle,3791740
+1061,Caprivi Technologies,Agriculture,Hardap,11,101,1829335,Equipment Purchase,24,6838348,370467,2038888,1481284,86844,461,4,1,Inventory,1153990
+1062,Oshana Technologies,Tourism,Oshikoto,17,100,691445,Technology Upgrade,48,13054290,605068,925898,2083395,83038,476,7,0,Livestock,2155116
+1063,Luderitz Manufacturing,Food Services,Erongo,17,180,352048,Expansion,12,10993798,648500,1311055,402546,95128,595,0,0,Savings,2901171
+1064,Etosha Trading,Logistics,Karas,25,97,1355088,Working Capital,12,11435168,150771,1539521,2899709,68038,846,3,0,Equipment,4533161
+1065,Windhoek Supplies,Tourism,Khomas,22,16,1506012,Inventory,48,10759974,669602,112744,940088,34873,755,7,0,Equipment,3365101
+1066,Luderitz Construction,Technology,Hardap,5,192,159864,Inventory,24,14488371,460959,2266126,3307386,115839,679,0,0,Property,3769591
+1067,Gobabis Transport,Tourism,Khomas,22,121,674942,Equipment Purchase,24,5617885,566914,1423928,660124,95230,789,3,0,Inventory,4462829
+1068,Caprivi Transport,Technology,Kavango East,12,103,136342,Payroll Support,24,3753145,116029,2366277,3626579,94319,746,2,0,Equipment,2321416
+1069,Kalahari Fishing,Technology,Erongo,22,171,1211514,Technology Upgrade,60,8596774,272589,523992,2398879,111557,816,8,0,Inventory,3931035
+1070,Etosha Trading,Transport,Oshana,2,86,651827,Construction,12,3518559,336480,1957750,3293517,112512,523,5,1,Property,1903053
+1071,Erongo Retail,Agriculture,Hardap,11,120,2314943,Expansion,60,12279639,237197,2522018,2222038,38030,843,5,0,Savings,462317
+1072,Caprivi Transport,Technology,Oshikoto,23,136,710981,Working Capital,48,11523547,565746,958435,1305158,102810,696,4,0,Property,1863329
+1073,Erongo Construction,Agriculture,Erongo,7,147,391161,Vehicle Purchase,60,14822986,260497,227187,1532937,49375,671,3,1,Equipment,4364798
+1074,Katima Trading,Construction,Kavango East,22,209,1282462,Expansion,36,396516,789899,1649486,602276,56407,753,4,1,Vehicle,4021502
+1075,Windhoek Retail,Mining Services,Kavango West,8,227,2071898,Payroll Support,60,825782,278336,2881622,2879994,93977,823,5,0,Equipment,3852248
+1076,Etosha Supplies,Food Services,Oshana,16,23,856906,Working Capital,12,14841408,30741,1491767,1836239,94348,746,6,1,Livestock,547366
+1077,Walvis Supplies,Technology,Kavango West,25,204,1448031,Inventory,12,13965740,544489,2176638,3664141,37912,492,7,1,Savings,821731
+1078,Windhoek Supplies,Food Services,Oshana,15,179,1771169,Vehicle Purchase,24,10033075,60616,1323445,2922571,11665,756,3,1,Vehicle,3165319
+1079,Okavango Tours,Food Services,Oshikoto,12,240,662076,Equipment Purchase,60,2717624,560593,1786738,2161024,80789,671,7,0,Inventory,1926547
+1080,Kalahari Supplies,Transport,Oshikoto,11,198,181762,Technology Upgrade,48,5275416,256722,1556258,183214,108175,782,7,0,Equipment,4367171
+1081,Walvis Logistics,Mining Services,Kavango West,10,163,1147757,Working Capital,60,3796295,636440,489215,2342963,94972,583,6,0,Equipment,2061964
+1082,Kunene Logistics,Manufacturing,Erongo,5,145,1794367,Equipment Purchase,36,10853570,657847,1877801,3872261,35159,523,4,1,Inventory,4115421
+1083,Windhoek Manufacturing,Manufacturing,Khomas,14,22,1831266,Payroll Support,24,4891522,398389,2858971,1129295,22298,491,3,1,Property,4465516
+1084,Windhoek Manufacturing,Technology,Kavango East,19,89,697102,Inventory,36,6415187,680699,1944778,3985722,1725,487,6,0,Savings,70406
+1085,Caprivi Trading,Agriculture,Erongo,21,98,709957,Equipment Purchase,48,8793485,87437,2242668,1499309,63296,613,2,0,Inventory,4393072
+1086,Erongo Technologies,Mining Services,Hardap,14,86,1292611,Inventory,36,9547105,71858,1898491,194881,39244,723,6,0,Property,3381423
+1087,Luderitz Tours,Manufacturing,Khomas,3,5,1643341,Payroll Support,60,4028923,64022,270914,30662,35199,657,5,0,Inventory,4985383
+1088,Okavango Technologies,Technology,Oshana,10,87,2178408,Payroll Support,48,1206334,664949,1388128,1458909,47595,726,4,0,Vehicle,2314700
+1089,Katima Tours,Logistics,Hardap,14,124,250344,Construction,12,7648849,584075,1352171,2423223,92778,821,7,0,Inventory,913046
+1090,Swakop Logistics,Mining Services,Oshikoto,17,116,853138,Expansion,12,4446443,575167,2117926,247923,48503,657,4,0,Savings,4369340
+1091,Oshana Transport,Transport,Kavango East,25,244,577033,Inventory,12,5093364,276941,2291924,1130175,68615,667,6,0,Livestock,3396426
+1092,Luderitz Farming,Technology,Otjozondjupa,24,173,189618,Vehicle Purchase,48,11803632,372282,530441,2843658,43623,547,2,0,Vehicle,1868556
+1093,Kalahari Retail,Manufacturing,Erongo,1,20,1034016,Construction,12,3822614,136255,2347933,2703428,52520,728,0,0,Inventory,3371542
+1094,Erongo Supplies,Construction,Kavango West,5,213,304818,Inventory,60,7592545,65862,2426128,3736143,117299,576,3,0,Savings,3070357
+1095,Walvis Fishing,Tourism,Erongo,25,87,1687500,Inventory,36,4053675,248471,1599508,3906757,4513,639,3,0,Inventory,714518
+1096,Etosha Construction,Agriculture,Khomas,18,215,1297619,Inventory,48,8880990,275490,246346,1308118,72315,468,5,1,Savings,813376
+1097,Kalahari Supplies,Technology,Oshikoto,16,22,2427828,Vehicle Purchase,36,6179602,597083,1494658,550157,65992,692,3,1,Equipment,2762129
+1098,Namib Technologies,Construction,Erongo,22,17,1634178,Inventory,24,8060754,441898,2067681,107074,76527,830,6,0,Equipment,2789347
+1099,Luderitz Manufacturing,Technology,Khomas,1,87,1439141,Payroll Support,60,8230557,607714,575527,2391187,20448,784,7,0,Savings,4109743
+1100,Katima Food Services,Manufacturing,Hardap,24,134,645548,Payroll Support,60,2116897,170177,2009900,686593,42138,787,2,0,Savings,4121834
+1101,Luderitz Trading,Agriculture,Oshana,2,212,1085060,Technology Upgrade,36,7309273,171274,741170,1391618,112663,715,0,0,Inventory,617626
+1102,Katima Transport,Mining Services,Erongo,16,30,865438,Expansion,60,5694554,83384,1315144,3279997,95733,841,6,1,Savings,1397064
+1103,Kalahari Farming,Logistics,Khomas,16,177,1773057,Inventory,48,14552923,172673,170164,848275,42807,750,0,0,Inventory,2446102
+1104,Okavango Farming,Food Services,Karas,13,216,2004459,Working Capital,36,6049741,74614,1182596,3385768,10942,647,1,1,Livestock,1920284
+1105,Walvis Transport,Retail,Hardap,22,25,2471085,Expansion,60,13689673,782791,49243,2773108,12347,820,0,1,Property,4887313
+1106,Kunene Construction,Manufacturing,Kavango West,18,29,707312,Vehicle Purchase,24,7558057,160851,946216,780942,26630,552,6,0,Livestock,4772342
+1107,Windhoek Manufacturing,Agriculture,Otjozondjupa,9,218,711616,Equipment Purchase,12,5506974,545312,1615611,3543437,66342,454,7,1,Equipment,4557286
+1108,Windhoek Transport,Transport,Oshikoto,4,22,1446664,Vehicle Purchase,60,7716292,446384,2184035,967347,60332,651,5,0,Inventory,4418197
+1109,Otji Farming,Technology,Erongo,6,171,1598675,Construction,36,12251983,178765,1106474,324200,90476,821,3,0,Savings,2538419
+1110,Windhoek Farming,Technology,Khomas,7,203,468664,Inventory,24,12484662,610878,1693786,1140194,28948,833,4,0,Livestock,3882894
+1111,Kalahari Fishing,Construction,Hardap,23,117,614016,Vehicle Purchase,24,7859569,489512,2717440,1364875,99594,557,5,0,Equipment,1844994
+1112,Etosha Supplies,Mining Services,Hardap,25,54,1561572,Inventory,36,5359824,285045,82169,2309960,48829,699,6,0,Savings,1865782
+1113,Okavango Manufacturing,Tourism,Hardap,4,158,2129106,Working Capital,36,3875507,660109,1170328,93312,5541,836,5,0,Equipment,2186648
+1114,Otji Retail,Retail,Kavango West,11,99,446213,Expansion,36,1106271,606765,2209690,1143459,108457,472,7,0,Savings,111884
+1115,Oshana Manufacturing,Agriculture,Erongo,5,242,576642,Vehicle Purchase,48,8809110,360140,808638,2623029,8946,547,7,0,Equipment,1729119
+1116,Kunene Tours,Tourism,Kavango West,16,73,344078,Equipment Purchase,60,1351433,653414,2181182,282878,81480,692,6,0,Inventory,3239212
+1117,Windhoek Retail,Tourism,Otjozondjupa,8,247,2136091,Expansion,36,8556988,485777,1650687,2132780,43074,838,6,0,Vehicle,3195699
+1118,Kunene Trading,Construction,Khomas,18,202,530056,Construction,12,12785729,732989,198528,1987013,73698,806,4,1,Inventory,4972955
+1119,Otji Trading,Manufacturing,Oshikoto,20,224,2209077,Payroll Support,48,13801156,521302,1790581,997929,78704,753,4,1,Inventory,2166460
+1120,Oshana Construction,Mining Services,Hardap,23,100,1307776,Construction,12,3996618,481934,1123392,270641,104694,580,6,0,Vehicle,2682687
+1121,Namib Construction,Technology,Kavango West,23,120,1930143,Construction,60,6837595,514689,243355,538360,16286,804,5,0,Equipment,3155059
+1122,Windhoek Logistics,Construction,Oshana,10,57,1834414,Equipment Purchase,36,2977685,356723,1132886,1460349,110596,603,3,0,Inventory,803403
+1123,Swakop Trading,Construction,Kavango East,22,205,962227,Inventory,36,13489800,90110,2924821,3563607,11062,497,1,1,Livestock,559111
+1124,Gobabis Trading,Agriculture,Khomas,4,9,818726,Inventory,24,3321746,770020,383833,588103,68052,637,6,0,Livestock,3830796
+1125,Windhoek Construction,Technology,Kavango West,21,160,67805,Working Capital,36,7292623,413275,811977,3875452,70378,493,4,0,Savings,1926983
+1126,Luderitz Tours,Retail,Hardap,7,218,1524718,Technology Upgrade,60,12042456,313556,2341267,426745,82904,573,6,0,Inventory,3576052
+1127,Katima Transport,Tourism,Karas,10,172,1650199,Construction,36,12002586,406519,1145649,3049349,15214,672,3,0,Property,840594
+1128,Gobabis Trading,Logistics,Hardap,12,189,918809,Inventory,24,12742664,645234,2527357,2759349,20474,804,6,0,Property,2967053
+1129,Swakop Technologies,Technology,Karas,24,58,127043,Inventory,60,7711391,98578,2408265,2636244,76968,575,4,1,Vehicle,3253906
+1130,Namib Fishing,Manufacturing,Erongo,16,175,1103621,Inventory,24,13943040,623440,2730247,3876147,16642,663,8,0,Livestock,2851298
+1131,Caprivi Transport,Mining Services,Khomas,17,21,1081098,Expansion,24,2369099,280303,2893371,3938472,32527,634,2,0,Livestock,2938579
+1132,Kalahari Farming,Manufacturing,Oshikoto,3,160,473834,Expansion,12,3653800,145991,2347708,2256694,98286,729,0,0,Livestock,3014184
+1133,Oshana Retail,Manufacturing,Karas,25,93,1629440,Payroll Support,36,13720822,321285,587360,1858269,70302,641,6,0,Property,4573977
+1134,Kunene Food Services,Agriculture,Kavango East,5,40,1940139,Inventory,12,11438721,194403,2848561,1791377,93921,532,4,0,Inventory,3713610
+1135,Windhoek Trading,Manufacturing,Khomas,23,208,1694142,Equipment Purchase,24,6947108,771908,553141,2548947,104867,550,8,1,Property,4620535
+1136,Oshana Logistics,Technology,Kavango West,2,74,1409609,Inventory,36,13701352,243452,1289338,2578547,13617,783,6,0,Vehicle,3047226
+1137,Gobabis Supplies,Food Services,Oshana,20,248,1404052,Payroll Support,12,12318522,457859,2536665,2685905,96956,572,2,0,Livestock,787391
+1138,Otji Transport,Agriculture,Kavango East,6,186,912763,Equipment Purchase,48,3581570,153705,2283848,1473669,6793,758,8,0,Vehicle,4080338
+1139,Erongo Food Services,Agriculture,Kavango West,6,7,1578155,Working Capital,60,7563968,788634,1247727,1005106,9023,785,8,1,Livestock,2255554
+1140,Okavango Construction,Logistics,Khomas,17,118,1527077,Vehicle Purchase,24,11822909,425794,1492550,2041739,109005,615,7,0,Livestock,2854212
+1141,Namib Fishing,Tourism,Kavango East,20,106,2002290,Equipment Purchase,24,8632060,539168,645328,3278543,24697,573,7,1,Inventory,3024680
+1142,Oshana Fishing,Tourism,Kavango West,2,77,960525,Expansion,60,2041990,217762,2408837,3301363,15121,799,3,0,Vehicle,680423
+1143,Katima Technologies,Logistics,Otjozondjupa,7,82,2179850,Technology Upgrade,60,8856113,342141,1327610,1925585,29271,806,3,0,Savings,4251249
+1144,Okavango Manufacturing,Technology,Oshikoto,20,107,2025109,Expansion,36,9518165,759902,1769611,3898915,50396,837,2,0,Inventory,1413863
+1145,Katima Fishing,Retail,Erongo,17,33,895981,Vehicle Purchase,24,6096942,446705,2783840,2833807,86859,489,1,0,Inventory,648663
+1146,Otji Food Services,Technology,Oshana,22,14,448094,Equipment Purchase,24,8919608,289907,1054343,3428301,38882,534,5,0,Vehicle,1568463
+1147,Kalahari Manufacturing,Mining Services,Karas,11,137,543018,Equipment Purchase,36,6451211,326332,2266409,1526555,113431,578,5,0,Vehicle,4616112
+1148,Namib Tours,Agriculture,Erongo,25,48,134406,Expansion,60,6434974,223762,1578985,3848022,87610,634,7,1,Property,2508950
+1149,Kunene Manufacturing,Technology,Kavango East,7,149,1086461,Vehicle Purchase,48,1305381,783604,719435,631923,50918,679,8,0,Savings,85250
+1150,Erongo Manufacturing,Technology,Oshikoto,15,47,707259,Expansion,12,1563251,660026,1855284,3901131,99265,750,4,0,Savings,4450320
+1151,Walvis Food Services,Mining Services,Karas,10,83,783304,Construction,24,6366479,689717,2277047,3158295,26822,845,8,0,Livestock,4625753
+1152,Caprivi Technologies,Technology,Karas,23,244,2178480,Equipment Purchase,48,5618048,170369,886993,2956683,51963,726,0,0,Property,4164232
+1153,Kunene Supplies,Manufacturing,Oshikoto,10,157,1376899,Equipment Purchase,36,1981545,344570,2564063,3637056,46315,637,0,1,Livestock,2364466
+1154,Kalahari Trading,Transport,Karas,7,199,119747,Inventory,48,3202916,132775,1876755,2004636,113068,818,1,0,Vehicle,2605342
+1155,Otji Trading,Construction,Hardap,9,247,2319776,Technology Upgrade,36,12822791,521898,2791117,2045229,13567,774,4,0,Vehicle,512230
+1156,Erongo Logistics,Technology,Otjozondjupa,12,13,2037060,Construction,60,13354128,756891,189878,65572,94221,561,5,0,Property,2669687
+1157,Kunene Manufacturing,Technology,Oshana,2,213,2473699,Technology Upgrade,12,11240571,466897,1023965,895911,22120,568,4,1,Inventory,3856759
+1158,Gobabis Logistics,Construction,Otjozondjupa,11,31,2196332,Working Capital,36,9447922,189571,1338126,585216,11990,510,5,0,Livestock,2907511
+1159,Etosha Construction,Technology,Kavango West,14,130,696243,Payroll Support,24,2614204,324998,454488,3893609,18825,474,4,0,Vehicle,897982
+1160,Etosha Fishing,Retail,Otjozondjupa,4,207,903969,Expansion,36,12428319,342233,2288848,411448,40330,521,7,0,Savings,3899090
+1161,Katima Tours,Tourism,Erongo,4,177,168895,Equipment Purchase,24,14580456,499716,2942506,2559572,76677,454,2,0,Savings,3247183
+1162,Kalahari Construction,Retail,Kavango East,14,132,1115996,Payroll Support,12,7769620,733254,470648,653093,57720,782,1,0,Vehicle,4948632
+1163,Kalahari Manufacturing,Technology,Oshikoto,6,73,2313226,Technology Upgrade,48,14606982,595710,1330758,10725,39427,796,8,0,Savings,978934
+1164,Kunene Fishing,Food Services,Oshana,18,194,549753,Equipment Purchase,24,4525863,334941,1034681,2136745,1226,560,0,0,Vehicle,2468934
+1165,Namib Retail,Manufacturing,Karas,17,230,1457791,Payroll Support,36,14838639,348495,1117274,2241952,54495,783,8,0,Property,1132709
+1166,Caprivi Trading,Manufacturing,Kavango East,8,49,2431906,Equipment Purchase,60,3586206,639728,414961,3006180,504,810,7,0,Vehicle,1823683
+1167,Kalahari Transport,Food Services,Oshana,18,139,1807014,Working Capital,12,4179062,207509,2132044,3615085,117219,569,4,0,Savings,2024514
+1168,Otji Retail,Retail,Oshikoto,10,4,2014097,Inventory,48,1382246,496925,2745084,2335781,51521,736,2,0,Property,3600041
+1169,Okavango Manufacturing,Mining Services,Kavango East,16,249,103200,Equipment Purchase,12,9160262,41195,1398213,3639828,11739,766,2,0,Savings,1531853
+1170,Swakop Manufacturing,Construction,Otjozondjupa,10,214,641646,Inventory,48,4318587,276468,1865560,3302640,49232,749,7,0,Property,4342253
+1171,Erongo Trading,Retail,Oshana,17,84,1291449,Construction,24,398705,343400,280884,3978731,86634,551,3,1,Property,1048588
+1172,Okavango Manufacturing,Logistics,Karas,10,157,272947,Expansion,24,1001113,430350,1427722,85585,107362,843,0,0,Inventory,3212471
+1173,Oshana Food Services,Transport,Erongo,16,53,410937,Construction,24,10939507,633723,1029426,3938153,42588,493,5,0,Livestock,4143244
+1174,Otji Logistics,Food Services,Erongo,24,32,2099111,Working Capital,12,462276,195473,688706,214897,85551,850,0,0,Equipment,2445520
+1175,Otji Construction,Agriculture,Hardap,4,71,1575035,Technology Upgrade,48,5599341,360066,1668050,791024,89157,800,6,0,Savings,3919223
+1176,Okavango Tours,Technology,Hardap,16,142,1188175,Vehicle Purchase,24,5338786,573741,2100391,2010546,80269,473,3,1,Property,2029187
+1177,Okavango Food Services,Technology,Otjozondjupa,12,20,2126607,Payroll Support,60,13297985,181141,2680119,1768745,110784,605,3,0,Savings,3702211
+1178,Oshana Tours,Logistics,Kavango East,4,30,203446,Construction,12,1190586,796384,1588384,2694654,72417,684,7,0,Inventory,4621258
+1179,Swakop Construction,Food Services,Otjozondjupa,19,115,576778,Payroll Support,12,4340633,629184,982111,1440511,22533,507,0,0,Savings,122997
+1180,Swakop Logistics,Manufacturing,Oshikoto,9,249,1952513,Inventory,60,7950613,684797,584297,3885419,73545,774,8,1,Vehicle,496739
+1181,Erongo Supplies,Retail,Oshana,6,91,673964,Inventory,24,603469,93847,443683,2230776,83889,489,0,0,Vehicle,3421174
+1182,Kalahari Food Services,Agriculture,Otjozondjupa,2,41,896498,Inventory,60,4280498,204623,1592856,2609662,113227,734,5,0,Equipment,3607200
+1183,Kalahari Construction,Manufacturing,Khomas,4,55,2318964,Working Capital,12,5169669,406330,1104053,559678,54109,727,7,1,Inventory,753428
+1184,Otji Logistics,Agriculture,Hardap,12,17,2267062,Payroll Support,48,1956594,246463,1153810,1159976,66440,761,3,0,Livestock,1155776
+1185,Kunene Transport,Tourism,Erongo,18,69,1045117,Payroll Support,48,2315664,299081,2473830,3824492,11440,814,8,0,Livestock,2193433
+1186,Luderitz Logistics,Logistics,Oshana,19,64,2289907,Working Capital,48,6668865,123390,2021651,1436316,82190,522,1,0,Savings,2693439
+1187,Oshana Fishing,Agriculture,Oshikoto,11,199,1003311,Working Capital,12,12840676,78073,2616751,2211053,100661,614,3,0,Inventory,2412577
+1188,Oshana Trading,Tourism,Otjozondjupa,6,228,385000,Payroll Support,12,5769851,239862,2612230,375475,22547,671,2,0,Livestock,2660069
+1189,Oshana Construction,Retail,Kavango East,14,119,656624,Working Capital,36,7892431,702337,2054899,1267029,31380,638,3,0,Property,1203343
+1190,Caprivi Transport,Food Services,Kavango East,1,58,2333693,Inventory,12,12993396,387665,1762606,744436,57727,495,3,0,Inventory,2153030
+1191,Kalahari Food Services,Agriculture,Otjozondjupa,18,17,569110,Construction,12,2415952,496968,2895828,2655611,11308,700,0,1,Property,3698066
+1192,Luderitz Farming,Construction,Karas,7,150,1695178,Expansion,12,11825796,63398,683107,1671006,81762,787,1,0,Vehicle,3852143
+1193,Kalahari Retail,Agriculture,Oshana,12,137,1961968,Working Capital,36,12205225,73076,2318432,409676,118159,570,0,0,Inventory,2053576
+1194,Windhoek Retail,Retail,Kavango East,5,19,1986254,Equipment Purchase,12,2878104,156579,2396484,2214984,48759,803,0,0,Vehicle,3770380
+1195,Erongo Farming,Construction,Kavango West,7,93,1238411,Construction,24,1990054,99978,587188,768617,18889,555,6,0,Inventory,1344794
+1196,Luderitz Technologies,Manufacturing,Kavango East,21,173,812792,Technology Upgrade,48,4366997,785056,1966198,3874559,66589,527,5,0,Livestock,3645538
+1197,Kalahari Fishing,Retail,Oshana,5,64,1468468,Payroll Support,12,11170958,108978,627383,3772133,48295,454,7,0,Livestock,113466
+1198,Walvis Transport,Transport,Otjozondjupa,5,171,2382897,Working Capital,12,14806483,66476,2703750,2612151,19680,620,2,0,Property,1326530
+1199,Namib Tours,Retail,Kavango West,14,34,474941,Expansion,24,12029352,290773,1430841,3378199,116785,469,7,0,Equipment,3656880
+1200,Swakop Transport,Agriculture,Karas,3,15,1767554,Expansion,24,5462896,387479,229688,694375,87702,603,4,0,Property,1991914
+1201,Etosha Manufacturing,Agriculture,Hardap,11,240,1761727,Construction,60,14280189,129971,2577795,3970741,91730,475,0,0,Savings,234632
+1202,Gobabis Logistics,Retail,Otjozondjupa,17,18,1358341,Inventory,48,6794795,299596,1692249,3323019,69050,848,7,0,Vehicle,1324596
+1203,Swakop Supplies,Agriculture,Khomas,2,88,136138,Payroll Support,24,8085054,505695,1102460,1124858,1140,491,8,0,Inventory,131969
+1204,Oshana Technologies,Construction,Oshana,10,189,1776329,Technology Upgrade,24,8923948,781919,618116,2154251,48419,778,8,0,Vehicle,2031487
+1205,Kunene Construction,Logistics,Kavango East,18,80,2159804,Construction,12,3042780,335048,2151959,935367,45240,469,7,1,Savings,4398221
+1206,Etosha Farming,Agriculture,Karas,5,162,102731,Payroll Support,48,6429911,541340,2294740,1855949,39566,547,5,0,Vehicle,742213
+1207,Caprivi Manufacturing,Tourism,Oshana,22,145,1376684,Working Capital,36,2207963,106023,1232652,3823799,80395,756,8,0,Property,151221
+1208,Kunene Logistics,Manufacturing,Oshikoto,7,44,553097,Construction,24,12676566,536781,1638711,1552907,40502,526,0,0,Property,3285682
+1209,Swakop Fishing,Manufacturing,Erongo,11,156,809055,Vehicle Purchase,60,12947462,559165,1277913,1052136,49037,793,5,1,Property,3973720
+1210,Windhoek Transport,Logistics,Oshana,11,158,268229,Expansion,12,3404962,683561,1103937,3011248,98463,745,8,0,Livestock,888568
+1211,Swakop Retail,Transport,Oshana,6,38,238522,Inventory,24,12972900,652506,1440907,505256,40636,671,2,0,Equipment,754468
+1212,Okavango Technologies,Transport,Kavango West,22,207,1713436,Working Capital,24,599613,620591,2109880,504924,28209,689,3,0,Vehicle,315934
+1213,Namib Logistics,Technology,Oshana,19,245,567778,Inventory,60,6972542,701904,1003436,1899877,72631,718,1,0,Property,3915020
+1214,Otji Trading,Agriculture,Kavango West,7,183,1487048,Construction,24,13143755,181620,1994390,3150212,110238,688,1,1,Savings,852241
+1215,Etosha Trading,Technology,Oshana,17,59,951586,Technology Upgrade,48,6651571,237592,1359014,3252965,113617,626,3,0,Savings,3197550
+1216,Erongo Fishing,Construction,Erongo,18,73,1869265,Payroll Support,36,6151780,442276,842914,556098,74207,543,0,0,Equipment,2226175
+1217,Oshana Tours,Agriculture,Erongo,12,158,150127,Inventory,36,3868133,188247,393658,2153127,116040,524,0,0,Equipment,1203522
+1218,Kalahari Fishing,Technology,Oshana,11,226,1813323,Equipment Purchase,36,10087545,63453,566224,2423449,75888,841,7,0,Vehicle,3681664
+1219,Walvis Technologies,Construction,Kavango West,17,160,1009878,Technology Upgrade,48,4926481,728915,1023946,3041356,38827,832,5,0,Livestock,209098
+1220,Kunene Food Services,Manufacturing,Erongo,15,6,1011267,Equipment Purchase,36,7809794,40453,634195,3352416,77890,707,3,0,Inventory,942453
+1221,Etosha Transport,Food Services,Otjozondjupa,18,122,1048820,Technology Upgrade,24,12718566,339761,1424176,2674112,78486,632,1,0,Livestock,2412817
+1222,Okavango Trading,Technology,Oshana,14,84,377770,Equipment Purchase,24,7283436,414693,1492254,2584019,50086,540,2,0,Vehicle,3798566
+1223,Namib Logistics,Technology,Erongo,15,81,2063590,Vehicle Purchase,24,11039029,617257,235684,75332,71060,599,8,0,Property,3039509
+1224,Okavango Transport,Technology,Erongo,24,173,1395027,Expansion,36,10177025,156958,624663,1082185,64706,717,5,0,Inventory,103029
+1225,Windhoek Trading,Transport,Oshikoto,18,84,1613644,Expansion,12,9946433,268548,636778,3420346,87412,714,4,0,Vehicle,4545974
+1226,Katima Tours,Tourism,Hardap,21,248,2482184,Vehicle Purchase,36,3820507,265946,1680896,3023459,8864,718,7,1,Savings,3051195
+1227,Windhoek Food Services,Retail,Kavango East,10,145,440908,Payroll Support,12,1592523,493162,840349,947935,77362,842,5,0,Savings,1297958
+1228,Kunene Technologies,Construction,Karas,23,88,410426,Vehicle Purchase,60,8007143,672146,909277,3606374,85156,473,2,0,Livestock,4270353
+1229,Kalahari Technologies,Retail,Otjozondjupa,16,155,565903,Expansion,24,1175960,191284,1191873,550385,119414,835,0,0,Equipment,2131903
+1230,Luderitz Manufacturing,Retail,Kavango West,17,242,1865442,Working Capital,12,5232266,417549,2192153,1284497,117775,795,4,0,Vehicle,3566976
+1231,Kalahari Transport,Logistics,Khomas,18,141,1830683,Equipment Purchase,48,7655520,662612,306872,394410,81303,689,2,0,Savings,3630095
+1232,Caprivi Logistics,Retail,Oshana,15,115,535204,Inventory,48,13662708,701999,1897583,1494758,105044,776,8,0,Property,695347
+1233,Windhoek Manufacturing,Technology,Kavango West,11,25,370788,Working Capital,60,11194648,722926,965523,3601121,109249,707,5,0,Equipment,2738661
+1234,Caprivi Farming,Tourism,Karas,22,125,1097541,Payroll Support,48,4769752,611161,2553617,3755312,43088,520,3,0,Equipment,795434
+1235,Luderitz Tours,Tourism,Khomas,4,229,2321295,Expansion,24,9388320,733625,1895250,3016553,29609,517,3,0,Vehicle,969279
+1236,Erongo Tours,Mining Services,Kavango East,10,40,567489,Construction,12,8464615,333564,701127,1983306,117669,784,5,0,Vehicle,2361839
+1237,Kunene Logistics,Mining Services,Oshana,10,83,2348193,Construction,12,3803605,746348,2419394,3351349,25579,679,1,0,Savings,767136
+1238,Erongo Logistics,Mining Services,Oshikoto,12,12,1364402,Construction,48,13291101,94302,285645,3246405,15224,824,8,0,Savings,2198517
+1239,Kunene Tours,Manufacturing,Otjozondjupa,24,121,1435957,Payroll Support,60,11398382,313644,2115671,520470,8896,472,4,0,Property,56336
+1240,Erongo Farming,Retail,Khomas,8,20,1706107,Technology Upgrade,60,5661881,444892,1317682,429198,67335,670,5,1,Livestock,1876515
+1241,Oshana Tours,Manufacturing,Karas,20,36,1265953,Technology Upgrade,48,1967779,330917,92989,329540,108804,490,2,0,Equipment,1908358
+1242,Oshana Logistics,Food Services,Hardap,22,61,655203,Equipment Purchase,24,2761025,682090,684048,630973,4690,817,2,0,Equipment,1854031
+1243,Kunene Trading,Mining Services,Kavango East,9,201,911027,Equipment Purchase,48,3161941,652715,1225427,1318642,110531,566,1,0,Savings,81556
+1244,Gobabis Transport,Retail,Kavango West,1,96,142207,Working Capital,48,13115720,450679,236736,1512981,3808,602,8,1,Vehicle,1948027
+1245,Caprivi Manufacturing,Mining Services,Karas,3,247,1038930,Equipment Purchase,12,3299306,491621,312561,652036,105317,838,4,1,Inventory,2165805
+1246,Kunene Transport,Transport,Hardap,11,12,1182528,Construction,60,1653847,637570,591219,1324704,41441,575,0,0,Vehicle,268763
+1247,Namib Transport,Retail,Karas,6,210,1179368,Working Capital,12,7148981,704899,2147379,3931055,116762,482,0,0,Property,3211184
+1248,Kalahari Fishing,Transport,Otjozondjupa,7,31,1275551,Working Capital,36,12166861,107999,1149618,897315,82562,456,5,0,Vehicle,4585217
+1249,Swakop Food Services,Food Services,Hardap,20,102,2463775,Expansion,48,1835665,250519,732949,214164,56671,502,3,0,Inventory,3106251
+1250,Okavango Retail,Agriculture,Erongo,21,190,2005367,Expansion,36,8958150,46962,1576691,147900,111540,657,8,0,Vehicle,4898897
+1251,Kalahari Tours,Logistics,Kavango West,1,38,1587368,Equipment Purchase,24,8067738,478748,2016464,1539741,81470,486,5,0,Inventory,2157946
+1252,Etosha Trading,Mining Services,Karas,14,73,368198,Vehicle Purchase,36,4501993,319135,676678,3376343,106178,626,7,1,Livestock,4087389
+1253,Windhoek Transport,Food Services,Erongo,15,156,1188499,Equipment Purchase,60,6926963,355336,642131,1088175,31189,744,1,0,Equipment,4340217
+1254,Namib Transport,Technology,Erongo,2,161,1009065,Construction,48,1992281,114952,1183158,3758196,107196,465,2,0,Equipment,1656867
+1255,Caprivi Manufacturing,Food Services,Kavango East,21,64,1266008,Expansion,48,7235747,460825,2329842,2275820,64251,624,2,0,Property,703376
+1256,Kunene Trading,Manufacturing,Karas,1,8,364054,Vehicle Purchase,12,4818891,788060,420324,247411,56755,676,2,1,Livestock,2136691
+1257,Walvis Retail,Logistics,Erongo,12,79,835016,Payroll Support,12,2775629,677765,1073522,2295440,22561,469,5,1,Vehicle,3635969
+1258,Etosha Food Services,Transport,Oshana,16,31,2220693,Expansion,12,8627243,504989,1354904,586261,84772,776,6,0,Livestock,3878626
+1259,Oshana Retail,Retail,Kavango East,18,40,1162062,Construction,60,4218514,187952,615090,3216172,29931,784,2,1,Vehicle,791524
+1260,Okavango Transport,Manufacturing,Khomas,25,78,1938800,Working Capital,48,13183814,656767,337344,1393638,37315,520,3,1,Savings,2283353
+1261,Namib Supplies,Transport,Kavango East,25,243,451905,Vehicle Purchase,12,2999797,553238,2261650,3179383,62877,594,0,0,Property,808469
+1262,Gobabis Trading,Food Services,Oshana,18,4,1291054,Inventory,48,13231026,157391,2702933,2952377,96271,739,7,1,Vehicle,4288319
+1263,Windhoek Logistics,Retail,Kavango East,16,27,923984,Vehicle Purchase,60,13621859,615254,1549461,2162969,71394,594,1,0,Vehicle,2236961
+1264,Otji Supplies,Manufacturing,Kavango West,9,200,1752585,Equipment Purchase,36,4094628,249328,2201614,1395830,88916,570,1,0,Savings,127791
+1265,Okavango Manufacturing,Mining Services,Hardap,20,55,1973033,Equipment Purchase,48,13588744,712385,1833171,3765727,81757,500,3,0,Inventory,3442695
+1266,Katima Tours,Food Services,Otjozondjupa,10,6,1239846,Working Capital,24,6639547,169419,1604028,3475596,67411,817,6,1,Equipment,3811889
+1267,Windhoek Technologies,Food Services,Kavango East,15,55,1101285,Equipment Purchase,24,13079481,119594,2585567,3553345,32794,463,7,0,Livestock,168017
+1268,Caprivi Logistics,Retail,Kavango East,15,224,740702,Construction,12,8767029,365888,2416833,2229453,8005,763,2,0,Equipment,3805292
+1269,Windhoek Fishing,Retail,Khomas,3,55,1412353,Working Capital,48,12072272,531680,252287,1722975,72484,490,2,0,Savings,958070
+1270,Luderitz Trading,Retail,Oshana,3,21,1309031,Payroll Support,60,13747771,767107,642557,1893863,60131,641,4,0,Savings,4597999
+1271,Otji Construction,Technology,Karas,10,222,390639,Working Capital,36,4786954,722260,1516137,3574577,58748,716,3,0,Vehicle,2755245
+1272,Namib Supplies,Mining Services,Otjozondjupa,3,65,1484308,Equipment Purchase,24,6539315,683063,1090990,299357,31130,535,5,0,Savings,1004139
+1273,Katima Farming,Tourism,Oshikoto,24,97,1158615,Inventory,24,5211422,580950,649207,3960368,11200,517,0,1,Property,193855
+1274,Kalahari Manufacturing,Technology,Oshikoto,12,129,1723475,Payroll Support,48,5193818,229072,2188600,546449,33282,719,6,1,Inventory,2477249
+1275,Walvis Manufacturing,Logistics,Kavango East,8,159,182897,Working Capital,36,7396662,788164,2935804,773615,4388,461,1,0,Inventory,2552039
+1276,Erongo Technologies,Mining Services,Kavango East,11,218,1057631,Vehicle Purchase,36,13944607,423719,1596313,2153754,90251,651,3,1,Property,4051060
+1277,Luderitz Food Services,Manufacturing,Karas,15,110,719898,Working Capital,36,13516568,292173,1351811,3024490,85525,700,3,0,Livestock,246426
+1278,Erongo Food Services,Tourism,Khomas,7,132,432430,Working Capital,60,7439501,473901,2640159,1431162,65559,654,0,0,Vehicle,1562753
+1279,Okavango Trading,Mining Services,Otjozondjupa,15,208,1242923,Payroll Support,24,13594050,712130,274014,1374733,12267,762,1,0,Equipment,1231556
+1280,Walvis Tours,Logistics,Erongo,14,113,1670210,Expansion,36,11654946,781098,885732,3410820,1252,587,3,0,Savings,3853383
+1281,Walvis Trading,Logistics,Oshana,5,197,975540,Inventory,48,4729929,545649,1448270,1568160,85476,818,2,0,Savings,2078036
+1282,Luderitz Logistics,Transport,Oshikoto,15,231,2368986,Technology Upgrade,24,11740732,141095,111658,3928127,30482,546,1,1,Savings,3120288
+1283,Oshana Trading,Technology,Oshikoto,13,218,963796,Vehicle Purchase,36,3608494,595197,2948287,3151887,10475,676,5,1,Vehicle,755743
+1284,Okavango Trading,Tourism,Erongo,14,18,1035241,Expansion,12,10335882,464670,1201071,3121228,72789,616,8,0,Livestock,3137812
+1285,Gobabis Manufacturing,Tourism,Oshikoto,24,9,2277882,Technology Upgrade,60,2475721,239870,376007,3255815,20957,816,0,0,Equipment,1115982
+1286,Katima Logistics,Transport,Erongo,10,97,552110,Construction,24,3898857,260954,2719488,1252986,99681,771,7,0,Property,2378739
+1287,Oshana Tours,Transport,Karas,16,57,1220778,Expansion,48,6454624,176760,1897414,701403,79605,637,5,0,Livestock,1847056
+1288,Caprivi Logistics,Mining Services,Hardap,14,3,1139552,Expansion,12,8348785,146003,1952279,342850,79696,548,4,0,Livestock,2702366
+1289,Windhoek Retail,Construction,Erongo,15,217,2262715,Construction,48,1362613,491035,2278576,2143446,11863,702,2,0,Inventory,3177587
+1290,Namib Logistics,Retail,Khomas,6,135,859729,Equipment Purchase,12,11493797,647908,342231,1843671,86129,677,1,0,Inventory,3265826
+1291,Swakop Manufacturing,Transport,Khomas,14,171,1323294,Working Capital,24,13174430,796327,735164,1966829,26291,515,6,1,Inventory,1331536
+1292,Walvis Farming,Manufacturing,Erongo,25,56,1140328,Payroll Support,12,8949763,116784,1147299,832791,1954,483,2,0,Property,3856060
+1293,Erongo Food Services,Transport,Otjozondjupa,1,55,438274,Inventory,60,13663715,464022,1786795,1254701,27761,480,6,0,Savings,2688605
+1294,Caprivi Technologies,Mining Services,Erongo,20,179,222549,Working Capital,60,13263413,122552,345271,1260244,63640,559,6,1,Property,2544987
+1295,Oshana Technologies,Technology,Otjozondjupa,8,17,2393429,Expansion,60,9572618,510070,2627533,3181899,79144,770,6,0,Inventory,3339071
+1296,Etosha Farming,Transport,Otjozondjupa,4,120,768694,Equipment Purchase,48,1540409,147536,991851,2278249,80352,643,3,0,Livestock,891255
+1297,Swakop Farming,Mining Services,Kavango East,9,166,1042407,Vehicle Purchase,48,1431896,422428,868339,488657,35482,635,5,0,Vehicle,3838341
+1298,Etosha Fishing,Retail,Oshana,2,169,2410199,Technology Upgrade,12,646342,367383,1231587,897684,65719,590,4,0,Vehicle,2821228
+1299,Swakop Transport,Logistics,Erongo,18,75,674019,Equipment Purchase,60,6027497,504287,839576,1378692,14680,466,1,1,Vehicle,4663947
+1300,Kunene Tours,Food Services,Oshana,10,94,450738,Working Capital,24,7761602,108800,270326,241678,119883,549,6,0,Savings,3197377
+1301,Etosha Food Services,Food Services,Otjozondjupa,13,197,742005,Payroll Support,12,1738611,40934,1659682,2551799,95515,820,6,0,Livestock,2357593
+1302,Etosha Trading,Mining Services,Kavango East,8,167,1162489,Expansion,12,449758,495233,1801817,3750128,46963,683,3,0,Equipment,3612403
+1303,Erongo Construction,Technology,Karas,19,16,2183631,Technology Upgrade,24,14875550,547581,2544940,3473847,102909,838,4,1,Inventory,3035556
+1304,Gobabis Fishing,Retail,Erongo,6,207,988164,Technology Upgrade,12,11102557,491767,1161568,3048319,74772,673,1,1,Vehicle,2808593
+1305,Namib Transport,Retail,Kavango East,2,177,1107867,Working Capital,60,3929178,70062,1134463,2666554,39612,677,1,0,Inventory,3641218
+1306,Namib Food Services,Agriculture,Oshana,24,131,1607685,Inventory,36,6238060,346970,1972111,3702925,34994,589,7,0,Equipment,717351
+1307,Luderitz Food Services,Food Services,Karas,11,207,2019208,Expansion,60,752302,90788,2847718,1241878,62833,784,3,1,Vehicle,2341209
+1308,Kunene Food Services,Construction,Khomas,24,146,1633500,Working Capital,48,9217374,655917,2777242,2772417,12934,580,7,0,Equipment,199133
+1309,Caprivi Tours,Technology,Oshana,13,210,2218605,Expansion,36,14658365,75390,1023934,3187032,73574,721,0,0,Vehicle,2376799
+1310,Kalahari Construction,Construction,Kavango East,18,106,1588954,Construction,48,9662923,722071,1391502,556176,74095,724,1,1,Equipment,879920
+1311,Caprivi Farming,Manufacturing,Karas,21,36,1192274,Payroll Support,12,1387589,366187,1738129,2056282,86406,587,8,0,Property,1919854
+1312,Otji Trading,Tourism,Karas,6,237,2128981,Equipment Purchase,24,838620,535108,1900671,356050,45915,635,4,0,Inventory,4671184
+1313,Swakop Logistics,Logistics,Oshana,4,46,769120,Technology Upgrade,24,4572719,231203,1492867,1922727,2612,693,6,0,Property,554179
+1314,Gobabis Supplies,Manufacturing,Oshikoto,10,148,2469325,Payroll Support,24,7396758,22698,200069,3443342,56153,541,3,1,Vehicle,2193027
+1315,Caprivi Technologies,Technology,Kavango East,17,226,1619798,Expansion,12,6809379,470084,242592,1353379,103276,477,0,0,Property,125002
+1316,Kunene Tours,Construction,Erongo,13,231,293898,Working Capital,12,3342989,480706,1488204,3495744,100848,654,8,0,Vehicle,3468882
+1317,Windhoek Fishing,Construction,Hardap,4,119,1216251,Working Capital,24,4835567,279497,1550110,2253808,66889,819,1,0,Inventory,2664023
+1318,Okavango Manufacturing,Agriculture,Erongo,7,54,2019221,Payroll Support,36,1964736,105572,207611,2858195,34631,779,8,0,Equipment,1696859
+1319,Etosha Fishing,Retail,Erongo,12,226,916296,Inventory,60,4733773,544167,2812666,1617037,49543,567,8,0,Equipment,2934230
+1320,Windhoek Construction,Agriculture,Erongo,3,183,272368,Working Capital,12,12490225,181229,1410616,282652,49170,492,2,0,Vehicle,4055924
+1321,Etosha Technologies,Food Services,Erongo,20,197,2147611,Expansion,12,1676857,203437,2764409,3752653,11036,832,6,1,Savings,3992309
+1322,Walvis Fishing,Tourism,Kavango East,1,227,2042335,Payroll Support,48,6760280,64067,1235330,3362178,81061,622,8,0,Vehicle,300240
+1323,Oshana Food Services,Transport,Kavango East,13,35,927240,Working Capital,36,9813914,353368,1111446,654820,29661,580,1,0,Inventory,3669363
+1324,Otji Food Services,Agriculture,Kavango West,20,102,816818,Working Capital,24,2438763,631192,2907280,2862470,78491,527,6,0,Property,3896137
+1325,Katima Supplies,Mining Services,Oshana,1,195,370978,Equipment Purchase,48,7305886,798812,2621492,423488,116324,611,3,1,Inventory,320974
+1326,Etosha Fishing,Construction,Oshana,11,227,1122004,Technology Upgrade,60,6268179,721357,2270152,2815071,44255,718,8,0,Property,2124213
+1327,Otji Tours,Technology,Erongo,22,234,2360653,Expansion,36,1912414,559550,16247,3745767,72313,819,7,0,Inventory,101277
+1328,Etosha Technologies,Agriculture,Karas,22,87,625854,Equipment Purchase,24,13573324,476243,340351,1984051,19893,591,6,0,Equipment,4573376
+1329,Kalahari Construction,Mining Services,Erongo,22,185,145414,Expansion,48,9080434,119000,978344,2235196,110595,518,8,0,Inventory,1367650
+1330,Otji Transport,Manufacturing,Oshikoto,13,233,106766,Working Capital,48,11366244,355367,435175,2382188,68650,839,1,0,Savings,1032639
+1331,Erongo Manufacturing,Logistics,Kavango East,25,193,840017,Payroll Support,48,14041199,655569,1095401,2241316,90548,739,2,0,Equipment,2478592
+1332,Etosha Food Services,Technology,Oshana,14,217,2073052,Equipment Purchase,36,8756412,446075,1096694,2829247,46830,549,6,0,Equipment,2218081
+1333,Kalahari Technologies,Agriculture,Erongo,19,143,2223233,Equipment Purchase,12,8550046,168432,811832,283749,86614,800,2,0,Vehicle,3483340
+1334,Oshana Retail,Mining Services,Kavango East,1,250,2440336,Construction,60,3836558,625094,2902935,3116812,85319,608,2,0,Savings,1232064
+1335,Etosha Trading,Transport,Kavango East,10,120,799123,Technology Upgrade,12,12392788,690147,90915,724581,106464,573,3,0,Vehicle,2318778
+1336,Okavango Supplies,Retail,Otjozondjupa,11,29,1631241,Working Capital,24,11386647,725390,2378488,2170181,31848,637,3,1,Savings,4949065
+1337,Walvis Logistics,Logistics,Erongo,9,125,441558,Expansion,36,5249922,578389,2628212,3049255,62328,638,3,0,Property,3820150
+1338,Kalahari Tours,Tourism,Kavango East,4,49,1488338,Equipment Purchase,48,13324061,73182,2182837,197421,119518,795,6,0,Property,2647126
+1339,Etosha Manufacturing,Food Services,Otjozondjupa,11,127,1042020,Expansion,60,4593665,478011,2764553,746447,31787,753,0,0,Livestock,2086393
+1340,Walvis Fishing,Food Services,Hardap,13,164,1603840,Equipment Purchase,12,4391066,246473,2095639,2629769,111756,567,4,0,Property,2380257
+1341,Katima Retail,Agriculture,Kavango West,6,152,141221,Equipment Purchase,24,10729242,586005,1687895,1088732,13752,770,3,0,Livestock,4351881
+1342,Okavango Farming,Logistics,Khomas,18,201,1067674,Expansion,24,8191727,768900,2626915,271188,47476,801,1,0,Livestock,821160
+1343,Etosha Food Services,Tourism,Kavango East,10,217,1359527,Expansion,12,8326952,490103,1656789,2140971,73923,584,0,0,Equipment,2578871
+1344,Luderitz Tours,Retail,Hardap,10,40,191538,Construction,60,14733236,386422,2720931,3803336,84887,500,1,1,Equipment,3868959
+1345,Caprivi Technologies,Tourism,Oshikoto,17,125,2032326,Construction,24,11116884,326170,518777,3133833,33090,595,8,0,Inventory,2142290
+1346,Katima Supplies,Tourism,Kavango West,4,229,2062257,Working Capital,12,9936360,50696,1972045,2074462,37708,570,1,0,Equipment,1234391
+1347,Walvis Manufacturing,Food Services,Oshana,20,133,540162,Expansion,12,8463815,364444,671160,413316,72317,781,0,0,Inventory,2274097
+1348,Walvis Trading,Construction,Otjozondjupa,7,247,1878312,Construction,60,4520402,301585,481812,2817842,77038,716,1,1,Property,2907281
+1349,Swakop Food Services,Technology,Hardap,13,174,799092,Inventory,24,11151568,510273,467481,551802,76951,692,5,1,Savings,790688
+1350,Caprivi Farming,Manufacturing,Otjozondjupa,18,5,632683,Inventory,36,3149902,146201,73318,2802526,67814,536,3,1,Savings,3116264
+1351,Kunene Fishing,Food Services,Oshikoto,10,114,1870805,Expansion,24,14397752,705695,714691,1247460,78297,460,3,0,Inventory,968931
+1352,Gobabis Construction,Transport,Kavango East,9,238,2260940,Inventory,60,1527318,146603,2650342,2342563,23547,845,7,0,Equipment,1295391
+1353,Caprivi Trading,Retail,Kavango West,23,89,2333719,Working Capital,60,7845212,473171,651188,2589879,82446,595,8,1,Vehicle,3635002
+1354,Swakop Supplies,Mining Services,Khomas,22,27,1493985,Expansion,36,14453050,496344,1975859,772465,94923,510,0,1,Property,505767
+1355,Namib Manufacturing,Agriculture,Hardap,13,150,1831641,Construction,60,9610335,390173,1310832,1143680,46642,485,5,0,Savings,992376
+1356,Luderitz Fishing,Retail,Oshikoto,19,91,2046939,Construction,12,13608037,637781,1593564,1963816,111520,712,5,1,Vehicle,2882395
+1357,Kalahari Manufacturing,Agriculture,Oshana,1,122,2355938,Inventory,12,7938968,635697,127432,532751,96737,755,6,0,Inventory,4115513
+1358,Erongo Trading,Mining Services,Oshikoto,18,221,1670880,Expansion,60,5492275,728151,1509316,1218571,37040,457,5,1,Property,2572199
+1359,Kunene Farming,Retail,Otjozondjupa,6,246,638844,Construction,12,13826454,715306,2534534,2610861,79351,832,4,0,Savings,4946723
+1360,Otji Transport,Agriculture,Kavango East,12,239,1079895,Construction,48,14898911,531868,2372882,761409,50201,616,7,0,Equipment,3449366
+1361,Otji Construction,Food Services,Kavango East,13,20,1729416,Payroll Support,48,4327643,478077,129776,3580378,73781,455,3,0,Savings,898245
+1362,Oshana Logistics,Agriculture,Kavango East,1,4,621288,Working Capital,60,9383565,667484,1972243,3059042,50229,669,5,1,Vehicle,3278964
+1363,Caprivi Logistics,Transport,Karas,25,229,1022925,Payroll Support,24,3821828,727818,1708552,298720,87807,651,5,0,Inventory,4448759
+1364,Etosha Tours,Technology,Oshikoto,16,129,1653448,Expansion,48,5622714,497467,1099029,3360542,8659,624,4,0,Vehicle,4328248
+1365,Caprivi Logistics,Mining Services,Oshana,12,243,2340085,Vehicle Purchase,48,11094424,479444,1375481,2388001,43145,637,6,1,Livestock,3615525
+1366,Kunene Fishing,Transport,Otjozondjupa,2,217,1533005,Technology Upgrade,24,2318437,661996,1544321,2993392,24752,637,1,0,Property,530925
+1367,Kalahari Tours,Transport,Kavango East,9,37,1466023,Equipment Purchase,36,8249275,688892,2621571,869294,91336,565,2,0,Livestock,4830366
+1368,Gobabis Retail,Food Services,Oshikoto,5,154,1656593,Technology Upgrade,36,704032,747389,2677898,2349005,34448,479,5,0,Equipment,386737
+1369,Caprivi Food Services,Technology,Oshana,18,76,1478783,Equipment Purchase,36,2160037,304315,231412,2465536,117147,766,4,0,Equipment,1024252
+1370,Kalahari Technologies,Technology,Otjozondjupa,9,2,605310,Payroll Support,60,7929297,662455,1323584,2632818,50345,846,7,0,Vehicle,3223170
+1371,Gobabis Supplies,Food Services,Erongo,8,124,1885773,Working Capital,60,9786636,626479,2531268,2261888,74660,700,1,1,Equipment,425972
+1372,Windhoek Trading,Mining Services,Oshana,11,168,706881,Equipment Purchase,60,1184098,657188,909765,3112997,97334,573,6,0,Inventory,1644043
+1373,Swakop Tours,Manufacturing,Erongo,14,152,1774748,Expansion,60,9325775,209262,2362417,2006693,67341,761,7,0,Vehicle,1687677
+1374,Swakop Technologies,Agriculture,Oshikoto,15,15,438158,Equipment Purchase,60,9797073,105938,129112,2158768,51215,727,5,1,Property,1428920
+1375,Oshana Food Services,Construction,Khomas,25,243,1642278,Inventory,48,6019859,298153,1199837,3975616,103714,487,8,1,Livestock,1839118
+1376,Namib Tours,Transport,Oshikoto,8,142,1876927,Payroll Support,12,11558270,405898,297108,3820266,85357,661,8,0,Savings,3378882
+1377,Kalahari Manufacturing,Manufacturing,Kavango West,5,131,1999387,Expansion,24,13011054,475274,1745885,3181021,119961,566,5,0,Vehicle,2106903
+1378,Gobabis Construction,Construction,Erongo,20,120,1627839,Technology Upgrade,36,2194379,333860,405460,3857126,30340,530,6,0,Savings,350109
+1379,Swakop Food Services,Food Services,Oshana,15,71,1048796,Inventory,36,10317053,305474,875849,313455,115840,810,0,0,Savings,2152677
+1380,Walvis Trading,Tourism,Hardap,10,96,923379,Construction,48,4398625,377825,1863752,509090,83630,758,0,1,Inventory,2530537
+1381,Kunene Logistics,Construction,Khomas,20,55,2096267,Inventory,36,2296979,748496,338093,2863837,17333,515,0,0,Inventory,3630926
+1382,Luderitz Manufacturing,Tourism,Hardap,21,221,1084825,Technology Upgrade,36,8295305,440028,148757,3092861,101450,753,3,0,Equipment,3208464
+1383,Oshana Logistics,Technology,Khomas,12,116,1348264,Equipment Purchase,60,1331580,767646,1662851,3814924,94507,512,0,0,Equipment,1592593
+1384,Caprivi Logistics,Transport,Khomas,21,36,940874,Technology Upgrade,48,13595338,103024,2864481,943038,102950,562,3,0,Equipment,4573583
+1385,Walvis Fishing,Agriculture,Khomas,7,29,2186367,Equipment Purchase,36,12463476,507073,383148,2903275,101833,738,3,0,Property,4831377
+1386,Okavango Manufacturing,Manufacturing,Kavango West,9,216,367044,Vehicle Purchase,24,8677037,97978,186964,871541,116473,548,8,1,Livestock,621904
+1387,Kunene Supplies,Mining Services,Oshikoto,17,38,1029580,Working Capital,36,7065572,94498,1627268,1456975,116025,760,7,1,Vehicle,4701162
+1388,Okavango Manufacturing,Agriculture,Kavango East,14,90,1861746,Technology Upgrade,36,11080477,224718,2756327,3491890,36155,736,0,0,Savings,718317
+1389,Luderitz Manufacturing,Logistics,Kavango West,20,167,2232784,Payroll Support,12,10090926,442722,1408650,2938837,70769,559,7,1,Savings,3452872
+1390,Swakop Farming,Construction,Khomas,25,132,1258340,Working Capital,36,9871140,148810,1582007,2580645,97909,484,0,0,Property,973596
+1391,Otji Technologies,Mining Services,Kavango West,1,7,707911,Payroll Support,24,9100654,407597,2331470,2400602,112218,666,5,0,Property,4036648
+1392,Luderitz Tours,Technology,Erongo,3,248,987355,Technology Upgrade,24,7150794,313720,363754,1608588,101357,789,7,0,Property,1986956
+1393,Swakop Tours,Tourism,Kavango West,25,18,781206,Equipment Purchase,48,11842991,775356,1748324,2079577,113450,473,0,0,Inventory,2574275
+1394,Walvis Fishing,Logistics,Erongo,9,249,2343551,Working Capital,36,494311,70886,116984,1866402,19454,625,5,0,Livestock,3280042
+1395,Gobabis Fishing,Transport,Kavango West,13,235,1364074,Inventory,60,10765728,755903,2272936,2994184,66371,570,0,1,Property,455763
+1396,Kunene Trading,Retail,Khomas,2,176,2215843,Expansion,60,14610558,202833,2431930,790088,85483,828,8,1,Property,3713584
+1397,Etosha Construction,Logistics,Kavango East,23,91,1848037,Equipment Purchase,48,9671546,601466,685960,2768616,36497,847,8,0,Vehicle,4231988
+1398,Namib Trading,Technology,Hardap,24,19,1855180,Vehicle Purchase,36,12682766,748286,348737,618588,104028,695,4,0,Livestock,4799613
+1399,Otji Technologies,Mining Services,Khomas,11,155,471748,Technology Upgrade,48,6486450,643379,1850183,3181151,27169,664,5,0,Vehicle,2669199

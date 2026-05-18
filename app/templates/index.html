@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Namibia SME Credit Pricing Engine</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Namibia SME Credit Pricing Engine</h1>
+
+    <form method="POST">
+
+        <label>Business Name</label>
+        <input type="text" name="business_name" required>
+
+        <label>Annual Revenue</label>
+        <input type="number" name="annual_revenue" required>
+
+        <label>Existing Debt</label>
+        <input type="number" name="existing_debt" required>
+
+        <label>Credit Score</label>
+        <input type="number" name="credit_score" required>
+
+        <label>Missed Payments</label>
+        <input type="number" name="missed_payments" required>
+
+        <label>Loan Amount Requested</label>
+        <input type="number" name="loan_amount" required>
+
+        <label>Repayment Period (Years)</label>
+        <input type="number" name="repayment_years" required>
+
+        <button type="submit">
+            Evaluate Borrower
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result-card {{ result.decision_class }}">
+
+        <h2>Loan Decision Result</h2>
+
+        <p><strong>Business:</strong> {{ result.business_name }}</p>
+
+        <p><strong>Annual Revenue:</strong> {{ result.annual_revenue }}</p>
+
+        <p><strong>Existing Debt:</strong> {{ result.existing_debt }}</p>
+
+        <p><strong>Loan Amount:</strong> {{ result.loan_amount }}</p>
+
+        <p><strong>Repayment Period:</strong> {{ result.repayment_years }} years</p>
+
+        <p><strong>Risk Score:</strong> {{ result.risk_score }}</p>
+
+        <p><strong>Decision:</strong> {{ result.decision }}</p>
+
+        <p><strong>Interest Rate:</strong> {{ result.interest_rate }}</p>
+
+        <p><strong>Monthly Payment:</strong> {{ result.monthly_payment }}</p>
+
+        <p><strong>Total Interest Income:</strong> {{ result.total_interest_income }}</p>
+
+        <h3>Decision Explanation</h3>
+
+        <ul>
+            {% for reason in result.reasons %}
+                <li>{{ reason }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Recommendation</h3>
+
+        <p>{{ result.recommendation }}</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>
